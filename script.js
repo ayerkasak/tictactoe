@@ -24,6 +24,9 @@ function checkWinner(){
     newDiv.appendChild(newP);
     newDiv.appendChild(restartButton);
     container.insertAdjacentElement('afterend', newDiv);
+    const gameWrapper = document.querySelector('.game-wrapper');
+    gameWrapper.appendChild(newDiv);
+
     
     }
     
@@ -78,6 +81,9 @@ function checkDraw(){
         newDiv.appendChild(newP);
         newDiv.appendChild(restartButton);
         container.insertAdjacentElement('afterend', newDiv);
+        const gameWrapper = document.querySelector('.game-wrapper');
+        gameWrapper.appendChild(newDiv);
+
     
     }
 }
