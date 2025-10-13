@@ -23,9 +23,9 @@ function checkWinner(){
     newP.textContent = `The Winner is ${currentPlayer}`
     newDiv.appendChild(newP);
     newDiv.appendChild(restartButton);
-    container.insertAdjacentElement('afterend', newDiv);
-    const gameWrapper = document.querySelector('.game-wrapper');
-    gameWrapper.appendChild(newDiv);
+    // container.insertAdjacentElement('afterend', newDiv);
+    // const gameWrapper = document.querySelector('.game-wrapper');
+    // gameWrapper.appendChild(newDiv);
 
     
     }
@@ -80,9 +80,9 @@ function checkDraw(){
         newP.textContent = `Draw!`
         newDiv.appendChild(newP);
         newDiv.appendChild(restartButton);
-        container.insertAdjacentElement('afterend', newDiv);
-        const gameWrapper = document.querySelector('.game-wrapper');
-        gameWrapper.appendChild(newDiv);
+        // container.insertAdjacentElement('afterend', newDiv);
+        // const gameWrapper = document.querySelector('.game-wrapper');
+        // gameWrapper.appendChild(newDiv);
 
     
     }
