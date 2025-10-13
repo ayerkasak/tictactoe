@@ -1,5 +1,6 @@
 let currentPlayer = "X";
 let arr = Array(9).fill(null);
+let isGameCompleted = false;
 
 function checkWinner(){
     if(
@@ -23,9 +24,10 @@ function checkWinner(){
     newP.textContent = `The Winner is ${currentPlayer}`
     newDiv.appendChild(newP);
     newDiv.appendChild(restartButton);
-    // container.insertAdjacentElement('afterend', newDiv);
-    // const gameWrapper = document.querySelector('.game-wrapper');
-    // gameWrapper.appendChild(newDiv);
+    container.insertAdjacentElement('afterend', newDiv);
+    const gameWrapper = document.querySelector('.game-wrapper');
+    gameWrapper.appendChild(newDiv);
+    isGameCompleted = true;
 
     
     }
@@ -34,10 +36,16 @@ function checkWinner(){
 
 function handleClick(el){
     const id = Number(el.id);
+    if (arr[id] || isGameCompleted){
+        return
+    }
     arr[id] = currentPlayer;
     el.innerText = currentPlayer;
     checkWinner();
     checkDraw();
+    if (isGameCompleted){
+        return
+    }
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
     
    
@@ -45,10 +53,13 @@ function handleClick(el){
 
 function restartGame(){
  arr = Array(9).fill(null);
+//  currentPlayer = "X"
+ isGameCompleted = false;
  const toResetColumns = document.querySelectorAll('.col');
  for (let i = 0; i < toResetColumns.length; i++) {
     const element = toResetColumns[i];
    element.innerHTML = "";
+   
 
  }
  const resetDiv = document.querySelector('.resetDiv');
@@ -80,9 +91,10 @@ function checkDraw(){
         newP.textContent = `Draw!`
         newDiv.appendChild(newP);
         newDiv.appendChild(restartButton);
-        // container.insertAdjacentElement('afterend', newDiv);
-        // const gameWrapper = document.querySelector('.game-wrapper');
-        // gameWrapper.appendChild(newDiv);
+        container.insertAdjacentElement('afterend', newDiv);
+        const gameWrapper = document.querySelector('.game-wrapper');
+        gameWrapper.appendChild(newDiv);
+        isGameCompleted = true;
 
     
     }
