@@ -471,5 +471,20 @@ const students = [
 ];
 
 const topStudents = students.filter(student => student.marks >= 80);
-const topStudentsNames = topStudents.map(students => students.name);
+const topStudentsNames = topStudents.map(student => student.name);
 console.log(topStudentsNames);
+const sttIndex = students.findIndex(student => student.name == "Sneha");
+console.log(sttIndex)
+// CRUD operation on object
+// let product = {
+//   name: "Laptop",
+//   price: 80000,
+//   brand: "Dell"
+// };
+
+// product.stock = 50;
+// console.log(product.brand);
+// product["price"] = 75000;
+// console.log(product["price"])
+// delete product.stock
+// console.log(product);
