@@ -309,14 +309,14 @@
 // Write a function outer() that defines another function inner().
 // When you call outer(), it should call inner() and print "Hello from inner function!".
 
-function outer(){
-    function inner() {
-        console.log("Hello from inner function!")
-    }
-    inner()
-}
+// function outer(){
+//     function inner() {
+//         console.log("Hello from inner function!")
+//     }
+//     inner()
+// }
 
-outer()
+// outer()
 
 // Q2. Passing argument to inner function
 
@@ -324,136 +324,136 @@ outer()
 // The sayHi() function should print:
 // 👉 "Hi, " + name.
 
-function greet(name){
-    function sayHi(){
-        return "Hi, " + name
-    }
-    return sayHi()
-}
-console.log(greet("Kasak"));
+// function greet(name){
+//     function sayHi(){
+//         return "Hi, " + name
+//     }
+//     return sayHi()
+// }
+// console.log(greet("Kasak"));
 
 // Q3. Returning value from inner function
 // Write a function outer(num) that defines an inner function square(x) which returns x * x.
 // outer() should call square(num) and return its result.
 
-function outerFunc(num){
-    function square(x){
-        return x * x
-    }
-    return square(3);
+// function outerFunc(num){
+//     function square(x){
+//         return x * x
+//     }
+//     return square(3);
 
-}
-const newSqr = outerFunc()
-console.log(newSqr)
+// }
+// const newSqr = outerFunc()
+// console.log(newSqr)
 
 // Q4. Inner function accessing outer variable (closure)
 // Make a function outer() that defines a variable count = 5 and an inner function showCount() which prints count.
 // Call showCount() inside outer().
 
-function newOuter(){
-    let count = 5;
-    function showCount(){
-        console.log(count);
-    }
-    showCount();
-}
-newOuter();
+// function newOuter(){
+//     let count = 5;
+//     function showCount(){
+//         console.log(count);
+//     }
+//     showCount();
+// }
+// newOuter();
 
 // Q5. Passing function as a parameter
 // Write a function operate(a, b, fn) that takes a function fn as an argument and uses it to combine the two numbers.
-function operate(a,b){
-    return a + b
-}
-function newOperate(func, val, val1){
-    console.log(func(val, val1));
-}
+// function operate(a,b){
+//     return a + b
+// }
+// function newOperate(func, val, val1){
+//     console.log(func(val, val1));
+// }
 
-newOperate(operate, 2, 3)
+// newOperate(operate, 2, 3)
 
 // Q6. Returning a function
 // Write a function multiplyBy(factor) that returns another function which multiplies any given number by factor.
  
-function multiplyBy(factor){
-    return function(number){
-        return factor * number
-    };
-}
+// function multiplyBy(factor){
+//     return function(number){
+//         return factor * number
+//     };
+// }
 
-const double = multiplyBy(2);
-const triple = multiplyBy(3);
+// const double = multiplyBy(2);
+// const triple = multiplyBy(3);
 
-console.log(double(5));
-console.log(triple(5));
+// console.log(double(5));
+// console.log(triple(5));
 
 // Q7. Nested function chain
 // Write a function outer() that defines a function middle(), which defines another function inner().
 // When outer() is called, all three functions should print messages in order.
-function nOuter(){
-    console.log("Hello from Outer.");
-    function middle(){
-        console.log("Hello from middle.");
-        function newInner(){
-            console.log("Hello from Inner.");
-        }
-        newInner();
+// function nOuter(){
+//     console.log("Hello from Outer.");
+//     function middle(){
+//         console.log("Hello from middle.");
+//         function newInner(){
+//             console.log("Hello from Inner.");
+//         }
+//         newInner();
 
-        }
-    middle();
-    }
-nOuter();
+//         }
+//     middle();
+//     }
+// nOuter();
     
 // Q8. Outer and inner both take arguments
 // Write a function mathOperation(a, b) that defines an inner function add(x, y) that returns their sum.
 // mathOperation() should return the result of add(a, b).
 
-function mathOperation(a, b){
-    function add(x, y){
-        return x + y
-    }
-    return add(a, b)
-}
+// function mathOperation(a, b){
+//     function add(x, y){
+//         return x + y
+//     }
+//     return add(a, b)
+// }
 
-const newSum = mathOperation(2,3);
-console.log(newSum)
+// const newSum = mathOperation(2,3);
+// console.log(newSum)
 
-// about spread and rest operator
-function sumNew(...numbers) {
+// // about spread and rest operator
+// function sumNew(...numbers) {
 
-  return numbers.reduce((a, b) => a + b, 0);
-}
-console.log(sumNew(1, 2, 3)); 
-
-
-const [first, second, ...rest] = [10, 20, 30, 40, 50];
-console.log(first, second); 
-console.log(rest); 
+//   return numbers.reduce((a, b) => a + b, 0);
+// }
+// console.log(sumNew(1, 2, 3)); 
 
 
-const obj = { a: 1, b: 2, c: 3 };
-const { a, ...others } = obj;
-console.log(a);      
-console.log(others); 
-
-const app = ('gyanchand');
-console.log(app)
+// const [first, second, ...rest] = [10, 20, 30, 40, 50];
+// console.log(first, second); 
+// console.log(rest); 
 
 
-// Example: rest in function
-function joinWith(separator, ...words) {
-  return words.join(separator);
-}
-console.log(joinWith("*", "a", "b", "c")); // "a-b-c"
+// const obj = { a: 1, b: 2, c: 3 };
+// const { a, ...others } = obj;
+// console.log(a);      
+// console.log(others); 
+
+// const app = ('gyanchand');
+// console.log(app)
+
+
+// // Example: rest in function
+// function joinWith(separator, ...words) {
+//   return words.join(separator);
+// }
+// console.log(joinWith("*", "a", "b", "c")); // "a-b-c"
 
 
 // Write a function called calculateAverage() that takes this array as an argument and returns the average of the numbers.
 
-const numbers = [5, 10, 15, 20, 25];
+// const numbers = [5, 10, 15, 20, 25];
 
-function calculateAverage(arr){
-    let totalSum = numbers.reduce((a, b) =>  a + b, 0);
-    return totalSum / arr.length
-}
-console.log(calculateAverage(numbers))
+// function calculateAverage(arr){
+//     let totalSum = numbers.reduce((a, b) =>  a + b, 0);
+//     return totalSum / arr.length
+// }
+// console.log(calculateAverage(numbers))
 
 // Write a function called getTopStudents() that:
 // Takes the array of students as an argument.
@@ -462,19 +462,28 @@ console.log(calculateAverage(numbers))
 // Bonus challenge:
 // Use arrow functions and array methods (filter() + map()).
 
-const students = [
-  { name: "Aarav", marks: 85 },
-  { name: "Priya", marks: 92 },
-  { name: "Rahul", marks: 76 },
-  { name: "Sneha", marks: 64 },
-  { name: "Kabir", marks: 88 }
-];
+// const students = [
+//   { name: "Aarav", marks: 85 },
+//   { name: "Priya", marks: 92 },
+//   { name: "Rahul", marks: 76 },
+//   { name: "Sneha", marks: 64 },
+//   { name: "Kabir", marks: 88 }
+// ];
 
-const topStudents = students.filter(student => student.marks >= 80);
-const topStudentsNames = topStudents.map(student => student.name);
-console.log(topStudentsNames);
-const sttIndex = students.findIndex(student => student.name == "Sneha");
-console.log(sttIndex)
+
+// fetch the marks 
+// const marks = students.map(student => student.marks)
+// // sort the marks
+// const sortedMarks = marks.sort()
+// // secondlast index ko marks liney ani kunai variablema store garne 
+// const secondLargestMark = sortedMarks[(sortedMarks.length - 1) - 1]
+// // finding the element of the array having the marks = having second largest number stored on the variable
+// const secondStudent = students.find(student => student.marks == secondLargestMark)
+// // print the variable.name
+// console.log(secondStudent.name)
+
+
+
 // CRUD operation on object
 // let product = {
 //   name: "Laptop",
@@ -488,3 +497,78 @@ console.log(sttIndex)
 // console.log(product["price"])
 // delete product.stock
 // console.log(product);
+
+// Tasks:
+// Create:
+// Add a new property called grade with the value "A" inside the main object.
+// Read:
+// Print the city name from the nested address object.
+// Update:
+// Change the country from "Nepal" to "India".
+// Also, add "Computer" as a new subject to the subjects array.
+// Delete:
+// Remove the property age from the student object.
+
+
+// let student = {
+//   name: "Riya Sharma",
+//   age: 21,
+//   address: {
+//     city: "Kathmandu",
+//     country: "Nepal"
+//   },
+//   subjects: ["Math", "Science", "English"]
+// };
+
+// student.grade = "A";
+// console.log(student.address.city);
+// student.address.country = "India";
+// student.subjects.push("Computer");
+// delete student.age
+// console.log(student)
+
+
+// // Task:
+// You must create four functions to perform CRUD operations on this inventory.
+// Create: Add a new item to the inventory (with id, name, and price).
+// Read: Display all items currently in the inventory.
+// Update: Update the price of an item using its id.
+// Delete: Remove an item from the inventory using its id.
+// Use .push() to add a new object to the array.
+// Use .forEach() or .find() to search for an item by id.
+// Use .filter() to delete items.
+// Use console.log() inside your functions to show updates.
+
+let inventory = {
+  items: [
+    { id: 1, name: "Laptop", price: 900 },
+    { id: 2, name: "Phone", price: 600 },
+    { id: 3, name: "Tablet", price: 400 }
+  ]
+};
+function createInventory( id, name, price){
+inventory.items.push({id: id, name: name, price: price})
+return {inventory, message: "Item added successfully"}
+}
+console.log(createInventory(4, "Iphone", 1000))
+
+function readInventory(){
+  return inventory
+}
+    
+console.log(readInventory())
+
+const updateInventory = (id, price) => {
+  const itemIndex = inventory.items.findIndex(item => item.id == id)
+  inventory.items[itemIndex].price = price
+return {inventory, message: "Item updated successfully"}
+}
+
+console.log(updateInventory(2, 450))
+
+const deleteInventory = (id) => {
+ const updatedInventory = inventory.items.filter(i => i.id !== id)
+ inventory.items = updateInventory
+return {inventory, message: "Item deleted successfully"}
+}
+console.log(deleteInventory(2));
