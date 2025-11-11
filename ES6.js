@@ -539,36 +539,78 @@
 // Use .filter() to delete items.
 // Use console.log() inside your functions to show updates.
 
-let inventory = {
-  items: [
-    { id: 1, name: "Laptop", price: 900 },
-    { id: 2, name: "Phone", price: 600 },
-    { id: 3, name: "Tablet", price: 400 }
-  ]
-};
-function createInventory( id, name, price){
-inventory.items.push({id: id, name: name, price: price})
-return {inventory, message: "Item added successfully"}
-}
-console.log(createInventory(4, "Iphone", 1000))
+// let inventory = {
+//   items: [
+//     { id: 1, name: "Laptop", price: 900 },
+//     { id: 2, name: "Phone", price: 600 },
+//     { id: 3, name: "Tablet", price: 400 }
+//   ]
+// };
+// function createInventory( id, name, price){
+// inventory.items.push({id: id, name: name, price: price})
+// return {inventory, message: "Item added successfully"}
+// }
+// console.log(createInventory(4, "Iphone", 1000))
 
-function readInventory(){
-  return inventory
-}
+// function readInventory(){
+//   return inventory
+// }
     
-console.log(readInventory())
+// console.log(readInventory())
 
-const updateInventory = (id, price) => {
-  const itemIndex = inventory.items.findIndex(item => item.id == id)
-  inventory.items[itemIndex].price = price
-return {inventory, message: "Item updated successfully"}
+// const updateInventory = (id, price) => {
+//   const itemIndex = inventory.items.findIndex(item => item.id == id)
+//   inventory.items[itemIndex].price = price
+// return {inventory, message: "Item updated successfully"}
+// }
+
+// console.log(updateInventory(2, 450))
+
+// const deleteInventory = (id) => {
+//  const updatedInventory = inventory.items.filter(i => i.id !== id)
+//  inventory.items = updatedInventory
+// return {inventory, message: "Item deleted successfully"}
+// }
+// console.log(deleteInventory(2));
+
+// Question 4:
+// You have an array of users. Each user has id, name, and skills (array).
+// Write functions to:
+// Add a new skill to a specific user by id.
+// Remove a skill from a specific user by id.
+// Return all users who have a particular skill (e.g., "JavaScript").
+
+let users = [
+  { id: 1, name: "Riya", skills: ["HTML", "CSS"] },
+  { id: 2, name: "Aarav", skills: ["JavaScript", "React"] },
+  { id: 3, name: "Neha", skills: ["Python", "Django"] }
+];
+
+const newSkill = (id, skill) => {
+  const selectId = users.findIndex(item => item.id == id)
+  if (users[selectId] !== undefined ){
+  users[selectId].skills.push(skill)
+  return {users, message: "Skill added successfully"}
+  } else{
+    return {message: "User not found!"}
+  }
 }
 
-console.log(updateInventory(2, 450))
+console.log(newSkill(2, "C++"));
 
-const deleteInventory = (id) => {
- const updatedInventory = inventory.items.filter(i => i.id !== id)
- inventory.items = updateInventory
-return {inventory, message: "Item deleted successfully"}
+const removeSkill = (id, skill) => {
+   const selectId = users.findIndex(item => item.id == id)
+  if (users[selectId] !== undefined ){
+  const filteredSkill = users[selectId].skills.filter(s => s !== skill)
+    users[selectId]["skills"] = filteredSkill
+  return {users, message: "Skill removed successfully"}
+  } else{
+    return {message: "User not found!"}
+  }
 }
-console.log(deleteInventory(2));
+
+const returnAllUsers = (skill) => {
+  const selectUser = users.filter(user => user.skills.includes(skill))
+  console.log(selectUser)
+}
+returnAllUsers("JavaScript")
