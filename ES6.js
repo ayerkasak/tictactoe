@@ -816,29 +816,56 @@
 // You are given an array of employees, where each employee has a department and an array of skills.
 // Write a function addSkillToDepartment(department, skill) that adds a new skill to every employee in that department — but only if they don’t already have it.
 
+// let employees = [
+//   { name: "Aarav", department: "IT", skills: ["JavaScript", "React"] },
+//   { name: "Riya", department: "HR", skills: ["Recruitment"] },
+//   { name: "Neha", department: "IT", skills: ["HTML", "CSS"] }
+// ];
+
+
+// function addSkillToDepartment(department, skill){
+//   const selectId = employees.filter(employee => employee.department == department);
+  
+//   const updateSkillOfEmployee = selectId.map(employee => {
+//     if (!employee.skills.includes(skill)){
+//       return{
+//       ...employee,
+//       skills: [...employee.skills, skill]
+//     }
+//     }
+//     return employee;
+//   })
+
+//   const otherEmployees = employees.filter(employee => employee.department !== department);
+//   employees = [...updateSkillOfEmployee, ...otherEmployees]
+//   return employees
+
+// }
+// console.log(addSkillToDepartment("IT", "TypeScript"))
+
+// Write a function called transferEmployee(id, newDepartment) that moves an employee to a new department.
+// The function should:
+// Find the employee by their id
+// Update their department property to the newDepartment
+// Keep all other data (skills, salary, etc.) the same
+// Return the updated employees array
+
 let employees = [
-  { name: "Aarav", department: "IT", skills: ["JavaScript", "React"] },
-  { name: "Riya", department: "HR", skills: ["Recruitment"] },
-  { name: "Neha", department: "IT", skills: ["HTML", "CSS"] }
+  { id: 1, name: "Aarav", department: "IT", skills: ["JavaScript", "React"] },
+  { id: 2, name: "Riya", department: "HR", skills: ["Recruitment"] },
+  { id: 3, name: "Neha", department: "IT", skills: ["HTML", "CSS"] }
 ];
 
-
-function addSkillToDepartment(department, skill){
-  const selectId = employees.filter(employee => employee.department == department);
-  
-  const updateSkillOfEmployee = selectId.map(employee => {
-    if (!employee.skills.includes(skill)){
-      return{
+function transferEmployee(id, newDepartment){
+  const selectEmployeeId = employees.filter(employee => employee.id == id);
+  const updateDepartmentOfEmployee = selectEmployeeId.map(employee =>{
+    return{
       ...employee,
-      skills: [...employee.skills, skill]
+      department: newDepartment
     }
-    }
-    return employee;
   })
-
-  const otherEmployees = employees.filter(employee => employee.department !== department);
-  employees = [...updateSkillOfEmployee, ...otherEmployees]
+  const oldDepartmentEmployee = employees.filter(employee => employee.id !== id)
+  employees = [...oldDepartmentEmployee, ...updateDepartmentOfEmployee]
   return employees
-
 }
-console.log(addSkillToDepartment("IT", "TypeScript"))
+console.log(transferEmployee(2, "Finance"));
