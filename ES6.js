@@ -724,12 +724,12 @@
 // Also, update their salary by adding that bonus to it.
 // Finally, return the updated employees array.
 
-let employees = [
-  { id: 1, name: "Aarav", department: "IT", salary: 50000, skills: ["JavaScript", "React"], },
-  { id: 2, name: "Riya", department: "HR", salary: 40000, skills: ["Recruitment", "Communication"] },
-  { id: 3, name: "Neha", department: "IT", salary: 55000, skills: ["HTML", "CSS", "Node.js"] },
-  { id: 4, name: "Karan", department: "Finance", salary: 45000, skills: ["Excel", "Accounting"] }
-];
+// let employees = [
+//   { id: 1, name: "Aarav", department: "IT", salary: 50000, skills: ["JavaScript", "React"], },
+//   { id: 2, name: "Riya", department: "HR", salary: 40000, skills: ["Recruitment", "Communication"] },
+//   { id: 3, name: "Neha", department: "IT", salary: 55000, skills: ["HTML", "CSS", "Node.js"] },
+//   { id: 4, name: "Karan", department: "Finance", salary: 45000, skills: ["Excel", "Accounting"] }
+// ];
 
 // function giveBonus(department, bonusAmount) {
 //   let givenDepartmentEmployees = employees.filter(e => e.department == department)
@@ -749,19 +749,67 @@ let employees = [
 
 
 
-const giveBonus = (department, bonusAmount) => {
-  const updatedEmployeeNames = employees.map(employee => {
-    if (employee.department === department){
-      return {
-        ...employee,
-        bonus: bonusAmount,
-        salary: employee.salary + bonusAmount
-      };
-    }else{
-      return {...employee, bonus: 0};
+// const giveBonus = (department, bonusAmount) => {
+//   const updatedEmployeeNames = employees.map(employee => {
+//     if (employee.department === department){
+//       return {
+//         ...employee,
+//         bonus: bonusAmount,
+//         salary: employee.salary + bonusAmount
+//       };
+//     }else{
+//       return {...employee, bonus: 0};
+//     }
+//     });
+//     // employees = updatedEmployeeNames
+//  return updatedEmployeeNames
+// }
+// console.log(giveBonus("IT", 6790));
+
+// Nested Data Update Challenge
+// Create a function named updatePerformance(id, newRating) that:
+// Finds the employee with the given id.
+// Updates only the rating inside their nested performance object.
+// Returns the updated list of employees.
+
+let employees = [
+  {
+    id: 1,
+    name: "Aarav",
+    department: "IT",
+    salary: 50000,
+    performance: { year: 2025, rating: 4.5 }
+  },
+  {
+    id: 2,
+    name: "Riya",
+    department: "HR",
+    salary: 40000,
+    performance: { year: 2025, rating: 3.8 }
+  },
+  {
+    id: 3,
+    name: "Neha",
+    department: "Finance",
+    salary: 55000,
+    performance: { year: 2025, rating: 4.9 }
+  }
+];
+
+const updatePerformance = (id, newRating) => {
+  const selectedEmployees = employees.filter(employee => employee.id == id)
+  const updateEmployeeRating = selectedEmployees.map(employee =>{
+    return{
+      ...employee,
+      performance:{
+        ...employee.performance,
+        rating: newRating
+      }
     }
-    });
-    // employees = updatedEmployeeNames
- return updatedEmployeeNames
-}
-console.log(giveBonus("IT", 6790));
+  })
+  let otherEmployees = employees.filter(employee => employee.id !== id);
+  employees = [...updateEmployeeRating, ...otherEmployees]
+  return employees;
+  }
+  console.log(updatePerformance(2,5));
+
