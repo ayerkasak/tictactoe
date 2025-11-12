@@ -772,44 +772,73 @@
 // Updates only the rating inside their nested performance object.
 // Returns the updated list of employees.
 
+// let employees = [
+//   {
+//     id: 1,
+//     name: "Aarav",
+//     department: "IT",
+//     salary: 50000,
+//     performance: { year: 2025, rating: 4.5 }
+//   },
+//   {
+//     id: 2,
+//     name: "Riya",
+//     department: "HR",
+//     salary: 40000,
+//     performance: { year: 2025, rating: 3.8 }
+//   },
+//   {
+//     id: 3,
+//     name: "Neha",
+//     department: "Finance",
+//     salary: 55000,
+//     performance: { year: 2025, rating: 4.9 }
+//   }
+// ];
+
+// const updatePerformance = (id, newRating) => {
+//   const selectedEmployees = employees.filter(employee => employee.id == id)
+//   const updateEmployeeRating = selectedEmployees.map(employee =>{
+//     return{
+//       ...employee,
+//       performance:{
+//         ...employee.performance,
+//         rating: newRating
+//       }
+//     }
+//   })
+//   let otherEmployees = employees.filter(employee => employee.id !== id);
+//   employees = [...updateEmployeeRating, ...otherEmployees]
+//   return employees;
+//   }
+//   console.log(updatePerformance(2,5));
+
+// You are given an array of employees, where each employee has a department and an array of skills.
+// Write a function addSkillToDepartment(department, skill) that adds a new skill to every employee in that department — but only if they don’t already have it.
+
 let employees = [
-  {
-    id: 1,
-    name: "Aarav",
-    department: "IT",
-    salary: 50000,
-    performance: { year: 2025, rating: 4.5 }
-  },
-  {
-    id: 2,
-    name: "Riya",
-    department: "HR",
-    salary: 40000,
-    performance: { year: 2025, rating: 3.8 }
-  },
-  {
-    id: 3,
-    name: "Neha",
-    department: "Finance",
-    salary: 55000,
-    performance: { year: 2025, rating: 4.9 }
-  }
+  { name: "Aarav", department: "IT", skills: ["JavaScript", "React"] },
+  { name: "Riya", department: "HR", skills: ["Recruitment"] },
+  { name: "Neha", department: "IT", skills: ["HTML", "CSS"] }
 ];
 
-const updatePerformance = (id, newRating) => {
-  const selectedEmployees = employees.filter(employee => employee.id == id)
-  const updateEmployeeRating = selectedEmployees.map(employee =>{
-    return{
-      ...employee,
-      performance:{
-        ...employee.performance,
-        rating: newRating
-      }
-    }
-  })
-  let otherEmployees = employees.filter(employee => employee.id !== id);
-  employees = [...updateEmployeeRating, ...otherEmployees]
-  return employees;
-  }
-  console.log(updatePerformance(2,5));
 
+function addSkillToDepartment(department, skill){
+  const selectId = employees.filter(employee => employee.department == department);
+  
+  const updateSkillOfEmployee = selectId.map(employee => {
+    if (!employee.skills.includes(skill)){
+      return{
+      ...employee,
+      skills: [...employee.skills, skill]
+    }
+    }
+    return employee;
+  })
+
+  const otherEmployees = employees.filter(employee => employee.department !== department);
+  employees = [...updateSkillOfEmployee, ...otherEmployees]
+  return employees
+
+}
+console.log(addSkillToDepartment("IT", "TypeScript"))
