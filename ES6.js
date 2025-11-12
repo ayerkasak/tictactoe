@@ -580,37 +580,188 @@
 // Remove a skill from a specific user by id.
 // Return all users who have a particular skill (e.g., "JavaScript").
 
-let users = [
-  { id: 1, name: "Riya", skills: ["HTML", "CSS"] },
-  { id: 2, name: "Aarav", skills: ["JavaScript", "React"] },
-  { id: 3, name: "Neha", skills: ["Python", "Django"] }
+// let users = [
+//   { id: 1, name: "Riya", skills: ["HTML", "CSS"] },
+//   { id: 2, name: "Aarav", skills: ["JavaScript", "React"] },
+//   { id: 3, name: "Neha", skills: ["Python", "Django"] }
+// ];
+
+// const newSkill = (id, skill) => {
+//   const selectId = users.findIndex(item => item.id == id)
+//   if (users[selectId] !== undefined ){
+//   users[selectId].skills.push(skill)
+//   return {users, message: "Skill added successfully"}
+//   } else{
+//     return {message: "User not found!"}
+//   }
+// }
+
+// console.log(newSkill(2, "C++"));
+
+// const removeSkill = (id, skill) => {
+//    const selectId = users.findIndex(item => item.id == id)
+//   if (users[selectId] !== undefined ){
+//   const filteredSkill = users[selectId].skills.filter(s => s !== skill)
+//     users[selectId]["skills"] = filteredSkill
+//   return {users, message: "Skill removed successfully"}
+//   } else{
+//     return {message: "User not found!"}
+//   }
+// }
+
+// const returnAllUsers = (skill) => {
+//   const selectUser = users.filter(user => user.skills.includes(skill))
+//   console.log(selectUser)
+// }
+// returnAllUsers("JavaScript")
+
+
+
+// let users = [
+//   { id: 1, name: "Aarav", age: 25, skills: ["JavaScript", "React"] },
+//   { id: 2, name: "Riya", age: 22, skills: ["Python", "Django"] },
+//   { id: 3, name: "Neha", age: 27, skills: ["HTML", "CSS", "JS"] }
+// ];
+
+
+// function newUser(id, name, age, skills){
+//   users.push({id: id, name: name, age: age, skills: skills})
+// }
+// newUser(4, "kasak", 28, ["Node.js", "React", "JavaScript"])
+
+// function readusers(){
+//   return users
+// }
+// console.log(readusers())
+
+// const updateUserName = (id, newName) => {
+//   const selectId = users.find(user => user.id === id);
+//   if (selectId){
+//     selectId.name = newName;
+//     return `User's name update successfully to ${newName}`
+//   } else {
+//     return "User not found!"
+//   }
+   
+    
+// }
+// console.log(updateUserName(1, "Aarav Ayer"))
+
+
+// const deleteUser = (id) => {
+//   const selectId = users.filter(user => user.id !== id);
+//   users = selectId;
+//   return users;
+// }
+// console.log(deleteUser(1));
+
+
+// Question 5 — Filter and Update Together
+// You are given the same users array.
+// Your task is to:
+// Find all users who have "JavaScript" in their skills.
+// Add "TypeScript" to their skills list only if it doesn’t already exist.
+// Print the updated array.
+
+
+// let users = [
+//   { id: 1, name: "Aarav", age: 25, skills: ["JavaScript", "React"] },
+//   { id: 2, name: "Riya", age: 22, skills: ["Python", "Django"] },
+//   { id: 3, name: "Neha", age: 27, skills: ["HTML", "CSS", "JS"] }
+// ];
+
+// const updateSkill = (skill, newSkill) => {
+//   const skilledUsers = users.filter(user => user.skills.includes(skill));
+
+//   skilledUsers.forEach(user => {
+//     if (!user.skills.includes(ski
+// ll)){
+//       user.skills.push(newSkill)
+//         console.log(`${newSkill} added for ${user.name}`);
+//     }
+//   })
+//   return users;
+// };
+// console.log(updateSkill("JavaScript", "TypeScript"))
+
+
+// Increase salary for specific department
+// Finds all employees in the given department (for example, "IT").
+// Increases their salary by the given percentage (e.g., 10%).
+// Returns the updated employees array.
+// Prints a message for each updated employee (e.g., "Aarav's new salary is 55000").
+
+// let employees = [
+//   { id: 1, name: "Aarav", department: "IT", salary: 50000 },
+//   { id: 2, name: "Riya", department: "HR", salary: 40000 },
+//   { id: 3, name: "Neha", department: "IT", salary: 55000 },
+//   { id: 4, name: "Karan", department: "Finance", salary: 45000 }
+// ];
+
+// function increaseSalary(department, percentage){
+//   const selectedEmployees = employees.filter(employee => employee.department == department);
+//   const employeesWithIncreasedSalary = selectedEmployees.map(employee => {
+//     return {
+//       id: employee.id,
+//       name: employee.name,
+//       department: employee.department,
+//       salary:  employee.salary + (employee.salary * (percentage / 100))
+//     }
+//     })
+//     const removeEmployee = employees.filter(employee => employee.department !== department)
+//     // const newEmployees = [...employeesWithIncreasedSalary, ...removeEmployee]
+//     // employees = newEmployees;
+//     employees = [...employeesWithIncreasedSalary, ...removeEmployee]
+
+//    return employees
+//   }
+// console.log(increaseSalary("IT", 10));
+
+// Department Salary Update with Bonus System
+// Create a function named giveBonus(department, bonusAmount) which will:
+// Find all employees who belong to the given department.
+// Add a new property to each of them named "bonus" and set its value to bonusAmount.
+// Also, update their salary by adding that bonus to it.
+// Finally, return the updated employees array.
+
+let employees = [
+  { id: 1, name: "Aarav", department: "IT", salary: 50000, skills: ["JavaScript", "React"], },
+  { id: 2, name: "Riya", department: "HR", salary: 40000, skills: ["Recruitment", "Communication"] },
+  { id: 3, name: "Neha", department: "IT", salary: 55000, skills: ["HTML", "CSS", "Node.js"] },
+  { id: 4, name: "Karan", department: "Finance", salary: 45000, skills: ["Excel", "Accounting"] }
 ];
 
-const newSkill = (id, skill) => {
-  const selectId = users.findIndex(item => item.id == id)
-  if (users[selectId] !== undefined ){
-  users[selectId].skills.push(skill)
-  return {users, message: "Skill added successfully"}
-  } else{
-    return {message: "User not found!"}
-  }
-}
+// function giveBonus(department, bonusAmount) {
+//   let givenDepartmentEmployees = employees.filter(e => e.department == department)
+//   let bonusAdded = givenDepartmentEmployees.map(e => {
+//     return {
+//       ...e,
+//       salary: e.salary + bonusAmount ,
+//       bonus: bonusAmount
+//     }
+//   })
 
-console.log(newSkill(2, "C++"));
+//   let otherDepartEmployees = employees.filter(e => e.department != department)
+//   employees = [...otherDepartEmployees, ...bonusAdded]
+//   return employees
 
-const removeSkill = (id, skill) => {
-   const selectId = users.findIndex(item => item.id == id)
-  if (users[selectId] !== undefined ){
-  const filteredSkill = users[selectId].skills.filter(s => s !== skill)
-    users[selectId]["skills"] = filteredSkill
-  return {users, message: "Skill removed successfully"}
-  } else{
-    return {message: "User not found!"}
-  }
-}
+// }
 
-const returnAllUsers = (skill) => {
-  const selectUser = users.filter(user => user.skills.includes(skill))
-  console.log(selectUser)
+
+
+const giveBonus = (department, bonusAmount) => {
+  const updatedEmployeeNames = employees.map(employee => {
+    if (employee.department === department){
+      return {
+        ...employee,
+        bonus: bonusAmount,
+        salary: employee.salary + bonusAmount
+      };
+    }else{
+      return {...employee, bonus: 0};
+    }
+    });
+    // employees = updatedEmployeeNames
+ return updatedEmployeeNames
 }
-returnAllUsers("JavaScript")
+console.log(giveBonus("IT", 6790));
