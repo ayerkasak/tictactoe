@@ -850,22 +850,51 @@
 // Keep all other data (skills, salary, etc.) the same
 // Return the updated employees array
 
+// let employees = [
+//   { id: 1, name: "Aarav", department: "IT", skills: ["JavaScript", "React"] },
+//   { id: 2, name: "Riya", department: "HR", skills: ["Recruitment"] },
+//   { id: 3, name: "Neha", department: "IT", skills: ["HTML", "CSS"] }
+// ];
+
+// function transferEmployee(id, newDepartment){
+//   const selectEmployeeId = employees.filter(employee => employee.id == id);
+//   const updateDepartmentOfEmployee = selectEmployeeId.map(employee =>{
+//     return{
+//       ...employee,
+//       department: newDepartment
+//     }
+//   })
+//   const oldDepartmentEmployee = employees.filter(employee => employee.id !== id)
+//   employees = [...oldDepartmentEmployee, ...updateDepartmentOfEmployee]
+//   return employees
+// }
+// console.log(transferEmployee(2, "Finance"));
+
+// Question 9 (CRUD + Array + Object — Medium Level)
+// Give a promotion (salary increase) to all employees who have more than 3 years of experience.
+// Increase the salary by 15% only for those employees.
+// Example Expected Output:
+// Riya should get the increment because she has 5 years
+// Aarav should NOT
+// Neha should NOT
+// Return the updated employees array.
+
 let employees = [
-  { id: 1, name: "Aarav", department: "IT", skills: ["JavaScript", "React"] },
-  { id: 2, name: "Riya", department: "HR", skills: ["Recruitment"] },
-  { id: 3, name: "Neha", department: "IT", skills: ["HTML", "CSS"] }
+  { id: 1, name: "Aarav", department: "IT", salary: 50000, experience: 2 },
+  { id: 2, name: "Riya", department: "HR", salary: 40000, experience: 5 },
+  { id: 3, name: "Neha", department: "IT", salary: 55000, experience: 3 }
 ];
 
-function transferEmployee(id, newDepartment){
-  const selectEmployeeId = employees.filter(employee => employee.id == id);
-  const updateDepartmentOfEmployee = selectEmployeeId.map(employee =>{
+function promotion(experience){
+  const selectEmployeeWithMaxExperience = employees.filter(employee => employee.experience > experience);
+  const promotedEmployees = selectEmployeeWithMaxExperience.map(employee =>{
     return{
       ...employee,
-      department: newDepartment
+      salary: employee.salary + employee.salary * 0.15
     }
   })
-  const oldDepartmentEmployee = employees.filter(employee => employee.id !== id)
-  employees = [...oldDepartmentEmployee, ...updateDepartmentOfEmployee]
+  const unpromotedEmployees = employees.filter(employee => employee.experience <= experience);
+  employees = [...unpromotedEmployees, ...promotedEmployees]
   return employees
 }
-console.log(transferEmployee(2, "Finance"));
+console.log(promotion(3));
