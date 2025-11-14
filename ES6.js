@@ -879,22 +879,50 @@
 // Neha should NOT
 // Return the updated employees array.
 
+// let employees = [
+//   { id: 1, name: "Aarav", department: "IT", salary: 50000, experience: 2 },
+//   { id: 2, name: "Riya", department: "HR", salary: 40000, experience: 5 },
+//   { id: 3, name: "Neha", department: "IT", salary: 55000, experience: 3 }
+// ];
+
+// function promotion(experience){
+//   const selectEmployeeWithMaxExperience = employees.filter(employee => employee.experience > experience);
+//   const promotedEmployees = selectEmployeeWithMaxExperience.map(employee =>{
+//     return{
+//       ...employee,
+//       salary: employee.salary + employee.salary * 0.15
+//     }
+//   })
+//   const unpromotedEmployees = employees.filter(employee => employee.experience <= experience);
+//   employees = [...unpromotedEmployees, ...promotedEmployees]
+//   return employees
+// }
+// console.log(promotion(3));
+
+// Question 10 — Increase Training Credits for a Department
+// TASK - Write a function: increaseTrainingCredits(department, creditsToAdd) that:
+// Finds all employees in the given department
+// Increases their trainingCredits by the given number
+// Returns the updated employees array
+// (Important) Do NOT directly modify the original employee object. Use immutable updates.
+
 let employees = [
-  { id: 1, name: "Aarav", department: "IT", salary: 50000, experience: 2 },
-  { id: 2, name: "Riya", department: "HR", salary: 40000, experience: 5 },
-  { id: 3, name: "Neha", department: "IT", salary: 55000, experience: 3 }
+  { id: 1, name: "Aarav", department: "IT", salary: 50000, trainingCredits: 2 },
+  { id: 2, name: "Riya", department: "HR", salary: 40000, trainingCredits: 1 },
+  { id: 3, name: "Neha", department: "IT", salary: 55000, trainingCredits: 3 },
+  { id: 4, name: "Karan", department: "Finance", salary: 45000, trainingCredits: 0 }
 ];
 
-function promotion(experience){
-  const selectEmployeeWithMaxExperience = employees.filter(employee => employee.experience > experience);
-  const promotedEmployees = selectEmployeeWithMaxExperience.map(employee =>{
+function increaseTrainingCredits(department, creditsToAdd){
+  const selectedEmployeesForAddingCredit = employees.filter(emp => emp.department == department);
+  const employeesWithAddedTrainingCredits = selectedEmployeesForAddingCredit.map(employee =>{
     return{
       ...employee,
-      salary: employee.salary + employee.salary * 0.15
+      trainingCredits: employee.trainingCredits + creditsToAdd
     }
   })
-  const unpromotedEmployees = employees.filter(employee => employee.experience <= experience);
-  employees = [...unpromotedEmployees, ...promotedEmployees]
+  const employeesWithSameTrainingCredit = employees.filter(employee => employee.department !== department);
+  employees = [...employeesWithSameTrainingCredit, ...employeesWithAddedTrainingCredits]
   return employees
 }
-console.log(promotion(3));
+console.log(increaseTrainingCredits("IT", 2));
