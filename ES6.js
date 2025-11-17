@@ -886,18 +886,27 @@
 // ];
 
 // function promotion(experience){
-//   const selectEmployeeWithMaxExperience = employees.filter(employee => employee.experience > experience);
-//   const promotedEmployees = selectEmployeeWithMaxExperience.map(employee =>{
+//   // const selectEmployeeWithMaxExperience = employees.filter(employee => employee.experience > experience);
+//   const promotedEmployees = employees.map(employee =>{
+//     if(employee.experience > experience){
 //     return{
 //       ...employee,
 //       salary: employee.salary + employee.salary * 0.15
 //     }
-//   })
-//   const unpromotedEmployees = employees.filter(employee => employee.experience <= experience);
-//   employees = [...unpromotedEmployees, ...promotedEmployees]
-//   return employees
+//   } else{
+//     return{
+//       ...employee
+//     } 
+//   }
+// })
+// employees = [...promotedEmployees]
+  // const unpromotedEmployees = employees.filter(employee => employee.experience <= experience);
+  // employees = [...unpromotedEmployees, ...promotedEmployees]
+//   return promotedEmployees
 // }
 // console.log(promotion(3));
+// const updatedEmployeees = promotion(3)
+// employees = [...updatedEmployeees]
 
 // Question 10 — Increase Training Credits for a Department
 // TASK - Write a function: increaseTrainingCredits(department, creditsToAdd) that:
@@ -906,23 +915,57 @@
 // Returns the updated employees array
 // (Important) Do NOT directly modify the original employee object. Use immutable updates.
 
+// let employees = [
+//   { id: 1, name: "Aarav", department: "IT", salary: 50000, trainingCredits: 2 },
+//   { id: 2, name: "Riya", department: "HR", salary: 40000, trainingCredits: 1 },
+//   { id: 3, name: "Neha", department: "IT", salary: 55000, trainingCredits: 3 },
+//   { id: 4, name: "Karan", department: "Finance", salary: 45000, trainingCredits: 0 }
+// ];
+
+// function increaseTrainingCredits(department, creditsToAdd){
+//   const selectedEmployeesForAddingCredit = employees.filter(emp => emp.department == department);
+//   const employeesWithAddedTrainingCredits = selectedEmployeesForAddingCredit.map(employee =>{
+//     return{
+//       ...employee,
+//       trainingCredits: employee.trainingCredits + creditsToAdd
+//     }
+//   })
+//   const employeesWithSameTrainingCredit = employees.filter(employee => employee.department !== department);
+//   employees = [...employeesWithSameTrainingCredit, ...employeesWithAddedTrainingCredits]
+//   return employees
+// }
+// console.log(increaseTrainingCredits("IT", 2));
+
+// Question 11 – Add a New Project to an Employee
+// TASK - Write a function: addProject(id, newProject) that:
+// Finds the employee with the matching id
+// Adds the newProject to their projects array
+// Returns the updated employees array
+// Uses map + spread operator
+// Does NOT mutate the original employee object
+
 let employees = [
-  { id: 1, name: "Aarav", department: "IT", salary: 50000, trainingCredits: 2 },
-  { id: 2, name: "Riya", department: "HR", salary: 40000, trainingCredits: 1 },
-  { id: 3, name: "Neha", department: "IT", salary: 55000, trainingCredits: 3 },
-  { id: 4, name: "Karan", department: "Finance", salary: 45000, trainingCredits: 0 }
+  { id: 1, name: "Aarav", department: "IT", projects: ["Inventory System", "AI Chatbot"] },
+  { id: 2, name: "Riya", department: "HR", projects: ["Recruitment Portal"] },
+  { id: 3, name: "Neha", department: "IT", projects: ["Billing Software"] }
 ];
 
-function increaseTrainingCredits(department, creditsToAdd){
-  const selectedEmployeesForAddingCredit = employees.filter(emp => emp.department == department);
-  const employeesWithAddedTrainingCredits = selectedEmployeesForAddingCredit.map(employee =>{
-    return{
-      ...employee,
-      trainingCredits: employee.trainingCredits + creditsToAdd
+function addProject(id, newProject){
+  const updateProject = employees.map(employee => {
+    if(employee.id == id){
+      return {
+        ...employee,
+        projects: [...employee.projects, newProject]
+      } 
+   }
+   else{
+    return {
+      ...employee
     }
+   }
   })
-  const employeesWithSameTrainingCredit = employees.filter(employee => employee.department !== department);
-  employees = [...employeesWithSameTrainingCredit, ...employeesWithAddedTrainingCredits]
+  employees = updateProject
   return employees
 }
-console.log(increaseTrainingCredits("IT", 2));
+
+console.log(addProject(2,"School Management System"));
