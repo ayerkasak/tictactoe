@@ -6,5 +6,7 @@ msg.style.color = "red";
 msg.style.fontSize = "30px";
 msg.style.backgroundColor = "yellow";
 
+document.getElementById("myImage").src = "tree.jpg"
+
 console.log(head);
 console.log(button);
