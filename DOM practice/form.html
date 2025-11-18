@@ -3,21 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form</title>
+     <link rel="stylesheet" href="style.css">
+     
+
+
 </head>
 <body>
-    <form>
-        <input type="text" placeholder="FirstName" > FirstName
-        <input type="text" placeholder="LastName" > LastName
-        <input type="email" placeholder="Your email"> email
-        <input type="password" placeholder="password"> password
-        <input type="radio" name="gender" value="male"> Male
-        <input type="radio" name="gender" value="female"> Female
-
-        
-
-
+    <div id="pageHeading">     
+        <h1> Sign Up Page</h1>
+    </div>
+   <div id="myForm"> 
+        <form id="signupForm" action="#" method="POST">
+            <label>FirstName:</label> <input type="text" id ="firstName" required> <br> <br>
+            <label>LastName:</label> <input type="text" id ="lastName" required> <br> <br>
+            <label>Email:</label><input type="email" id ="email" required> <br> <br>
+            <label>Password</label><input type="password" id ="password" required> <br> <br>
+            <label>gender:</label>
+            <br>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+            <br> <br>
+            <button  type="submit">submit</button>
     </form>
-    
+   </div>
+   <div id="tableContainer"> </div>
+    <script src="script.js"></script>
 </body>
 </html>
