@@ -944,28 +944,62 @@
 // Uses map + spread operator
 // Does NOT mutate the original employee object
 
+// let employees = [
+//   { id: 1, name: "Aarav", department: "IT", projects: ["Inventory System", "AI Chatbot"] },
+//   { id: 2, name: "Riya", department: "HR", projects: ["Recruitment Portal"] },
+//   { id: 3, name: "Neha", department: "IT", projects: ["Billing Software"] }
+// ];
+
+// function addProject(id, newProject){
+//   const updateProject = employees.map(employee => {
+//     if(employee.id == id){
+//       return {
+//         ...employee,
+//         projects: [...employee.projects, newProject]
+//       } 
+//    }
+//    else{
+//     return {
+//       ...employee
+//     }
+//    }
+//   })
+//   employees = updateProject
+//   return employees
+// }
+
+// console.log(addProject(2,"School Management System"));
+
+// Question 12: Update Employee Department & Add a Transfer Record
+// You have the same employees array. Write a function:
+// transferEmployee(id, newDepartment)
+// What the function should do:
+// Find the employee with the given id
+// Update their department to the new department
+// Add a record inside a new array field called transferHistory
+
 let employees = [
   { id: 1, name: "Aarav", department: "IT", projects: ["Inventory System", "AI Chatbot"] },
   { id: 2, name: "Riya", department: "HR", projects: ["Recruitment Portal"] },
   { id: 3, name: "Neha", department: "IT", projects: ["Billing Software"] }
 ];
 
-function addProject(id, newProject){
-  const updateProject = employees.map(employee => {
+function transferEmployee(id, newDepartment){
+  const updateNewDepartment = employees.map(employee => {
     if(employee.id == id){
-      return {
+      return{
         ...employee,
-        projects: [...employee.projects, newProject]
-      } 
-   }
-   else{
-    return {
-      ...employee
+        department: newDepartment
+      }
+    } else{
+      return{
+        ...employee
+      }
     }
-   }
+ 
   })
-  employees = updateProject
-  return employees
-}
+    employees = updateNewDepartment
+    return employees
 
-console.log(addProject(2,"School Management System"));
+}
+console.log(transferEmployee(2, "Finance"))
