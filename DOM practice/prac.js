@@ -92,9 +92,22 @@
 // console.log(totalEvenNumbers);
 
 // Q3: Convert an array of strings into one long sentence using reduce.
-const words = ["JavaScript", "reduce", "is", "powerful"];
+// const words = ["JavaScript", "reduce", "is", "powerful"];
 
-const sentence = words.reduce((acc, curr) => {
-    return acc + " " +curr;
-});
-console.log(sentence)
+// const sentence = words.reduce((acc, curr) => {
+//     return acc + " " +curr;
+// });
+// console.log(sentence)
+
+// You are given an array of objects representing students and their marks. Using reduce, calculate the total marks of all students.
+const students = [
+  { name: "Aarav", marks: 85 },
+  { name: "Riya", marks: 92 },
+  { name: "Karan", marks: 78 },
+  { name: "Asha", marks: 88 }
+];
+const sumOfMarks = students.reduce((acc, curr) => {
+    return acc + curr.marks
+},0);
+
+console.log(sumOfMarks);
