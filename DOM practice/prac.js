@@ -82,11 +82,19 @@
 
 // Given an array, use .reduce() to count how many even numbers are in the array.
 
-const arr = [2, 5, 8, 11, 14, 3];
-const totalEvenNumbers = arr.reduce((acc, curr) =>{
-    if(curr % 2 == 0){
-        return acc + 1
-    }
-    return acc
-}, 0);
-console.log(totalEvenNumbers);
+// const arr = [2, 5, 8, 11, 14, 3];
+// const totalEvenNumbers = arr.reduce((acc, curr) =>{
+//     if(curr % 2 == 0){
+//         return acc + 1
+//     }
+//     return acc
+// }, 0);
+// console.log(totalEvenNumbers);
+
+// Q3: Convert an array of strings into one long sentence using reduce.
+const words = ["JavaScript", "reduce", "is", "powerful"];
+
+const sentence = words.reduce((acc, curr) => {
+    return acc + " " +curr;
+});
+console.log(sentence)
