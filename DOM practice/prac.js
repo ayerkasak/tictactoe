@@ -73,9 +73,20 @@
 // console.log(maxNumber);
 
 // Given an array of numbers, use .reduce() to find the product of all numbers.
-const nums = [2, 3, 4];
+// const nums = [2, 3, 4];
 
-const product = nums.reduce((acc, curr) =>{
-    return acc * curr
-}, 1);
-console.log(product);
+// const product = nums.reduce((acc, curr) =>{
+//     return acc * curr
+// }, 1);
+// console.log(product);
+
+// Given an array, use .reduce() to count how many even numbers are in the array.
+
+const arr = [2, 5, 8, 11, 14, 3];
+const totalEvenNumbers = arr.reduce((acc, curr) =>{
+    if(curr % 2 == 0){
+        return acc + 1
+    }
+    return acc
+}, 0);
+console.log(totalEvenNumbers);
