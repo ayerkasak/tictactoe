@@ -56,9 +56,18 @@
 
 // Question 1 — Beginner Level - Given an array of numbers, use reduce() to find the sum of all numbers in the array.
 
-const numbers = [3, 7, 2, 9, 5];
-const sumOfNumbers = numbers.reduce((acc, curr) => {
-    return acc + curr
-}, 0)
+// const numbers = [3, 7, 2, 9, 5];
+// const sumOfNumbers = numbers.reduce((acc, curr) => {
+//     return acc + curr
+// }, 0)
 
-console.log(sumOfNumbers);
+// console.log(sumOfNumbers);
+
+// Question 2: Use reduce() to find the maximum number in the array.
+const nums = [12, 5, 40, 22, 9];
+
+const maxNumber = nums.reduce((acc, curr) => {
+    return acc > curr ? acc : curr;
+});
+
+console.log(maxNumber);
