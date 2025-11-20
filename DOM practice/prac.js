@@ -64,10 +64,18 @@
 // console.log(sumOfNumbers);
 
 // Question 2: Use reduce() to find the maximum number in the array.
-const nums = [12, 5, 40, 22, 9];
+// const nums = [12, 5, 40, 22, 9];
 
-const maxNumber = nums.reduce((acc, curr) => {
-    return acc > curr ? acc : curr;
-});
+// const maxNumber = nums.reduce((acc, curr) => {
+//     return acc > curr ? acc : curr;
+// });
 
-console.log(maxNumber);
+// console.log(maxNumber);
+
+// Given an array of numbers, use .reduce() to find the product of all numbers.
+const nums = [2, 3, 4];
+
+const product = nums.reduce((acc, curr) =>{
+    return acc * curr
+}, 1);
+console.log(product);
