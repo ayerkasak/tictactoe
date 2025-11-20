@@ -20,22 +20,30 @@ const parents = [
       
     ]}
 ]
-function totalNumberOfChild(){
-    let totalChildren = 0;
-    for(let i = 0; i < parents.length; i++){
-       if (parents[i].children){
-        // totalChildren = totalChildren + parents[i].children.length
-        totalChildren += parents[i].children.length
-       }
+// function totalNumberOfChild(){
+//     let totalChildren = 0;
+//     for(let i = 0; i < parents.length; i++){
+
+//        if (parents[i].children){
+
+//         // totalChildren = totalChildren + parents[i].children.length
+//         totalChildren += parents[i].children.length
+//        }
 
 
 
         
         
-    }
-    return totalChildren;
-}
-console.log(totalNumberOfChild());
+//     }
+//     return totalChildren;
+// }
+// console.log(totalNumberOfChild());
+
+const totalChildren = parents.reduce((acc, curr) =>{
+    return acc + curr.children.length
+    
+},0);
+console.log(totalChildren);
 
 
 // yeuta function create garne that returns the total number of child inside the array
