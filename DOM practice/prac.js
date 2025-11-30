@@ -100,14 +100,83 @@
 // console.log(sentence)
 
 // You are given an array of objects representing students and their marks. Using reduce, calculate the total marks of all students.
-const students = [
-  { name: "Aarav", marks: 85 },
-  { name: "Riya", marks: 92 },
-  { name: "Karan", marks: 78 },
-  { name: "Asha", marks: 88 }
-];
-const sumOfMarks = students.reduce((acc, curr) => {
-    return acc + curr.marks
-},0);
+// const students = [
 
-console.log(sumOfMarks);
+// Task: Use reduce to create an object that counts how many times each word appears.
+// const words = ["apple", "banana", "apple", "orange", "banana", "apple"];
+// const wordsCount = {};
+// for(let i = 0; i < words.length; i++){
+//   if(wordsCount[words[i]]){
+//     wordsCount[words[i]] += 1
+//   } else {
+//     wordsCount[words[i]] = 1
+//   }
+// }
+
+// console.log(wordsCount);
+
+// const wordsRepeated = words.reduce((acc, curr) => {
+//   if(acc[curr]){
+//     acc[curr] += 1
+
+//   } else {
+//     acc[curr] = 1
+
+//   }
+//   return acc;
+
+//   if(acc[curr]){
+//     acc[curr] += 1
+//   return acc;
+
+//   } 
+// acc[curr] = 1
+//   return acc;
+// },{})
+// const arr = [1,5,[2,6,7,8,[3,4, ["a", "b", "c"]]]]
+// // const secondLayer = arr[1]
+// // const thirdLayer = secondLayer[1]
+
+// // console.log(thirdLayer[1])
+// console.log(arr[2][4][2][2])
+
+
+// const msg = "I love you";
+// const vowelsArr = ["a", "e", "i", "o", "u"];
+// let totalNumberOfVowels = 0;
+// for(let i = 0; i < msg.length; i++){
+//   console.log(msg[i]);
+//  if(vowelsArr.includes(msg[i].toLowerCase())){
+//    totalNumberOfVowels += 1
+//  } 
+//   // return vowels 
+//   // console.log(msg[i].toLowerCase())
+// }
+// console.log({totalNumberOfVowels})
+
+// const myString = "Every green bus drives fast.";
+
+// Using length property and charAt() method
+// console.log(myString.length)
+// const lengthWay = myString.charAt(myString.length - 2);
+// console.log(lengthWay); // 't'
+
+
+
+const matrix = [
+  [1,2],
+  [3,4],
+  [7,8]
+]
+
+for(let i =0; i<matrix.length; i++){
+  for(let j = 0; j<matrix[i].length; j++){
+    console.log(matrix[i][j])
+    
+  }
+}
+for (let i = 0; i < matrix.length; i++) { // Iterate through rows
+  for (let j = 0; j < matrix[i].length; j++) { // Iterate through columns
+    console.log(matrix[i][j]);
+  }
+}
