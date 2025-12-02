@@ -163,20 +163,27 @@
 
 
 
-const matrix = [
-  [1,2],
-  [3,4],
-  [7,8]
-]
+// const matrix = [
+//   [1,2],
+//   [3,4],
+//   [7,8]
+// ]
 
-for(let i =0; i<matrix.length; i++){
-  for(let j = 0; j<matrix[i].length; j++){
-    console.log(matrix[i][j])
+// for(let i =0; i<matrix.length; i++){
+//   for(let j = 0; j<matrix[i].length; j++){
+//     console.log(matrix[i][j])
     
-  }
+//   }
+// }
+// for (let i = 0; i < matrix.length; i++) { // Iterate through rows
+//   for (let j = 0; j < matrix[i].length; j++) { // Iterate through columns
+//     console.log(matrix[i][j]);
+//   }
+// }
+
+const msg ="Aanad, why do you use I love you as string nowadays?";
+function countWords(sentence){
+const msgArray = sentence.split(' ');
+return (`the total number of words are ${msgArray.length}`)
 }
-for (let i = 0; i < matrix.length; i++) { // Iterate through rows
-  for (let j = 0; j < matrix[i].length; j++) { // Iterate through columns
-    console.log(matrix[i][j]);
-  }
-}
+console.log(countWords(msg));
