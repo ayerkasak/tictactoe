@@ -35,17 +35,32 @@
 //     alert("Button was clicked.");
 // }); 
 
+// const p = document.getElementById("myPara");
+// const changeBtn = document.getElementById("changeBtn");
+// const removeBtn = document.getElementById("removeBtn");
+
+// changeBtn.addEventListener('click', function(){
+//     p.style.color = "red";
+// p.style.fontSize = "20px"
+
+// });
+
+// removeBtn.addEventListener('click', function(){
+//     // p.style.removeProperty("color");
+//     p.removeAttribute("style");
+// })
+
+
 const p = document.getElementById("myPara");
-const changeBtn = document.getElementById("changeBtn");
-const removeBtn = document.getElementById("removeBtn");
+const div = document.createElement('div');
+// div.id = "container";
+const btn = document.createElement('button');
+btn.textContent = "Click";
+div.style.color
+p.appendChild(div);
+div.appendChild(btn)
+// console.log(p.appendChild(div))
+btn.addEventListener('click', function(){
+    p.style.border = "3px solid black"
 
-changeBtn.addEventListener('click', function(){
-    p.style.color = "red";
-p.style.fontSize = "20px"
-
-});
-
-removeBtn.addEventListener('click', function(){
-    // p.style.removeProperty("color");
-    p.removeAttribute("style");
 })
