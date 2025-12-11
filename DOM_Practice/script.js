@@ -25,10 +25,38 @@
 // });
 
 
-let heading = document.getElementById("title");
-// console.log(heading);
-heading.innerText = "I Love You Baby";
+// let heading = document.getElementById("title");
+// document.getElementById("btn").addEventListener('click', function(){
+// heading.innerText = "I Love You Baby";
+    
+//     alert("Button Clicked!");
+// });
 
-document.getElementById("btn").addEventListener('click', function(){
-    alert("Button Clicked!");
+
+const username = document.getElementById("name");
+const useremail = document.getElementById("email");
+const userphnNum = document.getElementById("phoneNo");
+const useraddress = document.getElementById("address");
+const userpassword = document.getElementById("password");
+const button = document.getElementById("btn");
+
+const output = document.getElementById("output");
+button.addEventListener('click', function(){
+
+    const userDetails = {
+        name: username.value,
+        email: useremail.value,
+        phoneNo: userphnNum.value,
+        address: useraddress.value,
+        password: userpassword.value
+    };
+
+    output.textContent = JSON.stringify(userDetails, null, 2);
+
+    username.value = "";
+    useremail.value ="";
+    userphnNum.value = "";
+    useraddress = "";
+    userpassword = "";
+
 });
