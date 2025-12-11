@@ -5,22 +5,32 @@
 // p.innerText = "Welcome To DOM Practice."
 // });
 
-const add = document.getElementById("add");
-const addBtn = document.getElementById("addBtn");
-const ul = document.getElementById("list");
+// const add = document.getElementById("add");
+// const addBtn = document.getElementById("addBtn");
+// const ul = document.getElementById("list");
 
-addBtn.addEventListener('click', function(){
-    const inputValue = add.value;
+// addBtn.addEventListener('click', function(){
+//     const inputValue = add.value;
 
-    if(inputValue === ""){
-        alert("Please Enter Something!");
-        return;
-    }
+//     if(inputValue === ""){
+//         alert("Please Enter Something!");
+//         return;
+//     }
     
-    const li = document.createElement("li");
-    li.innerText = inputValue;
+//     const li = document.createElement("li");
+//     li.innerText = inputValue;
 
-    ul.appendChild(li);
+//     ul.appendChild(li);
 
-    add.value = "";
+//     add.value = "";
+// });
+
+const container = document.getElementById("container");
+const btn = document.createElement("button");
+btn.textContent = "Click Me";
+
+container.appendChild(btn);
+
+btn.addEventListener('click', function(){
+    alert("Button was clicked.");
 });
