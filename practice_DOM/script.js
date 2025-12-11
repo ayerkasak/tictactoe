@@ -81,12 +81,27 @@
 //     div.style.border = "3px solid black";  // Add border to div
 // });
 // p.appendChild(btn);
-const p = document.getElementById("myPara");
-const colorBtn = document.createElement('button');
-colorBtn.textContent = "Click to Change Color";
+// const colorBtn = document.createElement('button');
+// colorBtn.textContent = "Click to Change Color";
 
-colorBtn.addEventListener('click', function(){
-    p.style.color = "blue";
+// colorBtn.addEventListener('click', function(){
+//     p.style.color = "blue";
+// })
+
+// document.body.appendChild(colorBtn);
+const p = document.getElementById("myPara");
+const biggerText = document.createElement("button");
+const smallerText = document.createElement("button");
+biggerText.textContent = "Click for Bigger Text";
+smallerText.textContent = "Click for Smaller text"
+
+biggerText.addEventListener('click', function(){
+    p.style.fontSize = "40px";
+});
+
+smallerText.addEventListener('click', function(){
+    p.style.fontSize = "5px";
 })
 
-document.body.appendChild(colorBtn);
+document.body.appendChild(biggerText);
+document.body.appendChild(smallerText);
