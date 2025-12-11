@@ -25,12 +25,27 @@
 //     add.value = "";
 // });
 
-const container = document.getElementById("container");
-const btn = document.createElement("button");
-btn.textContent = "Click Me";
+// const container = document.getElementById("container");
+// const btn = document.createElement("button");
+// btn.textContent = "Click Me";
 
-container.appendChild(btn);
+// container.appendChild(btn);
 
-btn.addEventListener('click', function(){
-    alert("Button was clicked.");
+// btn.addEventListener('click', function(){
+//     alert("Button was clicked.");
+// }); 
+
+const p = document.getElementById("myPara");
+const changeBtn = document.getElementById("changeBtn");
+const removeBtn = document.getElementById("removeBtn");
+
+changeBtn.addEventListener('click', function(){
+    p.style.color = "red";
+p.style.fontSize = "20px"
+
 });
+
+removeBtn.addEventListener('click', function(){
+    // p.style.removeProperty("color");
+    p.removeAttribute("style");
+})
