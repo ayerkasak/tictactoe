@@ -92,16 +92,22 @@
 const p = document.getElementById("myPara");
 const biggerText = document.createElement("button");
 const smallerText = document.createElement("button");
+const resetBtn = document.createElement("button");
 biggerText.textContent = "Click for Bigger Text";
 smallerText.textContent = "Click for Smaller text"
-
+resetBtn.textContent = "Click for Reset"
 biggerText.addEventListener('click', function(){
     p.style.fontSize = "40px";
 });
 
 smallerText.addEventListener('click', function(){
-    p.style.fontSize = "5px";
-})
+    p.style.fontSize = "25px";
+});
+
+resetBtn.addEventListener('click', function(){
+    p.removeAttribute("style");
+});
 
 document.body.appendChild(biggerText);
 document.body.appendChild(smallerText);
+document.body.appendChild(resetBtn);
