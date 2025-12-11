@@ -51,16 +51,42 @@
 // })
 
 
-const p = document.getElementById("myPara");
-const div = document.createElement('div');
-// div.id = "container";
-const btn = document.createElement('button');
-btn.textContent = "Click";
-div.style.color
-p.appendChild(div);
-div.appendChild(btn)
-// console.log(p.appendChild(div))
-btn.addEventListener('click', function(){
-    p.style.border = "3px solid black"
+// const p = document.getElementById("myPara");
+// const div = document.createElement('div');
+// const btn = document.createElement('button');
+// btn.textContent = "Click";
+// // div.style.color
+// p.appendChild(div);
+// div.appendChild(btn)
+// btn.addEventListener('click', function(){
+//     p.style.border = "3px solid black"
 
+// })
+
+// const p = document.getElementById("myPara");
+// const div = document.createElement('div');
+// const btn = document.createElement('button');
+// btn.textContent = "Click";
+
+// div.style.width = "200px";
+// div.style.height = "100px";
+// div.style.background = "lightgray";
+
+// Add the button inside the div
+
+// Add the div to the paragraph (or anywhere)
+// p.appendChild(div);
+
+// btn.addEventListener('click', function(){
+//     div.style.border = "3px solid black";  // Add border to div
+// });
+// p.appendChild(btn);
+const p = document.getElementById("myPara");
+const colorBtn = document.createElement('button');
+colorBtn.textContent = "Click to Change Color";
+
+colorBtn.addEventListener('click', function(){
+    p.style.color = "blue";
 })
+
+document.body.appendChild(colorBtn);
