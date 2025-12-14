@@ -89,25 +89,43 @@
 // })
 
 // document.body.appendChild(colorBtn);
+// const p = document.getElementById("myPara");
+// const biggerText = document.createElement("button");
+// const smallerText = document.createElement("button");
+// const resetBtn = document.createElement("button");
+// biggerText.textContent = "Click for Bigger Text";
+// smallerText.textContent = "Click for Smaller text"
+// resetBtn.textContent = "Click for Reset"
+// biggerText.addEventListener('click', function(){
+//     p.style.fontSize = "40px";
+// });
+
+// smallerText.addEventListener('click', function(){
+//     p.style.fontSize = "25px";
+// });
+
+// resetBtn.addEventListener('click', function(){
+//     p.removeAttribute("style");
+// });
+
+// document.body.appendChild(biggerText);
+// document.body.appendChild(smallerText);
+// document.body.appendChild(resetBtn);
+
+// p.addEventListener('mouseover', function(){
+//     p.style.color = "blue";
+// });
+
+// p.addEventListener('mouseout', function(){
+//     p.style.color = "black";
+// });
 const p = document.getElementById("myPara");
-const biggerText = document.createElement("button");
-const smallerText = document.createElement("button");
-const resetBtn = document.createElement("button");
-biggerText.textContent = "Click for Bigger Text";
-smallerText.textContent = "Click for Smaller text"
-resetBtn.textContent = "Click for Reset"
-biggerText.addEventListener('click', function(){
-    p.style.fontSize = "40px";
-});
+const toggleBtn = document.getElementById("toggleBtn");
 
-smallerText.addEventListener('click', function(){
-    p.style.fontSize = "25px";
-});
-
-resetBtn.addEventListener('click', function(){
-    p.removeAttribute("style");
-});
-
-document.body.appendChild(biggerText);
-document.body.appendChild(smallerText);
-document.body.appendChild(resetBtn);
+toggleBtn.addEventListener('click', function(){
+    if(p.style.backgroundColor === "yellow"){
+        p.style.backgroundColor = "";
+    } else {
+        p.style.backgroundColor = "yellow";
+    }
+})

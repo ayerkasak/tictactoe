@@ -1,4 +1,4 @@
-// const button = document.getElementById("addbtn");
+    // const button = document.getElementById("addbtn");
 // const container = document.getElementById("container");
 
 // button.addEventListener('click', function(){
@@ -13,10 +13,11 @@ const form = document.getElementById("form");
 // const container = document.getElementById("container");
 const tableBody = document.getElementById("tableBody");
 const readBtn =  document.getElementById("readBtn");
-
+// const submitBtn = document.getElementById("submitBtn");
 const users = JSON.parse(localStorage.getItem("users")) || []
 // displayData();
 
+// submitBtn.addEventListener('click', )
 form.addEventListener('submit', function(e){
     e.preventDefault();
 
@@ -30,9 +31,14 @@ form.addEventListener('submit', function(e){
         address: addressValue,
         phoneNum: phnNumValue,
         password: passwordValue
-    };
+    }
 
-    users.push(user);
+    users.push({
+        name: document.getElementById("name").value,
+        address: addressValue,
+        phoneNum: phnNumValue,
+        password: passwordValue
+    });
     localStorage.setItem("users", JSON.stringify(users));
     
     // addRowToTable(user);
