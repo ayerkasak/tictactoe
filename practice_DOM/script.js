@@ -118,14 +118,40 @@
 
 // p.addEventListener('mouseout', function(){
 //     p.style.color = "black";
-// });
-const p = document.getElementById("myPara");
-const toggleBtn = document.getElementById("toggleBtn");
+// // });
+// const p = document.getElementById("myPara");
+// const toggleBtn = document.getElementById("toggleBtn");
 
-toggleBtn.addEventListener('click', function(){
-    if(p.style.backgroundColor === "yellow"){
-        p.style.backgroundColor = "";
-    } else {
-        p.style.backgroundColor = "yellow";
+// toggleBtn.addEventListener('click', function(){
+//     if(p.style.backgroundColor === "yellow"){
+//         p.style.backgroundColor = "";
+//     } else {
+//         p.style.backgroundColor = "yellow";
+//     }
+// })
+
+const addText = document.getElementById("addtext");
+const addBtn = document.getElementById("addBtn")
+const itemsList = document.getElementById("items");
+
+addBtn.addEventListener('click', function(){
+    if(addText.value === ""){
+        alert("Please enter an item!");
+        return;
     }
+    const li = document.createElement('li');
+    li.innerText = addText.value;
+
+    const deleteBtn = document.createElement('button');
+    deleteBtn.innerText = "Delete";
+
+    deleteBtn.addEventListener('click', function(){
+        li.remove();
+    });
+
+    li.appendChild(deleteBtn)
+
+    itemsList.appendChild(li);
+
+    addText.value = "";
 })
