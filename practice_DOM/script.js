@@ -130,28 +130,74 @@
 //     }
 // })
 
-const addText = document.getElementById("addtext");
-const addBtn = document.getElementById("addBtn")
-const itemsList = document.getElementById("items");
+// const addText = document.getElementById("addtext");
+// const addBtn = document.getElementById("addBtn")
+// const itemsList = document.getElementById("items");
+
+// addBtn.addEventListener('click', function(){
+//     if(addText.value === ""){
+//         alert("Please enter an item!");
+//         return;
+//     }
+//     const li = document.createElement('li');
+//     li.innerText = addText.value;
+
+//     const deleteBtn = document.createElement('button');
+//     deleteBtn.innerText = "Delete";
+
+//     deleteBtn.addEventListener('click', function(){
+//         li.remove();
+//     });
+
+//     li.appendChild(deleteBtn)
+
+//     itemsList.appendChild(li);
+
+//     addText.value = "";
+// })
+const todoTask = document.getElementById("addTodo");
+const addBtn = document.getElementById("addBtn");
+const todoList = document.getElementById("todoList");
+
+let todos = JSON.parse(localStorage.getItem("todos")) || [];
+
+window.addEventListener('DOMContentLoaded', displayTodos);
 
 addBtn.addEventListener('click', function(){
-    if(addText.value === ""){
-        alert("Please enter an item!");
+    if(todoTask.value === ""){
+        alert("Please enter a task!");
         return;
     }
-    const li = document.createElement('li');
-    li.innerText = addText.value;
 
-    const deleteBtn = document.createElement('button');
-    deleteBtn.innerText = "Delete";
+    const todo = todoTask.value;
+    
+    todos.push(todo);
+    localStorage.setItem("todos", JSON.stringify(todos));
 
-    deleteBtn.addEventListener('click', function(){
-        li.remove();
+    displayTodos();
+    todoTask.value = "";
+
+});
+
+function displayTodos(){
+    todoList.innerHTML = "";
+
+    todos.forEach((todo, index) => {
+        const li = document.createElement("li");
+        li.innerHTML = todo;
+
+        const deleteBtn = document.createElement("button");
+        deleteBtn.innerText = "Delete";
+
+        deleteBtn.addEventListener('click', function(){
+            todos.splice(index, 1);
+            localStorage.setItem("todos", JSON.stringify(todos));
+            displayTodos();
+        });
+
+        li.appendChild(deleteBtn);
+        todoList.appendChild(li);
+        
+        
     });
-
-    li.appendChild(deleteBtn)
-
-    itemsList.appendChild(li);
-
-    addText.value = "";
-})
+}
