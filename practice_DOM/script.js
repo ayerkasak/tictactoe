@@ -195,7 +195,16 @@ function displayTodos(){
             displayTodos();
         });
 
+        const editBtn = document.createElement("button");
+        editBtn.innerText = "Edit";
+
+        editBtn.addEventListener('click', function(){
+            todoTask.value = todo;
+            console.log(todos[index], todo);
+        })
+
         li.appendChild(deleteBtn);
+        li.appendChild(editBtn);
         todoList.appendChild(li);
         
         
