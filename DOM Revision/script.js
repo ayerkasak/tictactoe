@@ -5,20 +5,31 @@
 //     p.innerText = "DOM is Fun."
 // });
 
-const inputItem = document.getElementById("itemInput");
-const btn = document.getElementById("addBtn");
-const list = document.getElementById("itemList");
+// dom revision q 2
+// const inputItem = document.getElementById("itemInput");
+// const btn = document.getElementById("addBtn");
+// const list = document.getElementById("itemList");
+
+// btn.addEventListener('click', function(){
+//     if(inputItem.value === ""){
+//         alert("Please enter an item.");
+//         return;
+//     }
+//     const li = document.createElement("li");
+//     li.innerText = inputItem.value;
+//     list.appendChild(li);
+//     inputItem.value = "";
+// });
+
+// dom revision q 3
+const p = document.getElementById("p");
+const btn = document.getElementById("btn");
 
 btn.addEventListener('click', function(){
-    if(inputItem.value === ""){
-        alert("Please enter an item.");
-        return;
+    if(p.style.display === "none"){
+        p.style.display = "block";
+    }else{
+        p.style.display = "none";
     }
-    const li = document.createElement("li");
-    li.innerText = inputItem.value;
+});
 
-    list.appendChild(li);
-    
-    inputItem.value = "";
-
-})
