@@ -22,14 +22,23 @@
 // });
 
 // dom revision q 3
+// const p = document.getElementById("p");
+// const btn = document.getElementById("btn");
+
+// btn.addEventListener('click', function(){
+//     if(p.style.display === "none"){
+//         p.style.display = "block";
+//     }else{
+//         p.style.display = "none";
+//     }
+// });
+
+// dom revision q 4
+
 const p = document.getElementById("p");
 const btn = document.getElementById("btn");
 
 btn.addEventListener('click', function(){
-    if(p.style.display === "none"){
-        p.style.display = "block";
-    }else{
-        p.style.display = "none";
-    }
-});
+    p.style.backgroundColor = "yellow";
 
+});
