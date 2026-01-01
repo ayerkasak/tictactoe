@@ -35,10 +35,25 @@
 
 // dom revision q 4
 
+// const p = document.getElementById("p");
+// const btn = document.getElementById("btn");
+
+// btn.addEventListener('click', function(){
+//     p.style.backgroundColor = "yellow";
+
+// });
+
+// dom revision q 5
+
 const p = document.getElementById("p");
 const btn = document.getElementById("btn");
 
 btn.addEventListener('click', function(){
-    p.style.backgroundColor = "yellow";
+    if(p.style.backgroundColor === "yellow"){
+        p.style.backgroundColor = "";
+    } else{
+        p.style.backgroundColor = "yellow";
+
+    }
 
 });
