@@ -45,15 +45,15 @@
 
 // dom revision q 5
 
-const p = document.getElementById("p");
-const btn = document.getElementById("btn");
+// const p = document.getElementById("p");
+// const btn = document.getElementById("btn");
 
-btn.addEventListener('click', function(){
-    if(p.style.backgroundColor === "yellow"){
-        p.style.backgroundColor = "";
-    } else{
-        p.style.backgroundColor = "yellow";
+// btn.addEventListener('click', function(){
+//     if(p.style.backgroundColor === "yellow"){
+//         p.style.backgroundColor = "";
+//     } else{
+//         p.style.backgroundColor = "yellow";
 
-    }
+//     }
 
-});
+// });
