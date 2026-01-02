@@ -57,3 +57,12 @@
 //     }
 
 // });
+
+// DOM revision question 6
+const addText = document.getElementById("addText");
+const p = document.getElementById("p");
+
+addText.addEventListener("input", function(){
+    p.innerText = "Characters:" + addText.value.length;
+
+})
