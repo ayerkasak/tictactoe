@@ -67,28 +67,37 @@
 
 // })
 
-const addText = document.getElementById("addText");
-const btn = document.getElementById("btn");
-const listItem = document.getElementById("listItem");
+// const addText = document.getElementById("addText");
+// const btn = document.getElementById("btn");
+// const listItem = document.getElementById("listItem");
 
-btn.addEventListener('click', function(){
+// btn.addEventListener('click', function(){
 
-    if(addText.value === ""){
-        alert("Please enter text");
-        return;
-    };
+//     if(addText.value === ""){
+//         alert("Please enter text");
+//         return;
+//     };
 
-    const li = document.createElement('li');
-    li.innerText = addText.value;
+//     const li = document.createElement('li');
+//     li.innerText = addText.value;
 
-    const deleteBtn = document.createElement('button');
-    deleteBtn.innerText = "Delete";
-    deleteBtn.addEventListener('click', function(){
-        li.remove();
-    })
+//     const deleteBtn = document.createElement('button');
+//     deleteBtn.innerText = "Delete";
+//     deleteBtn.addEventListener('click', function(){
+//         li.remove();
+//     })
 
-    li.appendChild(deleteBtn);
-    listItem.appendChild(li);
+//     li.appendChild(deleteBtn);
+//     listItem.appendChild(li);
 
-    addText.value ="";
-});
+//     addText.value ="";
+// });"
+
+for(let j = 1; j<= 5; j++){
+    let row = "";
+for(let i = 1; i <= j; i++){
+    // if(i <= j)
+row += "*";
+}
+console.log(row)
+}
