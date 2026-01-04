@@ -93,11 +93,24 @@
 //     addText.value ="";
 // });"
 
-for(let j = 1; j<= 5; j++){
-    let row = "";
-for(let i = 1; i <= j; i++){
-    // if(i <= j)
-row += "*";
+// for(let j = 1; j<= 5; j++){
+//     let row = "";
+// for(let i = 1; i <= j; i++){
+//     // if(i <= j)
+// row += "*";
+// }
+// console.log(row)
+// }
+
+const name = "kasak";
+const l = name.length;
+function checkingPalindrome(a){
+    for(let i = 0; i < l/2; i++){
+        if(a[i] !== a[l - 1 - i]){
+            return "not a palindrome string";
+        }
+    }
+    return "a palindrome string"
 }
-console.log(row)
-}
+
+console.log(checkingPalindrome(name));
