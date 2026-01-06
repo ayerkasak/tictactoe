@@ -41,7 +41,7 @@ footer {
     text-align: center;
 } */
 
-#box1 {
+/* #box1 {
     height: 100px;
     width: 100px;
     background-color: green;
@@ -52,4 +52,15 @@ footer {
     width: 50%;
     margin-left: 10%;
     background-color: yellow ;
+} */
+
+
+/* Position background */
+
+div {
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    border: 2px solid black;
+    display: inline-block;
 }

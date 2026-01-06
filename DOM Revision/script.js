@@ -102,15 +102,23 @@
 // console.log(row)
 // }
 
-const name = "kasak";
-const l = name.length;
+const nam = 1221;
 function checkingPalindrome(a){
-    for(let i = 0; i < l/2; i++){
-        if(a[i] !== a[l - 1 - i]){
-            return "not a palindrome string";
+   let numbString = `${a}`
+   let len = numbString.length
+   
+    for(let i = 0; i < len/2; i++){
+        
+        if(numbString[i] !== numbString[len - 1 - i]){
+            return "not a palindrome number";
         }
     }
-    return "a palindrome string"
+    return "a palindrome number"
 }
 
-console.log(checkingPalindrome(name));
+console.log(checkingPalindrome(nam));
+
+
+// checking a palindrome number
+// const num = 121;
+// let 
