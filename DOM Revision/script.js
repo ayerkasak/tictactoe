@@ -102,23 +102,43 @@
 // console.log(row)
 // }
 
-const nam = 1221;
-function checkingPalindrome(a){
-   let numbString = `${a}`
-   let len = numbString.length
+// const nam = 1221;
+// function checkingPalindrome(a){
+//    let numbString = `${a}`
+//    let len = numbString.length
    
-    for(let i = 0; i < len/2; i++){
+//     for(let i = 0; i < len/2; i++){
         
-        if(numbString[i] !== numbString[len - 1 - i]){
-            return "not a palindrome number";
-        }
-    }
-    return "a palindrome number"
-}
+//         if(numbString[i] !== numbString[len - 1 - i]){
+//             return "not a palindrome number";
+//         }
+//     }
+//     return "a palindrome number"
+// }
 
-console.log(checkingPalindrome(nam));
+// console.log(checkingPalindrome(nam));
 
 
 // checking a palindrome number
 // const num = 121;
 // let 
+
+
+// 2nd star patter
+//      *
+//     **
+//    ***
+//   ****
+//  *****
+
+for(let i = 1; i <= 5; i++){
+    let row = "";
+for(let j = 1; j <= 5; j++){
+    if(j >= 6 - i){
+        row += "*";
+    }else{
+        row += " ";
+    }
+}
+console.log(row)
+}
