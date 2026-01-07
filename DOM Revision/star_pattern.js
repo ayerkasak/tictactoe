@@ -52,14 +52,29 @@
 // **
 // *
 
+// for(let i = 1; i <= 5; i++){
+//     let row = "";
+//     for(j = 1; j <= 5; j++){
+//         if(j <= 6-i){
+//             row += "*";
+//         } else{
+//             row += " ";
+//         }
+//     }
+//     console.log(row);
+// }
+
+//  Fifth Star Pattern
+
 for(let i = 1; i <= 5; i++){
     let row = "";
-    for(j = 1; j <= 5; j++){
-        if(j <= 6-i){
+    for(let j = 1; j <= 9; j++){
+        if(j >= 6 - i && j <= 4 + i){
             row += "*";
-        } else{
+        } else {
             row += " ";
         }
     }
-    console.log(row);
+    console.log(row)
 }
+
