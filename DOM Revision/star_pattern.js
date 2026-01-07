@@ -85,17 +85,35 @@
 
 
 // Sixth Star Pattern
+//     *    
+//    * *   
+//   * * *
+//  * * * *
+// * * * * *
 
+// for(let i = 1; i <= 5; i++){
+//     let row = "";
+//     let k = 1;
+//     for(let j = 1; j <= 9; j++){
+//         if(j >= 6 - i && j <= 4 + i && k){
+//             row += "*";
+//             k = 0;
+//         } else {
+//             row += " ";
+//             k = 1;
+//         }
+//     }
+//     console.log(row); 
+// }
+
+// Sevebth Star Pattern
 for(let i = 1; i <= 5; i++){
-    let row = "";
-    let k = 1;
-    for(let j = 1; j <= 9; j++){
-        if(j >= 6 - i && j <= 4 + i && k){
+    row = "";
+    for (let j = 1; j <= 9; j++){
+        if(j <= 6 - i || j >= 4 + i){
             row += "*";
-            k = 0;
-        } else {
+        } else{
             row += " ";
-            k = 1;
         }
     }
     console.log(row);
