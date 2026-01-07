@@ -107,12 +107,60 @@
 // }
 
 // Sevebth Star Pattern
-for(let i = 1; i <= 5; i++){
-    row = "";
-    for (let j = 1; j <= 9; j++){
-        if(j <= 6 - i || j >= 4 + i){
-            row += "*";
-        } else{
+// *********
+// **** ****
+// ***   ***
+// **     **
+// *       *
+// for(let i = 1; i <= 5; i++){
+//     row = "";
+//     for (let j = 1; j <= 9; j++){
+//         if(j <= 6 - i || j >= 4 + i){
+//             row += "*";
+//         } else{
+//             row += " ";
+//         }
+//     }
+//     console.log(row);
+// }
+
+// Eighth Pattern
+//    1   
+//   121  
+//  12321
+// 1234321
+
+// for(let i = 1; i <= 4; i++){
+//     let k = 1;
+//     let row = "";
+//     for(let j = 1; j <= 7; j++){
+//         if(j >= 5-i && j <= 3 + i){
+//             row += k;
+//             if(j<4){
+//                 k++
+//             } else{
+//                 k--;
+//             }
+//         } else {
+//             row += " ";
+//         }
+//     }
+//     console.log(row);
+// }
+
+let alphabets = "abcdef";
+for(let i = 1; i <= 4; i++){
+    let row = "";
+    let k = 1;
+    for(let j = 1; j <= 7; j++){
+        if(j >= 5-i && j <= 3 + i){
+           row += alphabets[k-1]
+           if(j<4){
+            k++
+           }else{
+            k--;
+           }
+        }else{
             row += " ";
         }
     }
