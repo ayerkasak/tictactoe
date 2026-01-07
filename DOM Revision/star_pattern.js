@@ -148,6 +148,8 @@
 //     console.log(row);
 // }
 
+// Ninth pattern
+
 let alphabets = "abcdef";
 for(let i = 1; i <= 4; i++){
     let row = "";
