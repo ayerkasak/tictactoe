@@ -1,0 +1,33 @@
+.navbar_container{
+    position: fixed;
+    background-color: aqua;
+}
+.navbar{
+    /* height: 20px;
+    width: 100px; */
+    background-color: bisque;
+    border: 2px solid gold;
+    display: flex;
+    justify-content: space-evenly;
+    
+    /* display: inline-block; */
+    /* flex-direction: row;
+    justify-content: flex-start; */
+    /* align-items: ; */
+    
+
+}
+.span{
+    background-color: green;
+    /* display: block; */
+}
+li{
+    /* display: inline-block; */
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+
+}
