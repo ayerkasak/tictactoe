@@ -1,4 +1,4 @@
-div{
+.box{
     height: 80px;
     width: 80px;
     background-color: aqua;
@@ -8,6 +8,7 @@ div{
 
 #box1 {
     position: static;
+    
 }
 
 #box2 {

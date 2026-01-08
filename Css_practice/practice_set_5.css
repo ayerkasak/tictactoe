@@ -1,0 +1,37 @@
+.box{
+    height: 200px;
+    width: 200px;
+    /* border: 2px solid black; */
+    background-image: url("mountain_photo.avif");
+    background-size: cover;
+    position:fixed;
+    top: 50px;
+    right: 0px;
+    color: white;
+     
+    /* display: inline-block; */
+}
+
+
+
+
+
+/* #box1{
+    background-image: url("pandu.avif");
+    background-size: cover;
+}
+
+#box2{
+    background-image: url("hiran.avif");
+    background-size: cover;
+}
+
+#box3{
+    background-image: url("cat_photo.avif");
+    background-size: cover;
+}
+
+#box4{
+    background-image: url("pinky.avif");
+    background-size: cover;
+} */
