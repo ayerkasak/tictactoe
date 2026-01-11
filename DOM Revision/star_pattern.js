@@ -228,22 +228,44 @@
 // } 
 
 // Twelveth Pattern
+// *   
+// **  
+// ***
+// ****
+// ***
+// **
+// *
 
-let k = 0;
-for(let i = 1; i <= 7; i++){
-    row = "";
-    if(i<=4){
-        k++;
-    }else{
-        k--
-    }
-    for(j=1; j<=4; j++){
-        if(j<=k){
+ 
+// let k = 0;
+// for(let i = 1; i <= 7; i++){
+//     row = "";
+//     if(i<=4){
+//         k++;
+//     }else{
+//         k--
+//     }
+//     for(j=1; j<=4; j++){
+//         if(j<=k){
+//             row += "*";
+//         } else{
+//             row += " ";
+//         }
+//     }
+//     console.log(row);
+// }
+    
+
+// 13th star pattern
+
+for(let i = 1; i <= 4; i++){
+    let row = "";
+    for(let j = 1; j <= 7; j++){
+        if(j >= i && j<= 8-i){
             row += "*";
-        } else{
+        }else{
             row += " ";
         }
     }
     console.log(row);
 }
-    
