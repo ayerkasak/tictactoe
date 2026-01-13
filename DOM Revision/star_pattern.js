@@ -326,6 +326,14 @@
 
 
 // Sixteenth star pattern
+// 6543210
+// 543210 
+// 43210
+// 3210
+// 210
+// 10
+// 0
+
 let k = 0;
 for(let i = 1; i <= 9; i++){
     let row = "";

@@ -117,3 +117,32 @@
 // let 
 
 
+// const p = document.getElementById("p");
+// const btn = document.getElementById("btn");
+
+// btn.addEventListener('click', function(){
+//         p.innerText = "I Love You Baby"
+// });
+// mySplitter function
+const sentence = "I Love You";
+const words = sentence.split(" ");
+console.log(words.length);
+
+function mySplit(splitter){
+    let arr = [];
+    let word = "";
+    for(let i = 0; i < sentence.length; i++){
+        if(sentence[i] === splitter){
+            arr.push(word);
+            word = "";
+        }else{
+            word += sentence[i];
+        }
+        if(i == sentence.length - 1){
+            arr.push(word)
+        }
+
+    }
+    return arr;
+}
+console.log(mySplit(" ").length);
