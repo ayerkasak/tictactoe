@@ -124,25 +124,63 @@
 //         p.innerText = "I Love You Baby"
 // });
 // mySplitter function
-const sentence = "I Love You";
-const words = sentence.split(" ");
-console.log(words.length);
+// const sentence = "I Love You";
+// const words = sentence.split(" ");
+// console.log(words.length);
 
-function mySplit(splitter){
-    let arr = [];
-    let word = "";
-    for(let i = 0; i < sentence.length; i++){
-        if(sentence[i] === splitter){
-            arr.push(word);
-            word = "";
-        }else{
-            word += sentence[i];
-        }
-        if(i == sentence.length - 1){
-            arr.push(word)
-        }
+// function mySplit(splitter){
+//     let arr = [];
+//     let word = "";
+//     for(let i = 0; i < sentence.length; i++){
+//         if(sentence[i] === splitter){
+//             arr.push(word);
+//             word = "";
+//         }else{
+//             word += sentence[i];
+//         }
+//         if(i == sentence.length - 1){
+//             arr.push(word)
+//         }
 
-    }
-    return arr;
+//     }
+//     return arr;
+// }
+// console.log(mySplit(" ").length);
+
+
+// function myMap()
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// function mymap(numbers){
+//     let newNumber = [];
+//     for(let i = 0; i < numbers.length ; i++){
+//             newNumber.push(numbers[i] * 10)
+//     }
+//     return newNumber
+// }
+// console.log(mymap(numbers));
+
+
+// function myFilter()
+const listedNum = [10,29,36,71,67,10,]
+function isGreaterThan25(num, index, array){
+    console.log({num, index, array});
+    return num > 25
+
 }
-console.log(mySplit(" ").length);
+
+console.log(listedNum.filter(isGreaterThan25));
+
+
+// function myFilter(fun){
+//     let newNumb = [];
+//     for(let i = 0; i < listedNum.length; i++){
+//         if(fun(listedNum[i], i, listedNum))
+//             newNumb.push(listedNum[i]);
+//     }
+//     return newNumb
+// }
+// console.log(myFilter(isGreaterThan25));
+
+
