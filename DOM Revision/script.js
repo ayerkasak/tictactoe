@@ -163,14 +163,14 @@
 
 
 // function myFilter()
-const listedNum = [10,29,36,71,67,10,]
-function isGreaterThan25(num, index, array){
-    console.log({num, index, array});
-    return num > 25
+// const listedNum = [10,29,36,71,67,10,]
+// function isGreaterThan25(num, index, array){
+//     console.log({num, index, array});
+//     return num > 25
 
-}
+// }
 
-console.log(listedNum.filter(isGreaterThan25));
+// console.log(listedNum.filter(isGreaterThan25));
 
 
 // function myFilter(fun){
@@ -183,4 +183,30 @@ console.log(listedNum.filter(isGreaterThan25));
 // }
 // console.log(myFilter(isGreaterThan25));
 
+// counting occurence
 
+const fruits = ["apple", "banana", "apple", "kiwi", "orange"];
+function countingOccurence(arr){
+    let occurence = {};
+    for(let i = 0; i < arr.length; i++){
+        if(occurence[arr[i]]){
+            occurence[arr[i]] += 1;
+        }else{
+            occurence[arr[i]] = 1;
+        }
+    }
+    return occurence
+}
+console.log(countingOccurence(fruits));
+
+// const words = ["apple", "banana", "apple", "orange", "banana", "apple"];
+// const wordsCount = {};
+// for(let i = 0; i < words.length; i++){
+//   if(wordsCount[words[i]]){
+//     wordsCount[words[i]] += 1
+//   } else {
+//     wordsCount[words[i]] = 1
+//   }
+// }
+
+// console.log(wordsCount);
