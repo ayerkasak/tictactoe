@@ -199,6 +199,8 @@ function countingOccurence(arr){
 }
 console.log(countingOccurence(fruits));
 
+// output: { apple: 2, banana: 1, kiwi: 1, orange: 1 }
+
 // const words = ["apple", "banana", "apple", "orange", "banana", "apple"];
 // const wordsCount = {};
 // for(let i = 0; i < words.length; i++){

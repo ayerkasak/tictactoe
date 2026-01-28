@@ -326,29 +326,57 @@
 
 
 // Sixteenth star pattern
-// 6543210
-// 543210 
-// 43210
-// 3210
-// 210
-// 10
-// 0
+//     1
+//    12
+//   123
+//  1234
+// 12345
+//  1234
+//   123
+//    12
+//     1
 
-let k = 0;
-for(let i = 1; i <= 9; i++){
+// let k = 0;
+// for(let i = 1; i <= 9; i++){
+//     let row = "";
+//     let x = 1; 
+//     if(i<6){
+//         k++;
+//     }else{
+//         k--;
+//     }
+//     for(let j = 1; j <= 5; j++){
+//         if(j >= 6 - k){
+//             row += x;
+//             x++;
+//         }else{
+//             row += " ";
+//         }
+//     }
+//     console.log(row);
+// }
+
+
+// Seventeenth Star Pattern with Slashes
+// \*****/
+// *\***/*
+// **\*/**
+// ***/***
+// **/*\**
+// */***\*
+// /*****\
+
+for(let i = 1; i <= 7; i++){
     let row = "";
-    let x = 1; 
-    if(i<6){
-        k++;
-    }else{
-        k--;
-    }
-    for(let j = 1; j <= 5; j++){
-        if(j >= 6 - k){
-            row += x;
-            x++;
+    for(let j = 1; j <= 7; j++){
+        if(j == i || j == 8 - i){
+            if(j == 8 - i){
+                row += "/";
+            }else{
+                row += "\\";
+            }
         }else{
-            row += " ";
+            row += "*";
         }
     }
     console.log(row);
