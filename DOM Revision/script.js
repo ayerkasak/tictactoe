@@ -185,19 +185,7 @@
 
 // counting occurence
 
-const fruits = ["apple", "banana", "apple", "kiwi", "orange"];
-function countingOccurence(arr){
-    let occurence = {};
-    for(let i = 0; i < arr.length; i++){
-        if(occurence[arr[i]]){
-            occurence[arr[i]] += 1;
-        }else{
-            occurence[arr[i]] = 1;
-        }
-    }
-    return occurence
-}
-console.log(countingOccurence(fruits));
+// const fruits = ["apple", "banana", "apple", "kiwi", "orange"]
 
 // output: { apple: 2, banana: 1, kiwi: 1, orange: 1 }
 
@@ -212,3 +200,41 @@ console.log(countingOccurence(fruits));
 // }
 
 // console.log(wordsCount);
+
+// const strName = ["a", "b", "c"]
+// console.log(strName[0].toUpperCase())
+
+// function convertingToUpperCase(sen){
+//     return sentence.toUpperCase()
+// }
+// console.log(convertingToUpperCase(sentence));
+
+
+// // const arrList = sentence.split(" ");
+// for(let i = 0; i < arrList.length; i++){
+//     let capitalLetter = []
+//     let arrList[0].toUpperCase()
+    
+
+// }
+// let word = "hello";
+// word[0].toUpperCase()
+// console.log(word);
+
+
+
+function capitalize1stLetter(_name){
+    let nameArray = _name.split("")
+    let alpha = nameArray[0].toUpperCase()
+    nameArray[0] = alpha;
+    return nameArray.join("");
+}
+// console.log(capitalize1stLetter("annand"));
+
+let sentence = "hello javascript."
+let words = sentence.split(" ");
+for(let i = 0; i < words.length; i++){
+    // console.log(words[i])
+    words[i] = capitalize1stLetter(words[i])
+}
+console.log(words.join(" "));

@@ -366,18 +366,4 @@
 // */***\*
 // /*****\
 
-for(let i = 1; i <= 7; i++){
-    let row = "";
-    for(let j = 1; j <= 7; j++){
-        if(j == i || j == 8 - i){
-            if(j == 8 - i){
-                row += "/";
-            }else{
-                row += "\\";
-            }
-        }else{
-            row += "*";
-        }
-    }
-    console.log(row);
-}
+for(let i = 1; i <= 7; i++)
