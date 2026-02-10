@@ -7,13 +7,24 @@
 </head>
 <body>
    
-    <input type="text" id="nameInput" placeholder="Enter your name">
+    <!-- <input type="text" id="nameInput" placeholder="Enter your name">
     <button id="saveBtn">Save</button>
 
-    <p id="output"></p>
+    <p id="output"></p> -->
+    <form onsubmit="handleClick()" id="myForm">
+        <input type="text" placeholder="Enter Your Name" id="nameInput">
+        <input type="number" placeholder="Enter Your Age" id="ageInput">
+        <input type="email" placeholder="Enter Your Email" id="emailInput">
+        <br>
+        <input type="submit" id="submitBtn">
+    </form>
+   
+
+    <div id="output"></div>
 
     <!-- <script src="script.js"></script> -->
-     <script src="script01.js"></script>
+    <!-- <script src="script01.js"></script> -->
+    <script src="script02.js"></script>
 
 </body>
 </html>
