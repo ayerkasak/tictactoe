@@ -18,3 +18,5 @@ function armstrongNumber(){
 }
 
 console.log(armstrongNumber());
+
+// Output: [ 1, 153, 370, 371, 407 ]

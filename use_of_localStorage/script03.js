@@ -1,12 +1,13 @@
-
 const phoneNumber = document.getElementById("phoneNumber");
 const btn = document.getElementById("submit");
 const display = document.getElementById("output");
 
 
 function showData(){
+   display.innerHTML = "";
+   
    let phones = localStorage.getItem("phoneNumber");
-console.log({typeof: typeof phones, phones});
+   // console.log({typeof: typeof phones, phones});
    phones = phones === null ? [] : JSON.parse(phones)
    for (let i = 0; i < phones.length; i++) {
     const phone = phones[i];
