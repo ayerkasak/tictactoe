@@ -5,7 +5,7 @@ const display = document.getElementById("output");
 
 function showData(){
    display.innerHTML = "";
-   
+    
    let phones = localStorage.getItem("phoneNumber");
    // console.log({typeof: typeof phones, phones});
    phones = phones === null ? [] : JSON.parse(phones)
