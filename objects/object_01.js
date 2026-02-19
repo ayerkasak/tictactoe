@@ -29,12 +29,34 @@
 // console.log(student);
 
 // Example 3
-let car = {
-    brand:"Mahindra",
-    model:"Thar",
-    year:2025
-}
+// let car = {
+//     brand:"Mahindra",
+//     model:"Thar",
+//     year:2025
+// }
 
-console.log(car.model);
-car.year = 2026;
-console.log(car);
+// console.log(car.model);
+// car.year = 2026;
+// delete car.brand;
+// console.log(car);
+
+// Example 4
+
+// let person = {
+//     name:"Kasak",
+//     age: 29,
+//     hobbies: [
+//         "Reading Novels",
+//         "Travelling",
+//         "Cycling",
+//         "Playing outdoor games"
+//     ]
+// };
+
+// console.log(person.hobbies[1]);
+
+// person.hobbies.push("Listening Music");
+
+// person.age = 16;
+
+// console.log(person);
