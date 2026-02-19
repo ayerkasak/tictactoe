@@ -80,16 +80,33 @@
 
 // Example 6
 
+// let company = {
+//     name: "Techsoft",
+//     employees: [
+//         {name:"Ram", salary: 30000},
+//         {name:"Shyam", salary:35000}
+//     ]
+// };
+
+// console.log(company.employees[0].salary);
+// company.employees[0].salary = company.employees[0].salary + 5000;
+// company.employees.push({name: "Hari", salary:40000});
+
+// console.log(company);
+
+
+// Example 7 
 let company = {
     name: "Techsoft",
     employees: [
         {name:"Ram", salary: 30000},
-        {name:"Shyam", salary:35000}
+        {name:"Shyam", salary:35000},
+        {name: "Hari", salary:40000}
     ]
 };
 
-console.log(company.employees[0].salary);
-company.employees[0].salary = company.employees[0].salary + 5000;
-company.employees.push({name: "Hari", salary:40000});
+for(let i = 0; i < company.employees.length; i++){
+    employee = company.employees[i];
 
-console.log(company);
+    console.log(employee.name + " earns  " + employee.salary);
+}
