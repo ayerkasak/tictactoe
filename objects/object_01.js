@@ -60,3 +60,20 @@
 // person.age = 16;
 
 // console.log(person);
+
+// Example 5
+let student = {
+    name: "Aanand",
+    marks: {
+        math: 87,
+        science: 96,
+        english: 50
+    }
+};
+
+console.log(student.marks.science);
+
+student.marks.math = student.marks.math + 5;
+student.marks.computer = 95;
+
+console.log(student);
