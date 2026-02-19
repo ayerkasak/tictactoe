@@ -62,18 +62,34 @@
 // console.log(person);
 
 // Example 5
-let student = {
-    name: "Aanand",
-    marks: {
-        math: 87,
-        science: 96,
-        english: 50
-    }
+// let student = {
+//     name: "Aanand",
+//     marks: {
+//         math: 87,
+//         science: 96,
+//         english: 50
+//     }
+// };
+
+// console.log(student.marks.science);
+
+// student.marks.math = student.marks.math + 5;
+// student.marks.computer = 95;
+
+// console.log(student);
+
+// Example 6
+
+let company = {
+    name: "Techsoft",
+    employees: [
+        {name:"Ram", salary: 30000},
+        {name:"Shyam", salary:35000}
+    ]
 };
 
-console.log(student.marks.science);
+console.log(company.employees[0].salary);
+company.employees[0].salary = company.employees[0].salary + 5000;
+company.employees.push({name: "Hari", salary:40000});
 
-student.marks.math = student.marks.math + 5;
-student.marks.computer = 95;
-
-console.log(student);
+console.log(company);
