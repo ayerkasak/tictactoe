@@ -96,6 +96,22 @@
 
 
 // Example 7 
+// let company = {
+//     name: "Techsoft",
+//     employees: [
+//         {name:"Ram", salary: 30000},
+//         {name:"Shyam", salary:35000},
+//         {name: "Hari", salary:40000}
+//     ]
+// };
+
+// for(let i = 0; i < company.employees.length; i++){
+//     employee = company.employees[i];
+
+//     console.log(employee.name + " earns  " + employee.salary);
+// }
+
+// Example 8
 let company = {
     name: "Techsoft",
     employees: [
@@ -105,8 +121,10 @@ let company = {
     ]
 };
 
-for(let i = 0; i < company.employees.length; i++){
-    employee = company.employees[i];
 
-    console.log(employee.name + " earns  " + employee.salary);
+for(let i = 0; i < company.employees.length; i++){
+    let employee = company.employees[i];
+    employee.salary += 2000;
+    console.log(`${employee.name}'s salary is ${employee.salary}`);
+
 }
