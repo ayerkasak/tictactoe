@@ -1,8 +1,8 @@
-let cart = [
-    {itemname:"Colgate", description:"kya aapke toothpaste mein namak hai", quantity: 2},
-    {itemname:"Pepsodent ", description:"cavity protection", quantity: 3},
-    {itemname:"Sensodyne", description:"sensitivity se chhutkara", quantity: 1}   
-]
+// let cart = [
+//     {itemname:"Colgate", description:"kya aapke toothpaste mein namak hai", quantity: 2},
+//     {itemname:"Pepsodent ", description:"cavity protection", quantity: 3},
+//     {itemname:"Sensodyne", description:"sensitivity se chhutkara", quantity: 1}   
+// ]
 
 // function addItem(itemName, description, quantity){
 //     cart.push({itemName, description, quantity})
@@ -41,15 +41,38 @@ let cart = [
 // console.log(cart);
 
 
-function optimalUpdateItem(itemName, updates){
-    const itemToBeUpdated = cart.findIndex((item) =>  item.itemname == itemName)
+// function optimalUpdateItem(itemName, updates){
+//     const itemToBeUpdated = cart.findIndex((item) =>  item.itemname == itemName)
     
-    cart[itemToBeUpdated].itemname = updates.itemname;
-    cart[itemToBeUpdated].description = updates.description;
-    cart[itemToBeUpdated].quantity = updates.quantity;
+//     cart[itemToBeUpdated].itemname = updates.itemname;
+//     cart[itemToBeUpdated].description = updates.description;
+//     cart[itemToBeUpdated].quantity = updates.quantity;
 
-    return cart;
+//     return cart;
+// }
+// optimalUpdateItem("Colgate", {itemname:"Closeup", description:"Max Freshness", quantity: 1} );
+
+// console.log(cart);
+
+let cart = [
+    {itemname:"Colgate", description:"kya aapke toothpaste mein namak hai", quantity: 2},
+    {itemname:"Pepsodent ", description:"cavity protection", quantity: 3},
+    {itemname:"Sensodyne", description:"sensitivity se chhutkara", quantity: 1}   
+]
+
+function updatingQunatity(str,itemName, quantity){
+    switch(str){
+        case "inc":
+        const increasingdQuantityIndex = cart.findIndex((item) => item.itemname == itemName)
+        cart[increasingdQuantityIndex].quantity = cart[increasingdQuantityIndex].quantity + quantity;
+        return cart;
+    
+        case "dsc":
+        const decreasingQuantityIndex = cart.findIndex((item) => item.itemname == itemName)
+        cart[decreasingQuantityIndex].quantity = cart[decreasingQuantityIndex].quantity - quantity;
+        return cart;
+    }
 }
-optimalUpdateItem("Colgate", {itemname:"Closeup", description:"Max Freshness", quantity: 1} );
 
+updatingQunatity("dsc", "Colgate", 1);
 console.log(cart);
