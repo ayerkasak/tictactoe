@@ -23,19 +23,37 @@
 // console.log(`Student's Name: ${userStudent.name}, ${userStudent.name}'s Marks: ${userStudent.marks}`);
 
 // Example 3
-let students = localStorage.getItem("students");
-students = students === null ? [] : JSON.parse(students);
+// let students = localStorage.getItem("students");
+// students = students === null ? [] : JSON.parse(students);
 
+
+// let newStudent = {
+//     name: "Hari",
+//     marks: 90
+// };
+
+// students.push(newStudent);
+
+// localStorage.setItem("stuents", JSON.stringify(students));
+
+// for(let student of students){
+//     console.log(`${student.name} scored ${student.marks}`);
+// }
+
+// Example 4
+
+let studentData = localStorage.getItem("students");
+studentData = studentData === null ? [] : JSON.parse(studentData);
 
 let newStudent = {
-    name: "Hari",
-    marks: 90
-};
+    name:"Sita",
+    marks: 88
+}
 
-students.push(newStudent);
+studentData.push(newStudent);
 
-localStorage.setItem("stuents", JSON.stringify(students));
+localStorage.setItem("students", JSON.stringify(studentData));
 
-for(let student of students){
-    console.log(`${student.name} scored ${student.marks}`);
+for(let s of studentData){
+    console.log(`${s.name} scored ${s.marks}.`)
 }
