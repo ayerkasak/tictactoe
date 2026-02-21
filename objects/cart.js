@@ -75,4 +75,4 @@ function updatingQunatity(str,itemName, quantity){
 }
 
 updatingQunatity("dsc", "Colgate", 1);
-console.log(cart);
+console.log(cart); 
