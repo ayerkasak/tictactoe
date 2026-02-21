@@ -42,6 +42,24 @@
 
 // Example 4
 
+// let studentData = localStorage.getItem("students");
+// studentData = studentData === null ? [] : JSON.parse(studentData);
+
+// let newStudent = {
+//     name:"Sita",
+//     marks: 88
+// }
+
+// studentData.push(newStudent);
+
+// localStorage.setItem("students", JSON.stringify(studentData));
+
+// for(let s of studentData){
+//     console.log(`${s.name} scored ${s.marks}.`)
+// }
+
+// Example 5
+
 let studentData = localStorage.getItem("students");
 studentData = studentData === null ? [] : JSON.parse(studentData);
 
@@ -53,6 +71,16 @@ let newStudent = {
 studentData.push(newStudent);
 
 localStorage.setItem("students", JSON.stringify(studentData));
+
+let newStudentdata = JSON.parse(localStorage.getItem("students"));
+
+const indexOfElement = newStudentdata.findIndex((student) => student.name === "Sita")
+
+
+
+localStorage.setItem("students", JSON.stringify(newStudentdata));
+
+
 
 for(let s of studentData){
     console.log(`${s.name} scored ${s.marks}.`)
