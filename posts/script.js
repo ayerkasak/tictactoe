@@ -5,8 +5,24 @@ function getPosts(){
 }
 
 function savePosts(posts){
+    
     localStorage.setItem("posts", JSON.stringify(posts))
 }
+
+function updateData(){
+    const postList = document.getElementById("postList");
+
+    
+}
+
+function deletedata(){
+    const postList = document.getElementById("postList");
+
+    
+
+}
+
+    deletebtn.addEventListener
 
 
 function showData(){
@@ -19,8 +35,16 @@ function showData(){
         const div = document.createElement("div");
         div.textContent = post.title + " - " + post.content;
 
+        const updateBtn = document.createElement("button");
+        updateBtn.textContent = "Update";
+
+        const deletebtn = document.createElement("button");
+        deletebtn.textContent = "Delete";
+
         postList.appendChild(div)
-        
+        postList.appendChild(updateBtn)
+        postList.appendChild(deletebtn);
+       
     });
 }
 
