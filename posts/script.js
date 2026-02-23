@@ -42,8 +42,8 @@ function showData(){
         deletebtn.textContent = "Delete";
 
         postList.appendChild(div)
-        postList.appendChild(updateBtn)
-        postList.appendChild(deletebtn);
+        div.appendChild(updateBtn)
+        div.appendChild(deletebtn);
        
     });
 }
