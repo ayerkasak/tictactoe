@@ -9,21 +9,28 @@ function savePosts(posts){
     localStorage.setItem("posts", JSON.stringify(posts))
 }
 
-function updateData(){
-    const postList = document.getElementById("postList");
+function updateData(index){
 
-    
+    const posts = getPosts();
+
+    document.getElementById("title").value = posts[index].title;
+    document.getElementById("content").value = posts[index].content;
+
+
+        savePosts(posts);
+        showData();
+    }
+
+
+function deleteData(index){
+
+    const posts = getPosts();
+    posts.splice(index, 1);   
+
+    savePosts(posts);
+
+    showData();  
 }
-
-function deletedata(){
-    const postList = document.getElementById("postList");
-
-    
-
-}
-
-    deletebtn.addEventListener
-
 
 function showData(){
     const postList = document.getElementById("postList");
@@ -31,7 +38,7 @@ function showData(){
 
     const posts = getPosts();
 
-    posts.forEach(post => {
+    posts.forEach((post, index) => {
         const div = document.createElement("div");
         div.textContent = post.title + " - " + post.content;
 
@@ -40,6 +47,14 @@ function showData(){
 
         const deletebtn = document.createElement("button");
         deletebtn.textContent = "Delete";
+
+        deletebtn.addEventListener('click', function(){
+            deleteData(index);
+        });
+
+        updateBtn.addEventListener('click', function(){
+            updateData(index)
+        })
 
         postList.appendChild(div)
         div.appendChild(updateBtn)
