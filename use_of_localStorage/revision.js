@@ -88,7 +88,7 @@
 
 
 
-// Example 5
+// Example 6 this is committed as example 5 so committing again
 
 const students = { 
     name:"Kasak", marks: 79,
