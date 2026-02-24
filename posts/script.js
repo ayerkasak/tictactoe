@@ -1,7 +1,7 @@
 
 function getPosts(){
     const dataRecords = localStorage.getItem("posts");
-     return dataRecords ? JSON.parse(dataRecords) : [];
+    return dataRecords ? JSON.parse(dataRecords) : [];
 }
 
 function savePosts(posts){
@@ -12,6 +12,7 @@ function savePosts(posts){
 function updateData(index){
 
     const posts = getPosts();
+
 
     document.getElementById("title").value = posts[index].title;
     document.getElementById("content").value = posts[index].content;

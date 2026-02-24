@@ -130,22 +130,35 @@
 
 // Example 9
 
-let company = {
-    name: "Techsoft",
-    employees: [
-        {name:"Ram", salary: 30000},
-        {name:"Shyam", salary:35000},
-        {name: "Hari", salary:40000}
-    ]
-};
+// let company = {
+//     name: "Techsoft",
+//     employees: [
+//         {name:"Ram", salary: 30000},
+//         {name:"Shyam", salary:35000},
+//         {name: "Hari", salary:40000}
+//     ]
+// };
 
-function totalSalary(){
-    salary = 0;
-    for(let i = 0; i < company.employees.length; i++){
-        let employee = company.employees[i];
-        salary += company.employees[i].salary;
-    }
-    return `Total salary = ${salary}`;
-}
+// function totalSalary(){
+//     salary = 0;
+//     for(let i = 0; i < company.employees.length; i++){
+//         let employee = company.employees[i];
+//         salary += company.employees[i].salary;
+//     }
+//     return `Total salary = ${salary}`;
+// }
 
-console.log(totalSalary());
+// console.log(totalSalary());
+
+// Revision Example 1 Feb-24
+
+const students =   {name: "Ram", marks: 80};
+
+let data = localStorage.getItem("students");
+data = data ? JSON.parse(data): [];
+
+data.push(students)
+
+localStorage.setItem("students", JSON.stringify(data));
+
+console.log(data);
