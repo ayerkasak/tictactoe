@@ -152,13 +152,36 @@
 
 // Revision Example 1 Feb-24
 
-const students =   {name: "Ram", marks: 80};
+// const students =   {name: "Ram", marks: 80};
 
-let data = localStorage.getItem("students");
-data = data ? JSON.parse(data): [];
+// let data = localStorage.getItem("students");
+// data = data ? JSON.parse(data): [];
 
-data.push(students)
+// data.push(students)
 
-localStorage.setItem("students", JSON.stringify(data));
+// localStorage.setItem("students", JSON.stringify(data));
 
-console.log(data);
+// for(s of data){
+//     console.log(`The student's name is ${s.name}`);
+//     console.log(`The marks of the student is ${s.marks}`);
+// }
+
+
+
+// localStorage.clear();
+
+// Revision Example 2 Feb-24
+
+const students = [
+    {name:"Aanand", marks: 80},
+    {name:"Indu", marks: 95},
+    {name:"Ram", marks: 70}
+]
+
+for(let s of students){
+    if(s.marks >= 80){
+        console.log(`${s.name} passed`);
+    }else{
+        console.log(`${s.name} failed`);
+    }
+}
