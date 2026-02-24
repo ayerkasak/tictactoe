@@ -6,6 +6,7 @@
 //     age: 29
 // }
 
+
 // console.log(person.name);
 // console.log(person["age"]);
 
@@ -172,16 +173,37 @@
 
 // Revision Example 2 Feb-24
 
-const students = [
-    {name:"Aanand", marks: 80},
-    {name:"Indu", marks: 95},
-    {name:"Ram", marks: 70}
-]
+// const students = [
+//     {name:"Aanand", marks: 80},
+//     {name:"Indu", marks: 95},
+//     {name:"Ram", marks: 70}
+// ]
 
-for(let s of students){
+// for(let s of students){
+//     if(s.marks >= 80){
+//         console.log(`${s.name} passed`);
+//     }else{
+//         console.log(`${s.name} failed`);
+//     }
+// }
+
+// Revision Example 3 Feb-24
+
+// const students = [
+//     {name:"Aanand", marks: 80},
+//     {name:"Indu", marks: 95},
+//     {name:"Ram", marks: 70}
+// ]
+
+// localStorage.setItem("students", JSON.stringify(students));
+// console.log("Saved successfully");
+
+let studentData = JSON.parse(localStorage.getItem("students"));
+
+for(let s of studentData){
     if(s.marks >= 80){
-        console.log(`${s.name} passed`);
+        console.log(`${s.name} passed`)
     }else{
-        console.log(`${s.name} failed`);
+        console.log(`${s.name} failed`)
     }
 }
