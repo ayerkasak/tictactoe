@@ -212,41 +212,43 @@
 
 // Mini Project Practice
 
-const studentName = document.getElementById("nameInput");
-const studentMarks = document.getElementById("marksInput");
-const  btn = document.getElementById("addBtn");
-const output = document.getElementById("output");
+// const studentName = document.getElementById("nameInput");
+// const studentMarks = document.getElementById("marksInput");
+// const  btn = document.getElementById("addBtn");
+// const output = document.getElementById("output");
 
-let students = localStorage.getItem("students");
-students = students ? JSON.parse(students) : [];
+// let students = localStorage.getItem("students");
+// students = students ? JSON.parse(students) : [];
 
 
-function showData(){
-    output.innerHTML = "";
-    console.log(students)
-    for(let s of students){
-    const div = document.createElement("div");
+// function showData(){
+//     output.innerHTML = "";
+//     console.log(students)
+//     for(let s of students){
+//     const div = document.createElement("div");
     
-    div.textContent = s.name + " - " + s.marks;
-    output.appendChild(div);
-    }
-}
+//     div.textContent = s.name + " - " + s.marks;
+//     output.appendChild(div);
+//     }
+// }
 
-showData();
+// showData();
 
-btn.addEventListener('click', function(){
-    let student ={
-        name: studentName.value,
-        marks: studentMarks.value
-    }
+// btn.addEventListener('click', function(){
+//     let student ={
+//         name: studentName.value,
+//         marks: studentMarks.value
+//     }
 
-    students.push(student);
+//     students.push(student);
 
-    localStorage.setItem("students", JSON.stringify(students))
+//     localStorage.setItem("students", JSON.stringify(students))
 
-    showData();
+//     showData();
 
-    studentName.value = "";
-    studentMarks.value = "";
+//     studentName.value = "";
+//     studentMarks.value = "";
 
-})
+// })
+// localStorage.clear();
+

@@ -3,6 +3,8 @@
 // const btn = document.getElementById("addBtn");
 // const output = document.getElementById("output");
 
+// const { createElement } = require("react");
+
 // let data = localStorage.getItem("name");
 // data = data ? JSON.parse(data) : [];
 
@@ -34,42 +36,126 @@
 //     showData();
 
 
-const city = document.getElementById("cityName");
+// const city = document.getElementById("cityName");
+// const btn = document.getElementById("addBtn");
+// const output = document.getElementById("output");
+
+// let data = localStorage.getItem("city");
+// data = data ? JSON.parse(data) : [];
+
+// function render(){
+//     output.innerHTML = "";
+//     let cityName = JSON.parse(localStorage.getItem("city")) || [];
+
+//     for(let city of cityName){
+//         const p = document.createElement("p");
+//         p.textContent = `City's Name is ${city.city}`
+
+//         output.appendChild(p);
+
+//     }
+// }
+
+// render();
+// btn.addEventListener('click', function(){
+//     if(city.value === ""){
+//         alert("Please Enter the city's name!");
+//         return;
+//     }
+
+//     data.push({city: city.value})
+
+//     localStorage.setItem("city", JSON.stringify(data));
+
+//     render();
+
+//     city.value = "";
+
+
+
+
+// })
+
+
+   
+// const btn = document.getElementById("addBtn");
+// const output = document.getElementById("output");
+
+
+// let data = localStorage.getItem("nameAndage");
+// data = data? JSON.parse(data) : [];
+
+
+// btn.addEventListener('click', function(){
+//     let name = document.getElementById("nameInput").value;
+//     let age = document.getElementById("ageInput").value;
+//     console.log({name, age})
+    
+//     if(name === ""  || age === ""){
+//         alert("Please Enter the data in the related input fields.");
+//         return;     
+//     }
+    
+
+//     data.push({name,age});
+    
+//     localStorage.setItem("nameAndage", JSON.stringify(data));
+
+//     render();
+
+//     nameInput.value = "";
+//     ageInput.value = "";
+// })
+
+// function render(){
+//     output.innerHTML = "";
+    
+//     for(let dataSet of data){
+//         const p = document.createElement("p");
+//         p.textContent = `${dataSet.name}'s age is ${dataSet.age}`;
+//         output.appendChild(p);
+//     };
+// };
+
+// render();
+
+
+const foodInput = document.getElementById("foodInput");
 const btn = document.getElementById("addBtn");
 const output = document.getElementById("output");
 
-let data = localStorage.getItem("city");
-data = data ? JSON.parse(data) : [];
 
-function render(){
-    output.innerHTML = "";
-    let cityName = JSON.parse(localStorage.getItem("city")) || [];
+let foodData = localStorage.getItem("food");
+foodData = foodData? JSON.parse(foodData) : [];
 
-    for(let city of cityName){
-        const p = document.createElement("p");
-        p.textContent = `City's Name is ${city.city}`
+function addFood(){
+    const food = foodInput.value;
 
-        output.appendChild(p);
-
-    }
-}
-
-render();
-btn.addEventListener('click', function(){
-    if(city.value === ""){
-        alert("Please Enter the city's name!");
+    if(food === ""){
+        alert("Please Enter the Food in the Input Field");
         return;
     }
 
-    data.push({city: city.value})
+    foodData.push({food})
 
-    localStorage.setItem("city", JSON.stringify(data));
+    localStorage.setItem("food", JSON.stringify(foodData));
 
     render();
 
-    city.value = "";
+    foodInput.value = "";
 
+}
 
+function render(){
+    output.innerHTML = "";
 
+    for(let fName of foodData){
+        const p = document.createElement("p");
+        p.textContent = `One of the food item is ${fName.food}`;
+        output.appendChild(p)
+    };
+};
 
-})
+render();
+
+btn.addEventListener('click', addFood);
