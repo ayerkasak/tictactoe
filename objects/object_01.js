@@ -198,12 +198,55 @@
 // localStorage.setItem("students", JSON.stringify(students));
 // console.log("Saved successfully");
 
-let studentData = JSON.parse(localStorage.getItem("students"));
+// let studentData = JSON.parse(localStorage.getItem("students"));
 
-for(let s of studentData){
-    if(s.marks >= 80){
-        console.log(`${s.name} passed`)
-    }else{
-        console.log(`${s.name} failed`)
+// for(let s of studentData){
+//     if(s.marks >= 80){
+//         console.log(`${s.name} passed`)
+//     }else{
+//         console.log(`${s.name} failed`)
+//     }
+// }
+
+// console.log(JSON.parse(localStorage.getItem("students")))
+
+// Mini Project Practice
+
+const studentName = document.getElementById("nameInput");
+const studentMarks = document.getElementById("marksInput");
+const  btn = document.getElementById("addBtn");
+const output = document.getElementById("output");
+
+let students = localStorage.getItem("students");
+students = students ? JSON.parse(students) : [];
+
+
+function showData(){
+    output.innerHTML = "";
+    console.log(students)
+    for(let s of students){
+    const div = document.createElement("div");
+    
+    div.textContent = s.name + " - " + s.marks;
+    output.appendChild(div);
     }
 }
+
+showData();
+
+btn.addEventListener('click', function(){
+    let student ={
+        name: studentName.value,
+        marks: studentMarks.value
+    }
+
+    students.push(student);
+
+    localStorage.setItem("students", JSON.stringify(students))
+
+    showData();
+
+    studentName.value = "";
+    studentMarks.value = "";
+
+})
