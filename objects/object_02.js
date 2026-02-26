@@ -170,55 +170,110 @@
 
 // Adding a Delete Button
 
-const task =  document.getElementById("taskName");
-const btn = document.getElementById("addBtn");
+// const task =  document.getElementById("taskName");
+// const btn = document.getElementById("addBtn");
+// const output = document.getElementById("output");
+
+// let taskList = localStorage.getItem("task");
+// taskList = taskList? JSON.parse(taskList) : [];
+
+
+// function render(){
+//     output.innerHTML = "";
+
+//     taskList.forEach((task, index) => {
+//         const li = document.createElement("li");
+//         li.textContent = task;
+
+//         const deleteBtn = document.createElement("button");
+//         deleteBtn.textContent = "Delete";
+
+//         deleteBtn.addEventListener("click", function(){
+//         taskList.splice(index, 1);
+//         localStorage.setItem("task", JSON.stringify(taskList));
+//         render();
+//         });
+
+//         output.appendChild(li);
+//         li.appendChild(deleteBtn);
+//     })
+
+// }
+// render();
+
+// function addTask(){
+//     // const task = document.getElementById("taskName").value;
+
+//     if(task === ""){
+//         alert("Please enter the task!");
+//         return;
+//     }
+
+//     taskList.push(task);
+//     console.log(taskList)
+
+//     localStorage.setItem("task", JSON.stringify(taskList));
+
+//     render();
+
+//     document.getElementById("taskName").value = "";
+
+
+// }
+
+// btn.addEventListener("click", addTask)
+
+// localStorage.clear();
+
+// Example for Notes App with Delete Button
+
+const noteInput = document.getElementById("noteinput");
+const addBtn = document.getElementById("addNoteBtn");
 const output = document.getElementById("output");
 
-let taskList = localStorage.getItem("task");
-taskList = taskList? JSON.parse(taskList) : [];
-
+let notesList = localStorage.getItem("notes");
+notesList = notesList ? localStorage.parse(notesList) : [];
 
 function render(){
     output.innerHTML = "";
 
-    taskList.forEach((task, index) => {
+    notesList.forEach((note, index) => {
         const li = document.createElement("li");
-        li.textContent = task;
+        li.textContent = note;
 
         const deleteBtn = document.createElement("button");
-        deleteBtn.textContent = "Delete";
+        deleteBtn.textContent = "Delete Note";
 
-        deleteBtn.addEventListener("click", function(){
-        taskList.splice(index, 1);
-        localStorage.setItem("task", JSON.stringify(taskList));
-        render();
-        });
+        deleteBtn.addEventListener('click', deleteNote(index));
 
-        output.appendChild(li);
         li.appendChild(deleteBtn);
-    })
-
+        output.appendChild(li);
+        
+    });
 }
+
 render();
 
-function addTask(){
-    const task = document.getElementById("taskName").value;
+function addNote(){
+    const note = noteInput.value;
 
-    if(task === ""){
-        alert("Please enter the task!");
+    if(note ===""){
+        alert("Please add a note!");
         return;
     }
 
-    taskList.push(task);
-    console.log(taskList)
+    notesList.push(note);
 
-    localStorage.setItem("task", JSON.stringify(taskList));
+    localStorage.setItem("notes", JSON.parse(notesList));
 
     render();
+    noteInput.value = "";
+};
 
-    document.getElementById("taskName").value = "";
+addBtn.addEventListener('click', addNote);
 
-
+function deleteNote(index){
+    notesList.splice(index,1)
+    
+    localStorage.setItem("notes", JSON.stringify(notesList));
 }
-
-btn.addEventListener("click", addTask)
