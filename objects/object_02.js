@@ -120,42 +120,105 @@
 // render();
 
 
-const foodInput = document.getElementById("foodInput");
+// const foodInput = document.getElementById("foodInput");
+// const btn = document.getElementById("addBtn");
+// const output = document.getElementById("output");
+
+
+// let foodData = localStorage.getItem("food");
+// foodData = foodData? JSON.parse(foodData) : [];
+
+// function addFood(){
+//     const food = foodInput.value;
+
+//     if(food === ""){
+//         alert("Please Enter the Food in the Input Field");
+//         return;
+//     }
+
+//     foodData.push({food})
+
+//     localStorage.setItem("food", JSON.stringify(foodData));
+
+//     render();
+
+//     foodInput.value = "";
+
+// }
+
+// function render(){
+//     output.innerHTML = "";
+
+//     for(let fName of foodData){
+//         const p = document.createElement("p");
+//         p.textContent = `One of the food item is ${fName.food}`;
+
+//         const deleteBtn = document.createElement('button');
+//         deleteBtn.textContent = "Delete";
+
+
+
+//         output.appendChild(p)
+//         p.appendChild(deleteBtn);
+//     };
+// };
+
+// render();
+
+// btn.addEventListener('click', addFood);
+
+
+// Adding a Delete Button
+
+const task =  document.getElementById("taskName");
 const btn = document.getElementById("addBtn");
 const output = document.getElementById("output");
 
+let taskList = localStorage.getItem("task");
+taskList = taskList? JSON.parse(taskList) : [];
 
-let foodData = localStorage.getItem("food");
-foodData = foodData? JSON.parse(foodData) : [];
-
-function addFood(){
-    const food = foodInput.value;
-
-    if(food === ""){
-        alert("Please Enter the Food in the Input Field");
-        return;
-    }
-
-    foodData.push({food})
-
-    localStorage.setItem("food", JSON.stringify(foodData));
-
-    render();
-
-    foodInput.value = "";
-
-}
 
 function render(){
     output.innerHTML = "";
 
-    for(let fName of foodData){
-        const p = document.createElement("p");
-        p.textContent = `One of the food item is ${fName.food}`;
-        output.appendChild(p)
-    };
-};
+    taskList.forEach((task, index) => {
+        const li = document.createElement("li");
+        li.textContent = task;
 
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "Delete";
+
+        deleteBtn.addEventListener("click", function(){
+        taskList.splice(index, 1);
+        localStorage.setItem("task", JSON.stringify(taskList));
+        render();
+        });
+
+        output.appendChild(li);
+        li.appendChild(deleteBtn);
+    })
+
+}
 render();
 
-btn.addEventListener('click', addFood);
+function addTask(){
+    const task = document.getElementById("taskName").value;
+
+    if(task === ""){
+        alert("Please enter the task!");
+        return;
+    }
+
+    taskList.push(task);
+    console.log(taskList)
+
+    localStorage.setItem("task", JSON.stringify(taskList));
+
+    render();
+
+    document.getElementById("taskName").value = "";
+
+
+}
+
+btn.addEventListener("click", addTask)
