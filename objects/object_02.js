@@ -227,53 +227,64 @@
 
 // Example for Notes App with Delete Button
 
+// const noteInput = document.getElementById("noteinput");
+// const addBtn = document.getElementById("addNoteBtn");
+// const output = document.getElementById("output");
+
+// let notesList = localStorage.getItem("notes");
+// notesList = notesList ? localStorage.parse(notesList) : [];
+
+// function render(){
+//     output.innerHTML = "";
+
+//     notesList.forEach((note, index) => {
+//         const li = document.createElement("li");
+//         li.textContent = note;
+
+//         const deleteBtn = document.createElement("button");
+//         deleteBtn.textContent = "Delete Note";
+
+//         deleteBtn.addEventListener('click', function(){
+//             deleteNote(index)
+
+//             render();
+//         });
+
+//         li.appendChild(deleteBtn);
+//         output.appendChild(li);
+        
+//     });
+// }
+
+// render();
+
+// function addNote(){
+//     const note = noteInput.value;
+
+//     if(note ===""){
+//         alert("Please add a note!");
+//         return;
+//     }
+
+//     notesList.push(note);
+
+//     localStorage.setItem("notes", JSON.stringify(notesList));
+
+//     render();
+//     noteInput.value = "";
+// };
+
+// addBtn.addEventListener('click', addNote);
+
+// function deleteNote(index){
+//     notesList.splice(index,1)
+    
+//     localStorage.setItem("notes", JSON.stringify(notesList));
+// }
+
 const noteInput = document.getElementById("noteinput");
 const addBtn = document.getElementById("addNoteBtn");
 const output = document.getElementById("output");
 
-let notesList = localStorage.getItem("notes");
-notesList = notesList ? localStorage.parse(notesList) : [];
-
-function render(){
-    output.innerHTML = "";
-
-    notesList.forEach((note, index) => {
-        const li = document.createElement("li");
-        li.textContent = note;
-
-        const deleteBtn = document.createElement("button");
-        deleteBtn.textContent = "Delete Note";
-
-        deleteBtn.addEventListener('click', deleteNote(index));
-
-        li.appendChild(deleteBtn);
-        output.appendChild(li);
-        
-    });
-}
-
-render();
-
-function addNote(){
-    const note = noteInput.value;
-
-    if(note ===""){
-        alert("Please add a note!");
-        return;
-    }
-
-    notesList.push(note);
-
-    localStorage.setItem("notes", JSON.parse(notesList));
-
-    render();
-    noteInput.value = "";
-};
-
-addBtn.addEventListener('click', addNote);
-
-function deleteNote(index){
-    notesList.splice(index,1)
-    
-    localStorage.setItem("notes", JSON.stringify(notesList));
-}
+let data = localStorage.getItem("data");
+data = data ? JSON.parse(data) : [];
