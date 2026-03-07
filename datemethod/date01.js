@@ -18,5 +18,24 @@
 
 
 // Date.parse() Method
-let t = Date.parse("2026-03-07");
-console.log(t);
+// let t = Date.parse("2026-03-07");
+// console.log(t);
+
+// let date = new Date(Date.parse("2024-01-01"));
+// console.log(date);
+
+// let today = new Date();
+
+// console.log(today.getDay());
+// console.log(today.getMonth())
+// console.log(today.getHours());
+// console.log(today.getMinutes());
+// console.log(today.getSeconds());
+
+
+// Convert Timestamp to date
+let timestamp = Date.now();
+
+let date = new Date(timestamp);
+
+console.log(date);
