@@ -10,9 +10,13 @@
 
 // calculate time difference
 
-let start = Date.now();
-for(let i = 0; i < 1000000; i++){}
-    let end = Date.now()
+// let start = Date.now();
+// for(let i = 0; i < 1000000; i++){}
+//     let end = Date.now()
 
-    console.log(end - start);
+//     console.log(end - start);
 
+
+// Date.parse() Method
+let t = Date.parse("2026-03-07");
+console.log(t);
