@@ -288,3 +288,16 @@ const output = document.getElementById("output");
 
 let data = localStorage.getItem("data");
 data = data ? JSON.parse(data) : [];
+
+function addNote(){
+
+    if(noteInput.value === ""){
+        alert("Please enter the Note");
+        return;
+    }
+
+    data.push({
+        text: noteInput.value,
+        completed: false
+    });
+}
