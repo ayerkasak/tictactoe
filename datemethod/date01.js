@@ -34,8 +34,19 @@
 
 
 // Convert Timestamp to date
-let timestamp = Date.now();
+// let timestamp = Date.now();
 
-let date = new Date(timestamp);
+// let date = new Date(timestamp);
 
-console.log(date);
+// console.log(date);
+
+// let today = Date.now();
+// console.log(today);
+
+// Converting a Map to an Object
+const map = new Map([
+  ["foo", "bar"],
+  ["baz", 42],
+]);
+const obj = Object.fromEntries(map);
+console.log(obj); // { foo: "bar", baz: 42 }
