@@ -44,9 +44,19 @@
 // console.log(today);
 
 // Converting a Map to an Object
-const map = new Map([
-  ["foo", "bar"],
-  ["baz", 42],
-]);
-const obj = Object.fromEntries(map);
-console.log(obj); // { foo: "bar", baz: 42 }
+// const map = new Map([
+//   ["foo", "bar"],
+//   ["baz", 42],
+// ]);
+// const obj = Object.fromEntries(map);
+// console.log(obj); // { foo: "bar", baz: 42 }
+
+// Converting an Array to an Object
+
+const arr = [
+  ["0", "a"],
+  ["1", "b"],
+  ["2", "c"],
+];
+const obj = Object.fromEntries(arr);
+console.log(obj); // { 0: "a", 1: "b", 2: "c" }
