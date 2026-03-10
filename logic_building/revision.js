@@ -117,11 +117,26 @@
 
 // Example 12
 
-function reverseSentence(sentence){
-    let reversedSentence = "";
-    for(let i = 0; i < sentence.length; i++){
-        reversedSentence = sentence[i] + reversedSentence
+// function reverseSentence(sentence){
+//     let reversedSentence = "";
+//     for(let i = 0; i < sentence.length; i++){
+//         reversedSentence = sentence[i] + reversedSentence
+//     }
+//     return reversedSentence
+// }
+// console.log(reverseSentence("hello world"));
+
+
+// Example 13
+
+function reversewords(sentence){
+    let words = sentence.split(" ");
+
+    let reversedWords = "";
+    for(let i = 0; i < words.length; i++){
+        reversedWords = words[i] + " " + reversedWords;
     }
-    return reversedSentence
+    return reversedWords
 }
-console.log(reverseSentence("hello world"));
+
+console.log(reversewords("hello world javascript"));
