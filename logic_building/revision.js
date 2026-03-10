@@ -104,12 +104,24 @@
 
 
 // Example 11
- function reverseString(str){
-    let reversedWord = "";
-    for(let i = 0; i < str.length; i++){
-        reversedWord = str[i] + reversedWord;
-    }
-    return reversedWord
- }
+//  function reverseString(str){
+//     let reversedWord = "";
+//     for(let i = 0; i < str.length; i++){
+//         reversedWord = str[i] + reversedWord;
+//     }
+//     return reversedWord
+//  }
 
- console.log(reverseString("javascript"));
+//  console.log(reverseString("javascript"));
+
+
+// Example 12
+
+function reverseSentence(sentence){
+    let reversedSentence = "";
+    for(let i = 0; i < sentence.length; i++){
+        reversedSentence = sentence[i] + reversedSentence
+    }
+    return reversedSentence
+}
+console.log(reverseSentence("hello world"));
