@@ -58,12 +58,25 @@
 
 // Example 7
 
-let nums = [5,2,8,1]
-let min = nums[0];
-for(let i = 1; i < nums.length; i++){
-    if(nums[i] < min ){
-        min = nums[i]
+// let nums = [5,2,8,1]
+// let min = nums[0];
+// for(let i = 1; i < nums.length; i++){
+//     if(nums[i] < min ){
+//         min = nums[i]
+//     }
+// }
+
+// console.log(min);
+
+
+// Example 8
+
+let nums = [3, 7, 2, 9, 4];
+let count = 0;
+
+for(let i = 0; i < nums.length; i++){
+    if(nums[i] > 4){
+        count++
     }
 }
-
-console.log(min);
+console.log(count);
