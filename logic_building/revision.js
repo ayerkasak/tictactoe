@@ -84,10 +84,20 @@
 
 // Example 9
 
-let nums = [1,2,3,4];
- let result = "";
+// let nums = [1,2,3,4];
+//  let result = "";
 
- for(let i = 0; i < nums.length; i++){
-    result = result + nums[i];
- }
- console.log(result);
+//  for(let i = 0; i < nums.length; i++){
+//     result = result + nums[i];
+//  }
+//  console.log(result);
+
+// Example 10
+let word = "hello";
+let result = "";
+
+for (let i = 0; i < word.length; i++) {
+    result = word[i] + result;
+}
+
+console.log(result);
