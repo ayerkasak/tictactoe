@@ -23,10 +23,22 @@
 
 // Example 4
 
-let numbers = [3, 7, 2, 9];
+// let numbers = [3, 7, 2, 9];
 
-for(let i = 0; i < numbers.length; i++){
-    if(numbers[i] > 5){
-        console.log(numbers[i]);
-    }
+// for(let i = 0; i < numbers.length; i++){
+//     if(numbers[i] > 5){
+//         console.log(numbers[i]);
+//     }
+// }
+
+
+// Example 5
+
+let nums = [2,4,6,8];
+let sum = 0;
+
+for(let i = 0; i < nums.length; i++){
+    sum = sum + nums[i];
 }
+
+console.log(sum);
