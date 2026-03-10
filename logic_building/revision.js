@@ -93,11 +93,23 @@
 //  console.log(result);
 
 // Example 10
-let word = "hello";
-let result = "";
+// let word = "hello";
+// let result = "";
 
-for (let i = 0; i < word.length; i++) {
-    result = word[i] + result;
-}
+// for (let i = 0; i < word.length; i++) {
+//     result = word[i] + result;
+// }
 
-console.log(result);
+// console.log(result);
+
+
+// Example 11
+ function reverseString(str){
+    let reversedWord = "";
+    for(let i = 0; i < str.length; i++){
+        reversedWord = str[i] + reversedWord;
+    }
+    return reversedWord
+ }
+
+ console.log(reverseString("javascript"));
