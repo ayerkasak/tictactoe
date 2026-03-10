@@ -6,8 +6,17 @@
 // console.log(words);
 
 // Example 2
-let sentence = "I love javascript";
+// let sentence = "I love javascript";
 
-let words = sentence.split(" ");
+// let words = sentence.split(" ");
 
-console.log(words[1]);
+// console.log(words[1]);
+
+
+// Example 3
+
+let fruits = ["apple", "banana", "mango"];
+
+for(let i = 0; i < fruits.length; i++){
+    console.log(fruits[i]);
+};
