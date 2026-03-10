@@ -71,12 +71,23 @@
 
 // Example 8
 
-let nums = [3, 7, 2, 9, 4];
-let count = 0;
+// let nums = [3, 7, 2, 9, 4];
+// let count = 0;
 
-for(let i = 0; i < nums.length; i++){
-    if(nums[i] > 4){
-        count++
-    }
-}
-console.log(count);
+// for(let i = 0; i < nums.length; i++){
+//     if(nums[i] > 4){
+//         count++
+//     }
+// }
+// console.log(count);
+
+
+// Example 9
+
+let nums = [1,2,3,4];
+ let result = "";
+
+ for(let i = 0; i < nums.length; i++){
+    result = result + nums[i];
+ }
+ console.log(result);
