@@ -45,13 +45,25 @@
 
 // Example 6
 
-let nums = [5, 2, 8, 1];
-let max = nums[0];
+// let nums = [5, 2, 8, 1];
+// let max = nums[0];
 
-for(let i = 1; i <nums.length; i++){
-    if(nums[i] > max){
-        max = nums[i]
+// for(let i = 1; i <nums.length; i++){
+//     if(nums[i] > max){
+//         max = nums[i]
+//     }
+// }
+
+// console.log(max)
+
+// Example 7
+
+let nums = [5,2,8,1]
+let min = nums[0];
+for(let i = 1; i < nums.length; i++){
+    if(nums[i] < min ){
+        min = nums[i]
     }
 }
 
-console.log(max)
+console.log(min);
