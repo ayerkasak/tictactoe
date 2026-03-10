@@ -34,11 +34,24 @@
 
 // Example 5
 
-let nums = [2,4,6,8];
-let sum = 0;
+// let nums = [2,4,6,8];
+// let sum = 0;
 
-for(let i = 0; i < nums.length; i++){
-    sum = sum + nums[i];
+// for(let i = 0; i < nums.length; i++){
+//     sum = sum + nums[i];
+// }
+
+// console.log(sum);
+
+// Example 6
+
+let nums = [5, 2, 8, 1];
+let max = nums[0];
+
+for(let i = 1; i <nums.length; i++){
+    if(nums[i] > max){
+        max = nums[i]
+    }
 }
 
-console.log(sum);
+console.log(max)
