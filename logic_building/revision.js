@@ -129,14 +129,49 @@
 
 // Example 13
 
-function reversewords(sentence){
-    let words = sentence.split(" ");
+// function reversewords(sentence){
+//     let words = sentence.split(" ");
 
-    let reversedWords = "";
-    for(let i = 0; i < words.length; i++){
-        reversedWords = words[i] + " " + reversedWords;
+//     let reversedWords = "";
+//     for(let i = 0; i < words.length; i++){
+//         reversedWords = words[i] + " " + reversedWords;
+//     }
+//     return reversedWords.trim()
+// }
+
+// console.log(reversewords("hello world javascript"));
+
+
+// // Example 14
+
+// function reverseEachWord(str){
+//     let words = str.split(" ");
+//     let reversedwords = words.join();
+//     let reversedSentence = "";
+//     for(let i = 0; i < reversedwords.length; i++){
+//         reversedSentence = words[i] + reversedSentence;
+//     }
+//     return reversedwords;
+
+// };
+
+// console.log(reverseEachWord("hello world javascript"));
+
+
+// Example 15 fibonacci series:
+
+function fibonacciSeriesUpto10thTerms(){
+    let fibonacciList = [];
+    let a = 1;
+    let b = 1;
+    for(let i = 1; i <= 10; i++){
+        let c = a + b;
+        a = b;
+        b = c;
+
+        fibonacciList.push(c)       
     }
-    return reversedWords
+    return fibonacciList
+     
 }
-
-console.log(reversewords("hello world javascript"));
+console.log(fibonacciSeriesUpto10thTerms());
