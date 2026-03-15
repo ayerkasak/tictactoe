@@ -160,18 +160,18 @@
 
 // Example 15 fibonacci series:
 
-function fibonacciSeriesUpto10thTerms(){
-    let fibonacciList = [];
-    let a = 1;
-    let b = 1;
-    for(let i = 1; i <= 10; i++){
-        let c = a + b;
-        a = b;
-        b = c;
+function fibonacciSeriesUpto10thTerms(n){
+    let fibonacciList = [0, 1];
+    
+    for(let i = 2; i < n; i++){
+        let c = fibonacciList[i-1] + fibonacciList[i-2]
+        
+        
 
-        fibonacciList.push(c)       
+        // fibonacciList.push(c)     
+        fibonacciList[fibonacciList.length] = c  
     }
     return fibonacciList
      
 }
-console.log(fibonacciSeriesUpto10thTerms());
+console.log(fibonacciSeriesUpto10thTerms(10));
