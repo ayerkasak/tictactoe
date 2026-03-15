@@ -160,18 +160,33 @@
 
 // Example 15 fibonacci series:
 
-function fibonacciSeriesUpto10thTerms(n){
-    let fibonacciList = [0, 1];
+// function fibonacciSeriesUpto10thTerms(n){
+//     let fibonacciList = [0, 1];
     
-    for(let i = 2; i < n; i++){
-        let c = fibonacciList[i-1] + fibonacciList[i-2]
+//     for(let i = 2; i < n; i++){
+//         let c = fibonacciList[i-1] + fibonacciList[i-2]
         
         
 
-        // fibonacciList.push(c)     
-        fibonacciList[fibonacciList.length] = c  
-    }
-    return fibonacciList
+//         // fibonacciList.push(c)     
+//         fibonacciList[fibonacciList.length] = c  
+//     }
+//     return fibonacciList
      
+// }
+// console.log(fibonacciSeriesUpto10thTerms(10));
+
+
+// Example 16 Program to print an unique array
+
+let fruits = ["apple", "apple", "orange", "orange", "pineapple"];
+
+let uniqueFruitsList = [];
+
+for(let i = 0; i < fruits.length; i++){
+    if(!uniqueFruitsList.includes(fruits[i])){
+        uniqueFruitsList.push(fruits[i])
+    }
 }
-console.log(fibonacciSeriesUpto10thTerms(10));
+
+console.log(uniqueFruitsList);
