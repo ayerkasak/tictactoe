@@ -179,14 +179,26 @@
 
 // Example 16 Program to print an unique array
 
+// let fruits = ["apple", "apple", "orange", "orange", "pineapple"];
+
+// let uniqueFruitsList = [];
+
+// for(let i = 0; i < fruits.length; i++){
+//     if(!uniqueFruitsList.includes(fruits[i])){
+//         uniqueFruitsList.push(fruits[i])
+//     }
+// }
+
+// console.log(uniqueFruitsList);
+
+// Example 17 using reduce method
 let fruits = ["apple", "apple", "orange", "orange", "pineapple"];
-
-let uniqueFruitsList = [];
-
-for(let i = 0; i < fruits.length; i++){
-    if(!uniqueFruitsList.includes(fruits[i])){
-        uniqueFruitsList.push(fruits[i])
+let uniqueFruitsList = fruits.reduce((acc, curr) => {
+    if(!acc.includes(curr)){
+        acc.push(curr)
     }
-}
+    return acc;
+
+}, []);
 
 console.log(uniqueFruitsList);
