@@ -191,14 +191,34 @@
 
 // console.log(uniqueFruitsList);
 
-// Example 17 using reduce method
-let fruits = ["apple", "apple", "orange", "orange", "pineapple"];
-let uniqueFruitsList = fruits.reduce((acc, curr) => {
-    if(!acc.includes(curr)){
-        acc.push(curr)
+// // Example 17 using reduce method 
+// let fruits = ["apple", "apple", "orange", "orange", "pineapple"];
+// let uniqueFruitsList = fruits.reduce((acc, curr) => {
+//     if(!acc.includes(curr)){
+//         acc.push(curr)
+//     }
+//     return acc;
+
+// }, []);
+
+// console.log(uniqueFruitsList);
+
+
+// Example 18 print an array of unique element
+const arr = [1, 1, 2, 2, 3];
+let newArr = [];
+
+for(let i = 0; i < arr.length; i++){
+    let count = 0;
+    for(let j = 0; j < arr.length; j++){
+        if(arr[i] === arr[j]){
+            count += 1;
+        }
     }
-    return acc;
 
-}, []);
+    if(count === 1){
+        newArr.push(arr[i]);
+    }
+}
 
-console.log(uniqueFruitsList);
+console.log(newArr);
