@@ -205,7 +205,28 @@
 
 
 // Example 18 print an array of unique element
-const arr = [1, 1, 2, 2, 3];
+// const arr = [1, 1, 2, 2, 3];
+// let newArr = [];
+
+// for(let i = 0; i < arr.length; i++){
+//     let count = 0;
+//     for(let j = 0; j < arr.length; j++){
+//         if(arr[i] === arr[j]){
+//             count += 1;
+//         }
+//     }
+
+//     if(count === 1){
+//         newArr.push(arr[i]);
+//     }
+// }
+
+// console.log(newArr);
+// Output = [3]
+
+// Example 19
+
+const arr = [5,7,5,9,10,9,11];
 let newArr = [];
 
 for(let i = 0; i < arr.length; i++){
@@ -215,10 +236,10 @@ for(let i = 0; i < arr.length; i++){
             count += 1;
         }
     }
-
     if(count === 1){
         newArr.push(arr[i]);
     }
-}
+};
 
 console.log(newArr);
+// Output: [ 7, 10, 11 ]
