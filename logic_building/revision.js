@@ -226,20 +226,52 @@
 
 // Example 19
 
-const arr = [5,7,5,9,10,9,11];
-let newArr = [];
+// const arr = [5,7,5,9,10,9,11];
+// let newArr = [];
 
-for(let i = 0; i < arr.length; i++){
-    let count = 0;
-    for(let j = 0; j < arr.length; j++){
-        if(arr[i] === arr[j]){
-            count += 1;
-        }
-    }
-    if(count === 1){
-        newArr.push(arr[i]);
-    }
-};
+// for(let i = 0; i < arr.length; i++){
+//     let count = 0;
+//     for(let j = 0; j < arr.length; j++){
+//         if(arr[i] === arr[j]){
+//             count += 1;
+//         }
+//     }
+//     if(count === 1){
+//         newArr.push(arr[i]);
+//     }
+// };
 
-console.log(newArr);
+// console.log(newArr);
 // Output: [ 7, 10, 11 ]
+
+// Example 20 pattern 1 --- frequency  counting
+
+const arr = [1, 1, 2, 2, 3, 3, 4, 5, 6, 7,7,8,8];
+ let freq = {};
+ for(let i = 0; i < arr.length; i++){
+    let num = arr[i];
+    if(freq[num]){
+        freq[num]++;
+    }else{
+        freq[num] = 1;
+    }
+ }
+
+ console.log(freq);
+
+// output: { '1': 2, '2': 2, '3': 2, '4': 1, '5': 1, '6': 1, '7': 2, '8': 2 }
+
+// const arr = [1,1,2,2,3];
+// let freq = {};
+
+// for(let i = 0; i < arr.length; i++){
+//     let num = arr[i];
+
+//     if(freq[num]){
+//         freq[num]++;
+//     }else{
+//         freq[num] = 1;
+//     }
+// }
+
+// console.log(freq);
