@@ -297,8 +297,30 @@
 
 // Example 22 Problem: Find Elements That Appear Exactly Twice
 
-const arr = [1,2,3,1,2,1,4,5,4];
+// const arr = [1,2,3,1,2,1,4,5,4];
 
+// let newArr = [];
+
+// for(let i = 0; i < arr.length; i++){
+//     let count = 0;
+//     for(let j = 0; j < arr.length; j++){
+//         if(arr[i] === arr[j]){
+//             count += 1;
+//         }
+//     }
+//     if(count === 2 && !newArr.includes(arr[i])){
+//         newArr.push(arr[i])
+//     }
+// }
+
+// console.log(newArr);
+
+// Output: [2,4]
+
+
+// Example 23: Find elements that appear exactly 3 times
+
+const arr = [1,1,1,2,2,3,3,3,4];
 let newArr = [];
 
 for(let i = 0; i < arr.length; i++){
@@ -308,9 +330,11 @@ for(let i = 0; i < arr.length; i++){
             count += 1;
         }
     }
-    if(count === 2 && !newArr.includes(arr[i])){
+    if(count === 3 && !newArr.includes(arr[i])){
         newArr.push(arr[i])
     }
 }
 
 console.log(newArr);
+
+// Output: [1,3];
