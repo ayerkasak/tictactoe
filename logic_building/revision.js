@@ -320,21 +320,38 @@
 
 // Example 23: Find elements that appear exactly 3 times
 
-const arr = [1,1,1,2,2,3,3,3,4];
-let newArr = [];
+// const arr = [1,1,1,2,2,3,3,3,4];
+// let newArr = [];
 
-for(let i = 0; i < arr.length; i++){
-    let count = 0;
-    for(let j = 0; j < arr.length; j++){
-        if(arr[i] === arr[j]){
-            count += 1;
-        }
-    }
-    if(count === 3 && !newArr.includes(arr[i])){
-        newArr.push(arr[i])
+// for(let i = 0; i < arr.length; i++){
+//     let count = 0;
+//     for(let j = 0; j < arr.length; j++){
+//         if(arr[i] === arr[j]){
+//             count += 1;
+//         }
+//     }
+//     if(count === 3 && !newArr.includes(arr[i])){
+//         newArr.push(arr[i])
+//     }
+// }
+
+// console.log(newArr);
+
+// Output: [1,3];
+
+// Example 24: extracting the keys of the object having value 3.
+const obj = {
+    a: 1,
+    b: 3,
+    c: 5,
+    d: 3
+}
+let arr = [];
+for(const k in obj){
+    if(obj[k] === 3){
+        arr.push(k)
     }
 }
 
-console.log(newArr);
-
-// Output: [1,3];
+console.log(arr);
+// Output: [ 'b', 'd' ]
