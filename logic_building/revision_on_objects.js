@@ -1,17 +1,43 @@
 
-// Example 1: Problem: Count Frequency Using Object
+// Example 1: Count Frequency Using Object
+
+// const arr = [1,2,1,3,2,1];
+// let obj = {};
+// for(let i = 0; i < arr.length; i++){
+//     let key = arr[i];
+//     if(obj[key]){
+//         obj[key]++;
+//     } else{
+//         obj[key] = 1;
+//     }
+// }
+
+// console.log(obj);
+
+// Output: {1: 3, 2: 2, 3: 1}
+
+// Example 2: Find the element with maximum frequency
 
 const arr = [1,2,1,3,2,1];
 let obj = {};
+
 for(let i = 0; i < arr.length; i++){
     let key = arr[i];
     if(obj[key]){
-        obj[key]++;
-    } else{
+        obj[key]++
+    }else{
         obj[key] = 1;
     }
 }
 
-console.log(obj);
+let max = 0;
+let result = null;
+for(const key in obj){
+    if(obj[key] > max){
+        max = obj[key];
+        result = key
+    }
+}
 
-// Output: {1: 3, 2: 2, 3: 1}
+console.log(result);
+
