@@ -44,8 +44,35 @@
 
 // Example 3: Find the element with maximum frequency
 
+// const arr = [4,4,2,2,2,3,3];
+// let obj = {};
+// for(let i = 0; i < arr.length; i++){
+//     let key = arr[i];
+//     if(obj[key]){
+//         obj[key]++;
+//     }else{
+//         obj[key] = 1;
+//     }
+// }
+
+// let max = 0;
+// let result = null;
+// for(const key in obj){
+//     if(obj[key] > max){
+//         max = obj[key];
+//         result = key;
+//     }
+// }
+
+// console.log(result);
+
+// Output: 2
+
+// Example 4: Find the element with maximum frequency
+
 const arr = [4,4,2,2,2,3,3];
 let obj = {};
+
 for(let i = 0; i < arr.length; i++){
     let key = arr[i];
     if(obj[key]){
@@ -56,14 +83,24 @@ for(let i = 0; i < arr.length; i++){
 }
 
 let max = 0;
-let result = null;
+let max2nd = 0;
+let maxkey = null;
+let secondkey = null;
+
 for(const key in obj){
     if(obj[key] > max){
+        max2nd = max;
+        secondkey = maxkey;
+
         max = obj[key];
-        result = key;
+        maxkey = key;
+    }else if(obj[key] > max2nd && obj[key] < max){
+        max2nd = obj[key];
+        secondkey = key;
+
     }
 }
 
-console.log(result);
+console.log(Number(secondkey));
 
-// Output: 2
+// Output: 3
