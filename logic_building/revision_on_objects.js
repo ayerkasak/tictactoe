@@ -70,37 +70,67 @@
 
 // Example 4: Find the element with maximum frequency
 
-const arr = [4,4,2,2,2,3,3];
-let obj = {};
+// const arr = [4,4,2,2,2,3,3];
+// let obj = {};
 
-for(let i = 0; i < arr.length; i++){
-    let key = arr[i];
-    if(obj[key]){
-        obj[key]++;
-    }else{
-        obj[key] = 1;
-    }
-}
+// for(let i = 0; i < arr.length; i++){
+//     let key = arr[i];
+//     if(obj[key]){
+//         obj[key]++;
+//     }else{
+//         obj[key] = 1;
+//     }
+// }
 
-let max = 0;
-let max2nd = 0;
-let maxkey = null;
-let secondkey = null;
+// let max = 0;
+// let max2nd = 0;
+// let maxkey = null;
+// let secondkey = null;
 
-for(const key in obj){
-    if(obj[key] > max){
-        max2nd = max;
-        secondkey = maxkey;
+// for(const key in obj){
+//     if(obj[key] > max){
+//         max2nd = max;
+//         secondkey = maxkey;
 
-        max = obj[key];
-        maxkey = key;
-    }else if(obj[key] > max2nd && obj[key] < max){
-        max2nd = obj[key];
-        secondkey = key;
+//         max = obj[key];
+//         maxkey = key;
+//     }else if(obj[key] > max2nd && obj[key] < max){
+//         max2nd = obj[key];
+//         secondkey = key;
 
-    }
-}
+//     }
+// }
 
-console.log(Number(secondkey));
+// console.log(Number(secondkey));
 
 // Output: 3
+
+// Example: 5: First Repeating Element
+
+const arr = [5, 3, 4, 3, 5, 6];
+const newArr = [];
+
+for(let i = 0; i < arr.length; i++){
+    let count = 0;
+    for(let j = 0; j < arr.length; j++){
+        if(arr[i] === arr[j]){
+            count += 1
+        }
+    }
+    if(count > 1 ){
+        newArr.push(arr[i])
+        break;
+    }
+}
+
+console.log(newArr);
+
+// const arr = [5, 3, 4, 3, 5, 6];
+// for(let i = 0; i < arr.length; i++){
+//     for(let j = i +1; j < arr.length; j++){
+//         if(arr[i] === arr[j]){
+//             console.log(arr[i])
+//             break
+//         }
+//     }
+// }
