@@ -107,23 +107,7 @@
 
 // Example: 5: First Repeating Element
 
-const arr = [5, 3, 4, 3, 5, 6];
-const newArr = [];
-
-for(let i = 0; i < arr.length; i++){
-    let count = 0;
-    for(let j = 0; j < arr.length; j++){
-        if(arr[i] === arr[j]){
-            count += 1
-        }
-    }
-    if(count > 1 ){
-        newArr.push(arr[i])
-        break;
-    }
-}
-
-console.log(newArr);
+// const arr = [5, 3, 4, 3, 5, 6]; 
 
 // const arr = [5, 3, 4, 3, 5, 6];
 // for(let i = 0; i < arr.length; i++){
@@ -134,3 +118,16 @@ console.log(newArr);
 //         }
 //     }
 // }
+
+// Recusrsuin function:
+
+
+function factorial(n){
+    if(n > 0){
+        return n*factorial(n-1)
+    }else{
+        return 1
+    }
+}
+
+console.log("factorial of 5 is " + factorial(5))
