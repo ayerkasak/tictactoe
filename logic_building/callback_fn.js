@@ -50,22 +50,35 @@
 
 // Example 5
 
-function getData(callback) {
-    setTimeout(function() {
-        console.log("Data fetched");
-        callback();
-    }, 1000);
-}
+// function getData(callback) {
+//     setTimeout(function() {
+//         console.log("Data fetched");
+//         callback();
+//     }, 1000);
+// }
 
-function processData(callback) {
-    setTimeout(function() {
-        console.log("Data processed");
-        callback();
-    }, 1000);
-}
+// function processData(callback) {
+//     setTimeout(function() {
+//         console.log("Data processed");
+//         callback();
+//     }, 1000);
+// }
 
-getData(function() {
-    processData(function() {
-        console.log("All work done");
-    });
-});
+// getData(function() {
+//     processData(function() {
+//         console.log("All work done");
+//     });
+// });
+
+// 
+
+
+// Example for reduce method
+
+const numbers = [1, 2, 3, 4];
+
+const sum = numbers.reduce((acc, curr) => {
+    return acc + curr;
+}, 0);
+
+console.log(sum);
