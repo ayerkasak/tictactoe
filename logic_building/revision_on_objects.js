@@ -135,13 +135,32 @@
 
 // Printing fibonacci series 6th term using recursion function
 
-function fibonacci(n) {
-  if (n <= 1) {
-    return n;
-  }
-  return fibonacci(n - 1) + fibonacci(n - 2);
-}
+// function fibonacci(n) {
+//   if (n <= 1) {
+//     return n;
+//   }
+//   return fibonacci(n - 1) + fibonacci(n - 2);
+// }
 
 // Example: get 6th Fibonacci number
-console.log(fibonacci(6)); // 8
+// console.log(fibonacci(6)); // 8
 
+
+// Progarm to find Greatest Common Divisor using Recursion function
+
+function GCD(a, b){
+  if(a == b){
+    return a;
+  } else if(a % b == 0){
+    return b;
+  } else if(b % a == 0){
+    return a;
+  } else if(a > b){
+    return GCD(a%b, b);
+  } else{
+    return GCD(a, b % a)
+  }
+}
+
+
+console.log(GCD(105, 91));
