@@ -85,10 +85,24 @@
 
 // Example 7: multiplication using reduce
 
-const numbers = [2, 3, 4];
+// const numbers = [2, 3, 4];
 
-const result = numbers.reduce((acc, curr) => {
-    return acc * curr
-}, 1);
+// const result = numbers.reduce((acc, curr) => {
+//     return acc * curr
+// }, 1);
 
-console.log(result);
+// console.log(result);
+
+// Example 7: find maximum value using reduce method
+
+const arr = [5, 2, 9, 1];
+
+const max = arr.reduce((acc, curr) => {
+    if(acc > curr){
+        return acc;
+    }else{
+        return curr;
+    }
+})
+
+console.log(max);
