@@ -95,14 +95,29 @@
 
 // Example 7: find maximum value using reduce method
 
-const arr = [5, 2, 9, 1];
+// const arr = [5, 2, 9, 1];
 
-const max = arr.reduce((acc, curr) => {
-    if(acc > curr){
-        return acc;
+// const max = arr.reduce((acc, curr) => {
+//     if(acc > curr){
+//         return acc;
+//     }else{
+//         return curr;
+//     }
+// })
+
+// console.log(max);
+
+// EXample 8: Count Occurrence
+
+const fruits = ["apple", "bannan", "apple", "orange", "banana"];
+
+const count = fruits.reduce((acc, curr) => {
+    if(acc[curr]){
+        acc[curr] += 1;
     }else{
-        return curr;
+        acc[curr] = 1;
     }
-})
+    return acc;
+}, {});
 
-console.log(max);
+console.log(count);
