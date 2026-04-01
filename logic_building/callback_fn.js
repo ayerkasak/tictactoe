@@ -109,15 +109,24 @@
 
 // EXample 8: Count Occurrence
 
-const fruits = ["apple", "bannan", "apple", "orange", "banana"];
+// const fruits = ["apple", "bannan", "apple", "orange", "banana"];
 
-const count = fruits.reduce((acc, curr) => {
-    if(acc[curr]){
-        acc[curr] += 1;
-    }else{
-        acc[curr] = 1;
-    }
-    return acc;
-}, {});
+// const count = fruits.reduce((acc, curr) => {
+//     if(acc[curr]){
+//         acc[curr] += 1;
+//     }else{
+//         acc[curr] = 1;
+//     }
+//     return acc;
+// }, {});
 
-console.log(count);
+// console.log(count);
+
+// Example 9: Convert Array to single string
+
+const words = ["Hello", "Kasak"];
+const sentence = words.reduce((acc, curr) => {
+    return acc + " " + curr;
+})
+
+console.log(sentence);
