@@ -24,15 +24,48 @@
 
 // Example 3
 
-function fetchData(callback) {
-    console.log("Fetching data...");
+// function fetchData(callback) {
+//     console.log("Fetching data...");
     
+//     setTimeout(function() {
+//         console.log("Data received");
+//         callback();
+//     }, 2000);
+// }
+
+// fetchData(function() {
+//     console.log("Processing data...");
+// }); 
+
+// Example 4
+
+// function doTask(callback){
+//     console.log("Task is being done.....");
+//     callback()
+// }
+
+// doTask(function(){
+//     console.log("Task Completed!")
+// })
+
+// Example 5
+
+function getData(callback) {
     setTimeout(function() {
-        console.log("Data received");
+        console.log("Data fetched");
         callback();
-    }, 2000);
+    }, 1000);
 }
 
-fetchData(function() {
-    console.log("Processing data...");
-}); 
+function processData(callback) {
+    setTimeout(function() {
+        console.log("Data processed");
+        callback();
+    }, 1000);
+}
+
+getData(function() {
+    processData(function() {
+        console.log("All work done");
+    });
+});
