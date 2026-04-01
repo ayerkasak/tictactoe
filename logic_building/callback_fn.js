@@ -73,12 +73,22 @@
 // 
 
 
-// Example for reduce method
+// Example 6 for reduce method
 
-const numbers = [1, 2, 3, 4];
+// const numbers = [1, 2, 3, 4];
 
-const sum = numbers.reduce((acc, curr) => {
-    return acc + curr;
-}, 0);
+// const sum = numbers.reduce((acc, curr) => {
+//     return acc + curr;
+// }, 0);
 
-console.log(sum);
+// console.log(sum);
+
+// Example 7: multiplication using reduce
+
+const numbers = [2, 3, 4];
+
+const result = numbers.reduce((acc, curr) => {
+    return acc * curr
+}, 1);
+
+console.log(result);
