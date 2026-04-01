@@ -2,14 +2,14 @@
 
 // function greet(name, callback) {
 //     console.log("Hello " + name);
-//     callback();  // calling the callback function
+//     callback(name);  // calling the callback function
 // }
 
-// function sayBye() {
-//     console.log("Goodbye!");
+// function sayBye(name) {
+//     console.log("Goodbye!" + name);
 // }
 
-// greet("Kalpana", sayBye);
+// greet("Kalpana", sayBye());
 
 // Example 2
 
@@ -93,20 +93,7 @@
 
 // console.log(result);
 
-// Example 7: find maximum value using reduce method
-
-// const arr = [5, 2, 9, 1];
-
-// const max = arr.reduce((acc, curr) => {
-//     if(acc > curr){
-//         return acc;
-//     }else{
-//         return curr;
-//     }
-// })
-
-// console.log(max);
-
+// Example 7: find maximum value using 
 // EXample 8: Count Occurrence
 
 // const fruits = ["apple", "bannan", "apple", "orange", "banana"];
@@ -124,9 +111,41 @@
 
 // Example 9: Convert Array to single string
 
-const words = ["Hello", "Kasak"];
-const sentence = words.reduce((acc, curr) => {
-    return acc + " " + curr;
-})
+// const words = ["Hello", "Kasak"];
+// const sentence = words.reduce((acc, curr) => {
+//     return acc + " " + curr;
+// })
 
-console.log(sentence);
+// console.log(sentence);
+
+// Example for filter function
+
+// const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// const evenNum = nums.filter((num) => num % 2 == 0 );
+
+// console.log(evenNum);
+
+// const evenNumbers = [];
+// function evenNum(nums){
+    // for(let i = 0; i < nums.length; i++){
+    //     if(nums[i] % 2 == 0){
+    //         evenNumbers.push(nums[i])
+    //     }
+    // }
+// }
+
+// console.log(evenNumbers);
+
+
+const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function checkEven(n){
+    if(n % 2 == 0){
+        return n
+    }
+}
+
+const evenNum = nums.filter(checkEven);
+
+console.log(evenNum);
