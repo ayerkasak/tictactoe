@@ -122,12 +122,26 @@
 // Recusrsuin function:
 
 
-function factorial(n){
-    if(n > 0){
-        return n*factorial(n-1)
-    }else{
-        return 1
-    }
+// function factorial(n){
+//     if(n > 0){
+//         return n*factorial(n-1)
+//     }else{
+//         return 1
+//     }
+// }
+
+// console.log("factorial of 5 is " + factorial(5))
+
+
+// Printing fibonacci series 6th term using recursion function
+
+function fibonacci(n) {
+  if (n <= 1) {
+    return n;
+  }
+  return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
-console.log("factorial of 5 is " + factorial(5))
+// Example: get 6th Fibonacci number
+console.log(fibonacci(6)); // 8
+
