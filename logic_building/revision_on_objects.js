@@ -148,19 +148,40 @@
 
 // Progarm to find Greatest Common Divisor using Recursion function
 
-function GCD(a, b){
-  if(a == b){
-    return a;
-  } else if(a % b == 0){
-    return b;
-  } else if(b % a == 0){
-    return a;
-  } else if(a > b){
-    return GCD(a%b, b);
-  } else{
-    return GCD(a, b % a)
+// function GCD(a, b){
+//   if(a == b){
+//     return a;
+//   } else if(a % b == 0){
+//     return b;
+//   } else if(b % a == 0){
+//     return a;
+//   } else if(a > b){
+//     return GCD(a%b, b);
+//   } else{
+//     return GCD(a, b % a)
+//   }
+// }
+
+
+// console.log(GCD(105, 91));
+
+// Problem: First Non-Repeating Element (Using Object)
+
+const arr = [4, 5, 1, 2, 0, 4, 5, 2];
+let obj = {};
+ for(let i = 0; i < arr.length; i++){
+  let num = arr[i];
+  if(obj[num]){
+    obj[num] += 1;
+  }else{
+    obj[num] = 1;
   }
-}
+ }
 
 
-console.log(GCD(105, 91));
+ for(let i = 0; i < arr.length; i++){
+  if(obj[arr[i]] === 1){
+    console.log(arr[i]);
+    break;
+  }
+ }
