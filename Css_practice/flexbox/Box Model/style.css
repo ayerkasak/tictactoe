@@ -32,3 +32,40 @@
     border-radius: 25%;
     /* background-color: gray; */
 /* } */ 
+
+
+body{
+    background-color: #121212;
+    font-family: Arial, sans-serif;
+}
+
+.action-bar{
+    /* position: ; */
+    display: flex;
+    align-items: center;
+    background-color: #2b2b2b;
+    border-radius: 30px;
+    padding: 5px;
+    width: fit-container;
+    gap: 5px;
+}
+
+.action{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.action:hover{
+    background: #3a3a3a;
+}
+
+.like{
+    border-right: 1px solid #444;
+    padding-right: 16px ;
+}
