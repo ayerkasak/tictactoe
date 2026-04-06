@@ -34,8 +34,6 @@
 
 const nums = [1, 2, 3, 7, 8, 9, 10];
 
-
-
 function checkGreaterNumber(n){
     if(n > 8){
         return n;
