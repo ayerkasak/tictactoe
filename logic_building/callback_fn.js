@@ -143,8 +143,18 @@
 //     if(n % 2 ==)
 // }
 
-const numbers = [1, 2, 3, 4, 5, 6];
 
-const squareOfNumbers = numbers.map((n) => n*n)
+// const squareOfNumbers = numbers.map((n) => n*n)
 
-console.log(squareOfNumbers);
+// console.log(squareOfNumbers);
+
+const numbers = [1, 2, 13, 4, 5, 6];
+
+let max = 0;
+const greatestNumber = numbers.forEach((n) => {
+    if(n > max){
+        max = n;
+    }
+})
+
+console.log(max);
