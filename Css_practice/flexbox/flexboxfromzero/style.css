@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.box {
+    background: #333;
+    padding: 15px;
+    color: aliceblue;
+    border-radius: 20%;
+}
