@@ -30,17 +30,33 @@
 
 // Revision 3: Return all even numbers.
 
-const arr = [1,2,3,4,5,6];
+// const arr = [1,2,3,4,5,6];
 
-const evenNumbers = [];
+// const evenNumbers = [];
 
-function findingEvenNumbers(){
+// function findingEvenNumbers(){
+//     for(let i = 0; i < arr.length; i++){
+//         if(arr[i] % 2 == 0){
+//             evenNumbers.push(arr[i])
+//         }
+//     }
+//     return evenNumbers
+// }
+
+// console.log(findingEvenNumbers());
+
+// Revision 4: Find the first repeating element
+
+const arr = [1,2,3,2,4,5,6];
+let obj = {};
+function findFirstRepeatingElement(){
     for(let i = 0; i < arr.length; i++){
-        if(arr[i] % 2 == 0){
-            evenNumbers.push(arr[i])
+        for(let j = i + 1; j < arr.length; j++){
+            if(arr[i] === arr[j]){
+            return arr[i]
+            }
         }
     }
-    return evenNumbers
+    return "No repeating element";
 }
-
-console.log(findingEvenNumbers());
+console.log(findFirstRepeatingElement());
