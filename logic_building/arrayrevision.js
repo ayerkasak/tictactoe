@@ -47,16 +47,38 @@
 
 // Revision 4: Find the first repeating element
 
-const arr = [1,2,3,2,4,5,6];
-let obj = {};
-function findFirstRepeatingElement(){
+// const arr = [1,2,3,2,4,5,6];
+// let obj = {};
+// function findFirstRepeatingElement(){
+//     for(let i = 0; i < arr.length; i++){
+//         for(let j = i + 1; j < arr.length; j++){
+//             if(arr[i] === arr[j]){
+//             return arr[i]
+//             }
+//         }
+//     }
+//     return "No repeating element";
+// }
+// console.log(findFirstRepeatingElement());
+
+// Revision 5: Find all elements appearing exactly once
+
+const arr = [1,2,1,3,4,2,5];
+let newArr = [];
+
+function elementsAppearingOnlyOnce(){
     for(let i = 0; i < arr.length; i++){
-        for(let j = i + 1; j < arr.length; j++){
-            if(arr[i] === arr[j]){
-            return arr[i]
-            }
+        let count = 0;
+        for(let j = 0; j < arr.length; j++){
+             if(arr[i] == arr[j]){
+                count ++
+            }          
+        }
+        if(count == 1){
+            newArr.push(arr[i])
         }
     }
-    return "No repeating element";
+    return newArr;
 }
-console.log(findFirstRepeatingElement());
+
+console.log(elementsAppearingOnlyOnce());
