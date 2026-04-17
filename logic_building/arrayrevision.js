@@ -15,14 +15,32 @@
 
 
 // Revision 2: Find sum of all elements
-const arr = [2,4,6,8];
+// const arr = [2,4,6,8];
 
-function sumOfAllElements(){
-    let sum = 0;
+// function sumOfAllElements(){
+//     let sum = 0;
+//     for(let i = 0; i < arr.length; i++){
+//         sum += arr[i]
+//     }
+//     return sum
+// }
+
+// console.log(sumOfAllElements());
+
+
+// Revision 3: Return all even numbers.
+
+const arr = [1,2,3,4,5,6];
+
+const evenNumbers = [];
+
+function findingEvenNumbers(){
     for(let i = 0; i < arr.length; i++){
-        sum += arr[i]
+        if(arr[i] % 2 == 0){
+            evenNumbers.push(arr[i])
+        }
     }
-    return sum
+    return evenNumbers
 }
 
-console.log(sumOfAllElements());
+console.log(findingEvenNumbers());
