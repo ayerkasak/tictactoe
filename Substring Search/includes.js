@@ -10,5 +10,11 @@
 
 // Example 2
 
-let name = "Kasak Ayer";
-console.log(name.includes("Ayer"));
+// let name = "Kasak Ayer";
+// console.log(name.includes("Ayer"));
+
+
+// Example 3
+
+let city = "Kathmandu";
+console.log(city.includes("man"));
