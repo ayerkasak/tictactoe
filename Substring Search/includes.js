@@ -21,5 +21,10 @@
 
 // Example 4
 
-let email = "kasak@gmail.com";
-console.log(email.includes("@"));
+// let email = "kasak@gmail.com";
+// console.log(email.includes("@"));
+
+// Example 5
+
+let fruit = "banana";
+console.log(fruit.includes("apple"))
