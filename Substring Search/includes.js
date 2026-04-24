@@ -16,5 +16,10 @@
 
 // Example 3
 
-let city = "Kathmandu";
-console.log(city.includes("man"));
+// let city = "Kathmandu";
+// console.log(city.includes("man"));
+
+// Example 4
+
+let email = "kasak@gmail.com";
+console.log(email.includes("@"));
