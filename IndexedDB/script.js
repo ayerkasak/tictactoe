@@ -6,6 +6,10 @@ let openRequest = indexedDB.open("JavaScriptDB", 1);
 
 openRequest.onsuccess = (e) => {
     console.log("from success");
+
+    let db = openRequest.result;
+    let transaction = db.transaction("students", "readwrite");
+    let storeObject = transaction.objectStore("students")
 }
 
 openRequest.onupgradeneeded = (e) => {
