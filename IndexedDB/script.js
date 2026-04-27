@@ -20,7 +20,7 @@ openRequest.onsuccess = (e) => {
 
     // Get data from the Indexed DB
 
-    let request = storeObject.get(1);
+    let request = storeObject.getAll();
 
     request.onsuccess = (e) => {
         console.log(e.target.result)
