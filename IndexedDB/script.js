@@ -37,11 +37,12 @@ openRequest.onsuccess = (e) => {
     // Delete data from the Indexed DB
     // let request = storeObject.delete(2)
     
-    // Get Data one by one using cursor from the database
+    // Get Data one by one using cursor from the database as it iterated the whole onsuccess again and again
     let request = storeObject.openCursor();
     
     request.onsuccess = (e) => {
         let cursor = request.result;
+        console.log("Iteration")
         if(cursor){
             let {key, value} = cursor;
             console.log(key, value);
@@ -53,6 +54,8 @@ openRequest.onsuccess = (e) => {
         console.log(e.target.error);
     }
 }
+
+// Creating a table  and  columns
 
 openRequest.onupgradeneeded = (e) => {
     console.log("upgrade needed");
