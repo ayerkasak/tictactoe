@@ -10,6 +10,12 @@ openRequest.onsuccess = (e) => {
 
 openRequest.onupgradeneeded = (e) => {
     console.log("upgrade needed");
+    let db = openRequest.result;
+    if(!db.objectStoreNames.contains("students")){
+        let request = db.createObjectStore("students", {keyPath: 'id'});
+        request.createIndex("name", "name", {unique: false});
+        request.createIndex("email", "email", {unique: true});
+    }
 }
 
 openRequest.onerror = (e) => {
