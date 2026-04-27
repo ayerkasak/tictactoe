@@ -11,13 +11,23 @@ openRequest.onsuccess = (e) => {
     let transaction = db.transaction("students", "readwrite");
     let storeObject = transaction.objectStore("students");
 
-    // Insert Data into Indexed DB
-        // let request = storeObject.put({
+    // Insert Data into Indexed DB 
+        // let request = storeObject.add({
         //     id: 3,
-        //     name: 'indu',
-        //     email: 'indu@gmail.com',
+        //     name: 'aanand',
+        //     email: 'aanand@gmail.com',
         // });
 
+        
+        
+        
+        // Update Data into Indexed DB
+        // let request = storeObject.put({
+            //     id: 3,
+            //     name: 'indu',
+            //     email: 'indu@gmail.com',
+        // });
+        
     // Get data from the Indexed DB
 
     // let index = storeObject.index("name")
@@ -25,12 +35,18 @@ openRequest.onsuccess = (e) => {
 
 
     // Delete data from the Indexed DB
-    let request = storeObject.delete(3)
-
+    // let request = storeObject.delete(2)
     
-
+    // Get Data one by one using cursor from the database
+    let request = storeObject.openCursor();
+    
     request.onsuccess = (e) => {
-        console.log(e.target.result)
+        let cursor = request.result;
+        if(cursor){
+            let {key, value} = cursor;
+            console.log(key, value);
+            cursor.continue();
+        }
     }
 
     request.onerror =(e) => {
