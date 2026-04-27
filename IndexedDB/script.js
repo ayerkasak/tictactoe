@@ -11,11 +11,16 @@ openRequest.onsuccess = (e) => {
     let transaction = db.transaction("students", "readwrite");
     let storeObject = transaction.objectStore("students");
 
-    let request = storeObject.add({
-        id: 1,
-        name: 'Kasak',
-        email: 'kasak@gmail.com',
-    });
+    // Insert Data into Indexed DB
+        // let request = storeObject.put({
+        //     id: 3,
+        //     name: 'indu',
+        //     email: 'indu@gmail.com',
+        // });
+
+    // Get data from the Indexed DB
+
+    let request = storeObject.get(1);
 
     request.onsuccess = (e) => {
         console.log(e.target.result)
