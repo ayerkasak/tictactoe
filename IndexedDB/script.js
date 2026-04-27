@@ -20,7 +20,7 @@ openRequest.onsuccess = (e) => {
 
     // Get data from the Indexed DB
 
-    let request = storeObject.getAll();
+    let request = storeObject.getAll(IDBKeyRange.bound(2, 3));
 
     request.onsuccess = (e) => {
         console.log(e.target.result)
