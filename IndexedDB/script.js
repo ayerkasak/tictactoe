@@ -20,8 +20,14 @@ openRequest.onsuccess = (e) => {
 
     // Get data from the Indexed DB
 
-    let index = storeObject.index("name")
-    let request = index.get('aanand');
+    // let index = storeObject.index("name")
+    // let request = index.get('aanand');
+
+
+    // Delete data from the Indexed DB
+    let request = storeObject.delete(3)
+
+    
 
     request.onsuccess = (e) => {
         console.log(e.target.result)
