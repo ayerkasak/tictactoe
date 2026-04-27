@@ -1,7 +1,7 @@
 // IndexedDB
 
 // console.log(indexedDB);
-let openRequest = indexedDB.open("JavaScriptDB", 1);
+let openRequest = indexedDB.open("JavaScriptDB", 2);
 
 
 openRequest.onsuccess = (e) => {
