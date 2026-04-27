@@ -9,7 +9,21 @@ openRequest.onsuccess = (e) => {
 
     let db = openRequest.result;
     let transaction = db.transaction("students", "readwrite");
-    let storeObject = transaction.objectStore("students")
+    let storeObject = transaction.objectStore("students");
+
+    let request = storeObject.add({
+        id: 1,
+        name: 'Kasak',
+        email: 'kasak@gmail.com',
+    });
+
+    request.onsuccess = (e) => {
+        console.log(e.target.result)
+    }
+
+    request.onerror =(e) => {
+        console.log(e.target.error);
+    }
 }
 
 openRequest.onupgradeneeded = (e) => {
