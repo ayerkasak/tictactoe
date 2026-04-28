@@ -20,13 +20,14 @@
 const arr = [2, 7, 11, 15];
 
 
-for(let i = 0; i < arr.length; i++){
-    let index = [];
-    for(j = i + 1; j < arr.length; j++){
-        if(arr[i] + arr[j] == 9){
-           console.log([i, j])
+function sumOFTwo(){
+    for(let i = 0; i < arr.length; i++){
+        for(let j = i + 1; j < arr.length; j++){
+            if(arr[i] + arr[j] == 9){
+                return [i, j];
+            }
         }
     }
-    
 }
 
+console.log(sumOFTwo())
