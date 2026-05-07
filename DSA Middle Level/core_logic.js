@@ -68,16 +68,37 @@
 
 // To check wherther the given string is palindrome or not.
 
-function checkPalidrome(str){
-    let palindrome = "";
-    for(let i = 0; i < str.length; i++){
-        palindrome = str[i] + palindrome;
+// function checkPalindrome(str){
+//     let reversed = "";
+//     for(let i = 0; i < str.length; i++){
+//         reversed = str[i] + reversed;
+//     }
+//     if(str === reversed){
+//         return "The entered string is palindrome"
+//     }else{
+//         return "It's not palindrome."
+//     }
+// }
+
+// console.log(checkPalindrome("music"));
+
+// Using two pointer method for checking Palindrome now
+
+function checkPalindrome(str){
+    let left = 0;
+    let right = str.length - 1;
+
+    while(left < right){
+        if(str[left] !== str[right]){
+            return false;
+        }
+
+        left++;
+        right--;
     }
-    if(str === palindrome){
-        return "The entered string is palindrome"
-    }else{
-        return "It's not palindrome."
-    }
+
+    return true;
+
 }
 
-console.log(checkPalidrome("music"));
+console.log(checkPalindrome("dad"));
