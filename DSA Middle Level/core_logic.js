@@ -48,17 +48,36 @@
 
 // console.log(targetSix()); 
 
-function twoSum(nums, target) {
-    let map = {}; 
 
-    for (let i = 0; i < nums.length; i++) {
-        let needed = target - nums[i];
+// Question 3 using Hash Map.
 
-        if (map[needed] !== undefined) {
-            return [map[needed], i];
-        }
+// function twoSum(nums, target) {
+//     let map = {}; 
 
-        map[nums[i]] = i;
+//     for (let i = 0; i < nums.length; i++) {
+//         let needed = target - nums[i];
+
+//         if (map[needed] !== undefined) {
+//             return [map[needed], i];
+//         }
+
+//         map[nums[i]] = i;
+//     }
+// }
+// console.log(twoSum([2,7,11,15], 9));
+
+// To check wherther the given string is palindrome or not.
+
+function checkPalidrome(str){
+    let palindrome = "";
+    for(let i = 0; i < str.length; i++){
+        palindrome = str[i] + palindrome;
+    }
+    if(str === palindrome){
+        return "The entered string is palindrome"
+    }else{
+        return "It's not palindrome."
     }
 }
-console.log(twoSum([2,7,11,15], 9));
+
+console.log(checkPalidrome("music"));
