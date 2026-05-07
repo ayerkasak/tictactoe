@@ -73,6 +73,7 @@
 //     for(let i = 0; i < str.length; i++){
 //         reversed = str[i] + reversed;
 //     }
+//     console.log({reversed, str})
 //     if(str === reversed){
 //         return "The entered string is palindrome"
 //     }else{
@@ -81,24 +82,31 @@
 // }
 
 // console.log(checkPalindrome("music"));
-
+const str = "mom";
+console.log(str.split("").reverse().join("")===str)
 // Using two pointer method for checking Palindrome now
 
-function checkPalindrome(str){
-    let left = 0;
-    let right = str.length - 1;
+// function checkPalindrome(str){
+//     let left = 0;
+//     let right = str.length - 1;
 
-    while(left < right){
-        if(str[left] !== str[right]){
-            return false;
-        }
+//     while(left < right){
+//         if(str[left] !== str[right]){
+//             return false;
+//         }
 
-        left++;
-        right--;
-    }
+//         left++;
+//         right--;
+//     }
 
-    return true;
+//     return true;
 
-}
+// }
 
-console.log(checkPalindrome("dad"));
+// console.log(checkPalindrome("dad"));
+
+// function checkPalindrome(str){
+//     let left = 0;
+//     let right = str.length - 1 
+
+// }
