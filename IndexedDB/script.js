@@ -72,24 +72,49 @@
 // }
 
 
-let request = indexedDB.open("Members", 1);
+// let request = indexedDB.open("Members", 1);
+
+// request.onupgradeneeded = function(event) {
+//     let db = event.target.result;
+    
+//     db.createObjectStore("Members", {
+//         keyPath: "id",
+//         autoIncrement: true
+//     })
+// };
+
+
+// request.onsuccess = function(event) {
+//     let db = event.target.result;
+//     let transaction = db.transaction("Members", "readwrite");
+//     let store = transaction.objectStore("Members");
+
+//     store.add({
+//         name: "Ram"
+//     })
+// }
+
+// Practice question no. 2
+
+
+let request = indexedDB.open("LibraryDB", 1);
 
 request.onupgradeneeded = function(event) {
     let db = event.target.result;
-    
-    db.createObjectStore("Members", {
+
+    db.createObjectStore("Books", {
         keyPath: "id",
         autoIncrement: true
     })
-};
+}
 
 
-request.onsuccess = function(event) {
+request.onsuccess = function(event){
     let db = event.target.result;
-    let transaction = db.transaction("Members", "readwrite");
-    let store = transaction.objectStore("Members");
+    let transaction = db.transaction("Books", "readwrite");
+    let store = transaction.objectStore("Books");
 
     store.add({
-        name: "Ram"
+        title: "Atomic Habits"
     })
 }
