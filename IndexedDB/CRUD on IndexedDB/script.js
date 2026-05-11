@@ -31,7 +31,7 @@ request.onsuccess = (e) =>{
     let store = transaction.objectStore("Students");
 
     let addRequest = store.add({
-        name: "Kasak",
+        name: "Aanand",
         address: "Dhangadhi"
     });
 

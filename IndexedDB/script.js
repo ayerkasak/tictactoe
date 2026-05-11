@@ -1,72 +1,95 @@
-// IndexedDB
+// // IndexedDB
 
-// console.log(indexedDB);
-let openRequest = indexedDB.open("JavaScriptDB", 1);
+// // console.log(indexedDB);
+// let openRequest = indexedDB.open("JavaScriptDB", 1);
 
 
-openRequest.onsuccess = (e) => {
-    console.log("from success");
+// openRequest.onsuccess = (e) => {
+//     console.log("from success");
 
-    let db = openRequest.result;
-    let transaction = db.transaction("students", "readwrite");
-    let storeObject = transaction.objectStore("students");
+//     let db = openRequest.result;
+//     let transaction = db.transaction("students", "readwrite");
+//     let storeObject = transaction.objectStore("students");
 
-    // Insert Data into Indexed DB 
-        // let request = storeObject.add({
-        //     id: 3,
-        //     name: 'aanand',
-        //     email: 'aanand@gmail.com',
-        // });
+//     // Insert Data into Indexed DB 
+//         // let request = storeObject.add({
+//         //     id: 3,
+//         //     name: 'aanand',
+//         //     email: 'aanand@gmail.com',
+//         // });
 
         
         
         
-        // Update Data into Indexed DB
-        // let request = storeObject.put({
-            //     id: 3,
-            //     name: 'indu',
-            //     email: 'indu@gmail.com',
-        // });
+//         // Update Data into Indexed DB
+//         // let request = storeObject.put({
+//             //     id: 3,
+//             //     name: 'indu',
+//             //     email: 'indu@gmail.com',
+//         // });
         
-    // Get data from the Indexed DB
+//     // Get data from the Indexed DB
 
-    // let index = storeObject.index("name")
-    // let request = index.get('aanand');
+//     // let index = storeObject.index("name")
+//     // let request = index.get('aanand');
 
 
-    // Delete data from the Indexed DB
-    // let request = storeObject.delete(2)
+//     // Delete data from the Indexed DB
+//     // let request = storeObject.delete(2)
     
-    // Get Data one by one using cursor from the database as it iterated the whole onsuccess again and again
-    let request = storeObject.openCursor();
+//     // Get Data one by one using cursor from the database as it iterated the whole onsuccess again and again
+//     let request = storeObject.openCursor();
     
-    request.onsuccess = (e) => {
-        let cursor = request.result;
-        console.log("Iteration")
-        if(cursor){
-            let {key, value} = cursor;
-            console.log(key, value);
-            cursor.continue();
-        }
-    }
+//     request.onsuccess = (e) => {
+//         let cursor = request.result;
+//         console.log("Iteration")
+//         if(cursor){
+//             let {key, value} = cursor;
+//             console.log(key, value);
+//             cursor.continue();
+//         }
+//     }
 
-    request.onerror =(e) => {
-        console.log(e.target.error);
-    }
-}
+//     request.onerror =(e) => {
+//         console.log(e.target.error);
+//     }
+// }
 
-// Creating a table  and  columns
+// // Creating a table  and  columns
 
-openRequest.onupgradeneeded = (e) => {
-    console.log("upgrade needed");
-    let db = openRequest.result;
-    if(!db.objectStoreNames.contains("students")){
-        let request = db.createObjectStore("students", {keyPath: 'id'});
-        request.createIndex("name", "name", {unique: false});
-        request.createIndex("email", "email", {unique: true});
-    }
-}
+// openRequest.onupgradeneeded = (e) => {
+//     console.log("upgrade needed");
+//     let db = openRequest.result;
+//     if(!db.objectStoreNames.contains("students")){
+//         let request = db.createObjectStore("students", {keyPath: 'id'});
+//         request.createIndex("name", "name", {unique: false});
+//         request.createIndex("email", "email", {unique: true});
+//     }
+// }
 
-openRequest.onerror = (e) => {
-    console.log("Error: ", e);
+// openRequest.onerror = (e) => {
+//     console.log("Error: ", e);
+// }
+
+
+let request = indexedDB.open("Members", 1);
+
+request.onupgradeneeded = function(event) {
+    let db = event.target.result;
+    
+    db.createObjectStore("Members", {
+        keyPath: "id",
+        autoIncrement: true
+    })
+};
+
+
+request.onsuccess = function(event) {
+    let db = event.target.result;
+    let transaction = db.transaction("Members", "readwrite");
+    let store = transaction.objectStore("Members");
+
+    store.add({
+        name: "Ram"
+    })
 }
