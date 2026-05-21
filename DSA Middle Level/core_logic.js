@@ -82,8 +82,8 @@
 // }
 
 // console.log(checkPalindrome("music"));
-const str = "mom";
-console.log(str.split("").reverse().join("")===str)
+// const str = "mom";
+// console.log(str.split("").reverse().join("")===str)
 // Using two pointer method for checking Palindrome now
 
 // function checkPalindrome(str){
@@ -110,3 +110,18 @@ console.log(str.split("").reverse().join("")===str)
 //     let right = str.length - 1 
 
 // }
+
+
+// Example: Find the Largest number in the array
+
+function largestNumber(arr){
+    let max = 0;
+    for(let i = 0; i < arr.length; i++){
+            if(arr[i] > max){
+                max = arr[i];
+            }
+    }
+    return max;
+}
+
+console.log(largestNumber([1,4,5,2,9]))
