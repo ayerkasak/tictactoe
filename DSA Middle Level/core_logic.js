@@ -148,14 +148,32 @@
 
 // Find smallest number in the array.
 
-function samllestNumber(arr){
-    let min = arr[0];
+// function smallestNumber(arr){
+//     let min = arr[0];
+//     for(let i = 0; i < arr.length; i++){
+//         if(arr[i] < min){
+//             min = arr[i];
+//         }
+//     }
+//     return min;
+// }
+
+// console.log(smallestNumber([10, 12, 3, 5, 6, 7, 1, 9]))
+
+
+// Count Even and Odd Numbers
+
+function countingEvenAndOddNumbers(arr){
+    let even = 0;
+    let odd = 0;
     for(let i = 0; i < arr.length; i++){
-        if(arr[i] < min){
-            min = arr[i];
+        if(arr[i] % 2 == 0){
+            even += 1;
+        } else{
+            odd += 1;
         }
     }
-    return min;
+    return {even, odd}
 }
 
-console.log(samllestNumber([10, 12, 3, 5, 6, 7, 1, 9]))
+console.log(countingEvenAndOddNumbers([1,2,3,4,5,6,7,8,9,10,11]));
