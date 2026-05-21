@@ -129,19 +129,33 @@
 
 // Find the Second largest number
 
-function secondLargestNumber(arr){
-    let max = arr[0];
-    let secondMax = arr[0];
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i] > max ){
-            secondMax = max;
-            max = arr[i];
+// function secondLargestNumber(arr){
+//     let max = arr[0];
+//     let secondMax = arr[0];
+//     for(let i = 0; i < arr.length; i++){
+//         if(arr[i] > max ){
+//             secondMax = max;
+//             max = arr[i];
 
-        } else if(arr[i] > secondMax && arr[i] !== max){
-            secondMax = arr[i];
+//         } else if(arr[i] > secondMax && arr[i] !== max){
+//             secondMax = arr[i];
+//         }
+//     }
+//     return secondMax;
+// }
+
+// console.log(secondLargestNumber([8, 6, 2, 4, 9]));
+
+// Find smallest number in the array.
+
+function samllestNumber(arr){
+    let min = arr[0];
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] < min){
+            min = arr[i];
         }
     }
-    return secondMax;
+    return min;
 }
 
-console.log(secondLargestNumber([8, 6, 2, 4, 9]));
+console.log(samllestNumber([10, 12, 3, 5, 6, 7, 1, 9]))
