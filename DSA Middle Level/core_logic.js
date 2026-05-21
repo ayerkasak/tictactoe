@@ -114,14 +114,34 @@
 
 // Example: Find the Largest number in the array
 
-function largestNumber(arr){
-    let max = 0;
+// function largestNumber(arr){
+//     let max = 0;
+//     for(let i = 0; i < arr.length; i++){
+//             if(arr[i] > max){
+//                 max = arr[i];
+//             }
+//     }
+//     return max;
+// }
+
+// console.log(largestNumber([1,4,5,2,9]))
+
+
+// Find the Second largest number
+
+function secondLargestNumber(arr){
+    let max = arr[0];
+    let secondMax = arr[0];
     for(let i = 0; i < arr.length; i++){
-            if(arr[i] > max){
-                max = arr[i];
-            }
+        if(arr[i] > max ){
+            secondMax = max;
+            max = arr[i];
+
+        } else if(arr[i] > secondMax && arr[i] !== max){
+            secondMax = arr[i];
+        }
     }
-    return max;
+    return secondMax;
 }
 
-console.log(largestNumber([1,4,5,2,9]))
+console.log(secondLargestNumber([8, 6, 2, 4, 9]));
