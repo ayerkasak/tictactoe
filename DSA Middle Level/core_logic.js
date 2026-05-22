@@ -163,17 +163,29 @@
 
 // Count Even and Odd Numbers
 
-function countingEvenAndOddNumbers(arr){
-    let even = 0;
-    let odd = 0;
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i] % 2 == 0){
-            even += 1;
-        } else{
-            odd += 1;
-        }
+// function countingEvenAndOddNumbers(arr){
+//     let even = 0;
+//     let odd = 0;
+//     for(let i = 0; i < arr.length; i++){
+//         if(arr[i] % 2 == 0){
+//             even += 1;
+//         } else{
+//             odd += 1;
+//         }
+//     }
+//     return {even, odd}
+// }
+
+// console.log(countingEvenAndOddNumbers([1,2,3,4,5,6,7,8,9,10,11]));
+
+// Reverse an Array Manually
+
+function reversingArray(arr){
+    let reversedArray = [];
+    for(let i = arr.length-1; i >= 0; i--){
+        reversedArray.push(arr[i])
     }
-    return {even, odd}
+    return reversedArray;
 }
 
-console.log(countingEvenAndOddNumbers([1,2,3,4,5,6,7,8,9,10,11]));
+console.log(reversingArray([1,2,3,4,5]));
