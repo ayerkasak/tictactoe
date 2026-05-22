@@ -180,12 +180,31 @@
 
 // Reverse an Array Manually
 
+// function reversingArray(arr){
+//     let reversedArray = [];
+//     for(let i = arr.length-1; i >= 0; i--){
+//         reversedArray.push(arr[i])
+//     }
+//     return reversedArray;
+// }
+
+// console.log(reversingArray([1,2,3,4,5]));
+
+// Reverse an array using two pointer variable:
+
 function reversingArray(arr){
-    let reversedArray = [];
-    for(let i = arr.length-1; i >= 0; i--){
-        reversedArray.push(arr[i])
+    let left = 0;
+    let right = arr.length - 1;
+
+    while(left < right){
+        let temp = arr[left];
+        arr[left] = arr[right];
+        arr[right] = temp;
+
+        left ++;
+        right --;
     }
-    return reversedArray;
+    return arr;
 }
 
-console.log(reversingArray([1,2,3,4,5]));
+console.log(reversingArray([1, 2, 3, 4, 5]));
