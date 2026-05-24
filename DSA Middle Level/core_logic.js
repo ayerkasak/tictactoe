@@ -192,19 +192,30 @@
 
 // Reverse an array using two pointer variable:
 
-function reversingArray(arr){
-    let left = 0;
-    let right = arr.length - 1;
+// function reversingArray(arr){
+//     let left = 0;
+//     let right = arr.length - 1;
 
-    while(left < right){
-        let temp = arr[left];
-        arr[left] = arr[right];
-        arr[right] = temp;
+//     while(left < right){
+//         let temp = arr[left];
+//         arr[left] = arr[right];
+//         arr[right] = temp;
 
-        left ++;
-        right --;
-    }
-    return arr;
+//         left ++;
+//         right --;
+//     }
+//     return arr;
+// }
+
+// console.log(reversingArray([1, 2, 3, 4, 5]));
+
+// Check th most repeated element and 
+
+
+function sum(a, b, ...c){
+     return a + b + c.reduce((acc, curr) => { 
+        return acc + curr
+     }, 0);
 }
 
-console.log(reversingArray([1, 2, 3, 4, 5]));
+console.log(sum(1, 2, 3, 4))
