@@ -28,22 +28,38 @@
 
 // const h = [1,2,3,4,5,6,7];
 
- function maxArea(h){
-    let area = 0;
-    let containerWall = [];
-    for(let i = 0; i < h.length; i++){
-        for(let j = i + 1; j < h.length; j++){
-            let areaOccupied = Math.min(h[i], h[j]) * (j-i);
-            // console.log(areaOccupied)
-            if(areaOccupied > area){
-                area = areaOccupied;
-                containerWall[0] = h[i];
-                containerWall[1] = h[j];  
+//  function maxArea(h){
+//     let area = 0;
+//     let containerWall = [];
+//     for(let i = 0; i < h.length; i++){
+//         for(let j = i + 1; j < h.length; j++){
+//             let areaOccupied = Math.min(h[i], h[j]) * (j-i);
+//             // console.log(areaOccupied)
+//             if(areaOccupied > area){
+//                 area = areaOccupied;
+//                 containerWall[0] = h[i];
+//                 containerWall[1] = h[j];  
 
-            }
-        }
-    }
-    return {area, containerWall}; 
- }
+//             }
+//         }
+//     }
+//     return {area, containerWall}; 
+//  }
 
- console.log(maxArea([1,8,6,2,5,4,8,3,7]))
+//  console.log(maxArea([1,8,6,2,5,4,8,3,7]))
+
+// leetcode Question 1: (Two Sum) Return the indeces whose sum is 9
+// const arr = [2, 7, 11, 15];
+
+
+// function sumOFTwo(){
+//     for(let i = 0; i < arr.length; i++){
+//         for(let j = i + 1; j < arr.length; j++){
+//             if(arr[i] + arr[j] == 9){
+//                 return [i, j];
+//             }
+//         }
+//     }
+// }
+
+// console.log(sumOFTwo())
