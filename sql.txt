@@ -20,4 +20,6 @@
 
  INSERT INTO members(name, age, membership)
  VALUES("Khushbu", 35, "Basic");
- 
+
+ //Read data
+ SELECT * FROM members;
