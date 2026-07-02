@@ -42,3 +42,8 @@ WHERE age > 21;
 SELECT * 
 FROM members
 WHERE membership = 'Premium';
+
+// a query to find members whose age is 20.
+SELECT *
+FROM members
+WHERE age = 20;
