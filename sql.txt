@@ -53,3 +53,7 @@ WHERE age = 20;
 UPDATE members
 SET membership = 'Premium'
 WHERE name = 'Khushbu';
+
+UPDATE members
+SET membership = 'Gold'
+WHERE id = 2;
