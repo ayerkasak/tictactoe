@@ -28,3 +28,6 @@
 
  SELECT name, membership
  FROM members;
+
+SELECT name, age
+FROM members;
