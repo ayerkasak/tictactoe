@@ -1,0 +1,12 @@
+//Creating a table in database
+ CREATE TABLE members (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    age INTEGER,
+    membership TEXT
+ );
+
+ //Inserting data into the table
+ INSERT INTO members(name, age, membership)
+ VALUES('Kasak', 28, 'Gold');
+ 
