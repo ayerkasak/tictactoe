@@ -38,3 +38,7 @@ SELECT *
 FROM members
 WHERE age > 21;
 
+// finding only premium members
+SELECT * 
+FROM members
+WHERE membership = 'Premium';
