@@ -47,3 +47,9 @@ WHERE membership = 'Premium';
 SELECT *
 FROM members
 WHERE age = 20;
+
+
+// Update (Modify Data)
+UPDATE members
+SET membership = 'Premium'
+WHERE name = 'Khushbu';
