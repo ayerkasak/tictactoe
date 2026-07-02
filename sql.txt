@@ -31,3 +31,10 @@
 
 SELECT name, age
 FROM members;
+
+// Using WHERE for filtering data
+
+SELECT * 
+FROM members
+WHERE age > 21;
+
