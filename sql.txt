@@ -23,3 +23,8 @@
 
  //Read data
  SELECT * FROM members;
+
+ //Showing only specific columns
+
+ SELECT name, membership
+ FROM members;
