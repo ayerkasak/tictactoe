@@ -9,4 +9,10 @@
  //Inserting data into the table
  INSERT INTO members(name, age, membership)
  VALUES('Kasak', 28, 'Gold');
+
+
+ // Inserting more data into the table
+ INSERT INTO members(name, age, membership)
+ VALUES('Aanand', 29, 'Basic');
+
  
