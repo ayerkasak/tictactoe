@@ -113,3 +113,7 @@ ADD COLUMN address TEXT;
 UPDATE members
 SET address = 'Kathmandu'
 WHERE name = 'Ram';
+
+ UPDATE members
+SET address = 'Pokhara'
+WHERE name = 'Sita';
