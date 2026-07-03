@@ -91,4 +91,7 @@ WHERE name = 'Ram';
  SET phone = '9812345678'
  WHERE name = 'Sita';
 
- 
+// Updating phone number
+UPDATE members
+SET phone = '9841000000'
+WHERE name = 'Hari';
