@@ -122,3 +122,9 @@ WHERE name = 'Sita';
 UPDATE members
 SET membership = 'Gold'
 Where name = 'Sita';
+
+//Order By (Sorting)
+
+SELECT * 
+FROM members
+ORDER BY age Asc;
