@@ -76,3 +76,7 @@ WHERE name = 'Aanand';
 UPDATE members
  SET phone = '980000000'
 WHERE name = 'Ram';
+
+// Adding email column
+ALTER TABLE members
+ADD COLUMN email TEXT;
