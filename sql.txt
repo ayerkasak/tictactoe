@@ -72,3 +72,7 @@ WHERE name = 'Aanand';
  ALTER TABLE members
  ADD COLUMN phone TEXT;
 
+// Adding phone number 
+UPDATE members
+ SET phone = '980000000'
+WHERE name = 'Ram';
