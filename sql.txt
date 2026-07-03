@@ -108,3 +108,8 @@ Where name = 'Ram';
 // adding a new column address
 ALTER TABLE members
 ADD COLUMN address TEXT;
+
+// Updating address
+UPDATE members
+SET address = 'Kathmandu'
+WHERE name = 'Ram';
