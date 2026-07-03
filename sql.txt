@@ -104,3 +104,7 @@ WHERE is = 2;
 //DELETE member
 DELETE FROM members
 Where name = 'Ram';
+
+// adding a new column address
+ALTER TABLE members
+ADD COLUMN address TEXT;
