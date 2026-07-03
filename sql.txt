@@ -67,3 +67,8 @@ WHERE id = 2;
 
 DELETE FROM members
 WHERE name = 'Aanand';
+
+// Adding Columns
+ ALTER TABLE members
+ ADD COLUMN phone TEXT;
+
