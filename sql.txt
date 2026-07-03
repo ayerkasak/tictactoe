@@ -85,3 +85,10 @@ ADD COLUMN email TEXT;
 UPDATE members
 SET email = 'ram@gmail.com'
 WHERE name = 'Ram';
+
+// Adding phone number
+ UPDATE members
+ SET phone = '9812345678'
+ WHERE name = 'Sita';
+
+ 
