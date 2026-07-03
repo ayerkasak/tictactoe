@@ -123,8 +123,13 @@ UPDATE members
 SET membership = 'Gold'
 Where name = 'Sita';
 
-//Order By (Sorting)
+//Order By (Sorting from smallest to Largest)
 
 SELECT * 
 FROM members
 ORDER BY age Asc;
+
+//Sorting from Largest to smallest
+SELECT *
+FROM members
+ORDER BY age DESC;
