@@ -95,3 +95,8 @@ WHERE name = 'Ram';
 UPDATE members
 SET phone = '9841000000'
 WHERE name = 'Hari';
+
+// Changing the membership
+UPDATE members
+SET membership = 'Basic'
+WHERE is = 2;
