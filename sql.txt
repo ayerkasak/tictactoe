@@ -146,3 +146,26 @@ task4: SELECT * FROM members
 WHERE age > 20
 ORDER BY age DESC;
 task5: It'll sort the data in Ascending order as it is the default nature of ORDER BY.
+
+//Combining WHERE + ORDER BY + LIMIT
+task 1: SELECT * FROM members
+LIMIT 2;
+Task2: SELECT * FROM members
+ORDER BY age ASC
+LIMIT 1;
+Task 3: SELECT * FROM members
+ORDER BY age DESC
+LIMIT 1;
+Task 4: SELECT * FROM members
+WHERE membership = 'Premium'
+ORDER BY age ASC
+LIMIT 1;
+Task5: 
+SELECT *
+FROM members
+ORDER BY age DESC
+LIMIT 2;
+
+Which ages do you think will be returned?
+
+30 and 25 will be returned
