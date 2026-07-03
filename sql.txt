@@ -80,3 +80,8 @@ WHERE name = 'Ram';
 // Adding email column
 ALTER TABLE members
 ADD COLUMN email TEXT;
+
+// Adding email
+UPDATE members
+SET email = 'ram@gmail.com'
+WHERE name = 'Ram';
