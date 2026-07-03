@@ -117,3 +117,8 @@ WHERE name = 'Ram';
  UPDATE members
 SET address = 'Pokhara'
 WHERE name = 'Sita';
+
+// Update membership
+UPDATE members
+SET membership = 'Gold'
+Where name = 'Sita';
