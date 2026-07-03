@@ -100,3 +100,7 @@ WHERE name = 'Hari';
 UPDATE members
 SET membership = 'Basic'
 WHERE is = 2;
+
+//DELETE member
+DELETE FROM members
+Where name = 'Ram';
