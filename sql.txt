@@ -169,3 +169,36 @@ LIMIT 2;
 Which ages do you think will be returned?
 
 30 and 25 will be returned
+
+//Write queries for:
+
+Count all members.
+Count only Gold members.
+Find the average age of all members.
+Find the total fees collected.
+Find the highest fee.
+Find the minimum age.
+Find the average age of Premium members.
+Find the total fees collected from Gold members.
+Write one query that returns:
+total members,
+average age,
+oldest age,
+youngest age,
+total fees
+
+1. SELECT COUNT(*) FROM members;
+2. SELECT COUNT(*) FROM members WHERE membership = 'Gold';
+3.SELECT AVG(age) FRom members;
+4. SELECt SUM(fee) FROM members;
+5. SELECT MAX(fee) FROM members;
+6. SELECT MIN(age) FROM members;
+7. SELECT AVG(age) FROM members WHERE membership = 'Premium';
+8. SELECT SUM(fee) FROM members WHERE membership = 'Gold';
+9. SELECT COUNT(*) AS total_members,
+   AVG(age) AS avg_age,
+   MAX(age) AS oldest_age,
+   MIN(age) AS youngest_age,
+   SUM(fee) AS total_fee 
+   FROM members;
+
