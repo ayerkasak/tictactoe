@@ -230,3 +230,11 @@ SELECT customer,
 SUM(amount) AS total_spent
 FROM orders
 GROUP BY customer;
+
+
+// HAVING filters
+SELECT city,
+COUNT(*) AS total_people
+FROM members
+GROUP BY city
+HAVING COUNT(*) > 1;
