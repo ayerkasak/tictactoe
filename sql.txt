@@ -216,3 +216,17 @@ SELECT department,
 AVG(salary)
 FROM employees
 GROUP BY department;
+
+//orders table
+| customer | amount |
+| -------- | ------ |
+| Ram      | 500    |
+| Ram      | 700    |
+| Sita     | 300    |
+| Hari     | 100    |
+| Hari     | 200    |
+
+SELECT customer, 
+SUM(amount) AS total_spent
+FROM orders
+GROUP BY customer;
