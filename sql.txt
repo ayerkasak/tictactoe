@@ -202,3 +202,17 @@ total fees
    SUM(fee) AS total_fee 
    FROM members;
 
+// GROUP BY
+
+| name | department | salary |
+| ---- | ---------- | ------ |
+| Ram  | IT         | 40000  |
+| Hari | IT         | 45000  |
+| Sita | HR         | 30000  |
+| Gita | HR         | 35000  |
+| John | Sales      | 25000  |
+
+SELECT department,
+AVG(salary)
+FROM employees
+GROUP BY department;
