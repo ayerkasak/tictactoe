@@ -292,3 +292,9 @@ SELECT membership,
 MAX(age) AS oldest_member
 FROM members
 GROUP BY membership;
+
+//Young age in each membership
+SELECT membership,
+MIN(age) AS youngest_member
+FROM members
+GROUP BY membership;
