@@ -267,3 +267,10 @@ HAVING COUNT(*) > 2;
 | 5  | John | 24  | Gold       | 5000 |
 | 6  | Rita | 22  | Basic      | 2000 |
 | 7  | Sam  | 28  | Premium    | 3000 |
+
+//Task 1: GROUP BY only
+
+SELECT membership, 
+COUNT(*) AS total_members
+FROM members
+GROUP BY membership;
