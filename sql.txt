@@ -257,3 +257,13 @@ COUNT(*)
 FROM members
 GROUP BY membership
 HAVING COUNT(*) > 2;
+
+| id | name | age | membership | fee  |
+| -- | ---- | --- | ---------- | ---- |
+| 1  | Ram  | 22  | Premium    | 3000 |
+| 2  | Sita | 20  | Basic      | 2000 |
+| 3  | Hari | 25  | Premium    | 3000 |
+| 4  | Gita | 18  | Gold       | 5000 |
+| 5  | John | 24  | Gold       | 5000 |
+| 6  | Rita | 22  | Basic      | 2000 |
+| 7  | Sam  | 28  | Premium    | 3000 |
