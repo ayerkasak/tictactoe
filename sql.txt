@@ -274,3 +274,9 @@ SELECT membership,
 COUNT(*) AS total_members
 FROM members
 GROUP BY membership;
+
+// Task2: average age of each membership
+SELECT membership,
+AVERAGE(age) AS average_age
+FROM members
+GROUP BY membership;
