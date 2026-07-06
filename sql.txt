@@ -286,3 +286,9 @@ SELECT membership,
 SUM(fee) AS total_fee
 FROM members
 GROUP BY membership;
+
+//Task4: highest age in each membership
+SELECT membership,
+MAX(age) AS oldest_member
+FROM members
+GROUP BY membership;
