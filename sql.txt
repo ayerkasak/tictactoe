@@ -280,3 +280,9 @@ SELECT membership,
 AVERAGE(age) AS average_age
 FROM members
 GROUP BY membership;
+
+// Task3: total fees collected for each membership
+SELECT membership,
+SUM(fee) AS total_fee
+FROM members
+GROUP BY membership;
