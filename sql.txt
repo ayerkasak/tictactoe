@@ -305,3 +305,11 @@ COUNT(*) AS total_members
 FROM members
 GROUP BY membership
 HAVING COUNT(*) > 2;
+
+Task 6: 
+SELECT membership,
+COUNT(*) AS total_members
+FROM members
+GROUP BY membership
+HAVING total_members > 2;
+
