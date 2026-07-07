@@ -313,3 +313,9 @@ FROM members
 GROUP BY membership
 HAVING total_members > 2;
 
+//Task7: 
+SELECT membership,
+AVG(age) as average_age
+FROM members
+GROUP BY membership
+HAVING average_age > 22;
