@@ -277,7 +277,7 @@ GROUP BY membership;
 
 // Task2: average age of each membership
 SELECT membership,
-AVERAGE(age) AS average_age
+AVG(age) AS average_age
 FROM members
 GROUP BY membership;
 
@@ -293,8 +293,15 @@ MAX(age) AS oldest_member
 FROM members
 GROUP BY membership;
 
-//Young age in each membership
+//Task5: Young age in each membership
 SELECT membership,
-MIN(age) AS youngest_member
+MIN(age) AS youngest_member 
 FROM members
 GROUP BY membership;
+
+//HAVING
+SELECT membership,
+COUNT(*) AS total_members
+FROM members
+GROUP BY membership
+HAVING COUNT(*) > 2;
