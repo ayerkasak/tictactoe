@@ -333,3 +333,10 @@ SELECT members.name, payments.amount
 FROM members
 INNER JOIN payments
 ON members.member_id = payments.member_id;
+
+//Table Aliases
+
+SELECT m.name, p.amount
+FROM member m
+INNER JOIN payments p
+ON m.member_id = p.member_id;
