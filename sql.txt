@@ -340,3 +340,9 @@ SELECT m.name, p.amount
 FROM member m
 INNER JOIN payments p
 ON m.member_id = p.member_id;
+
+// Task3:
+SELECT m.member_id, m.name, p.payment_id, p.amount
+FROM member m
+INNER JOIN payments p
+ON members.member_id = payments.member_id;
