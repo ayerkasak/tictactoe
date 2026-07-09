@@ -402,3 +402,12 @@ FROM members m
 LEFT JOIN payments p 
 ON m.member_id = p.member_id 
 GROUP BY m.member_id;
+
+/Task6
+SELECT m.name,
+COUNT(p.payment_id) AS total_number_of_payments
+FROM members m
+LEFT JOIN payments p
+ON m.member_id = p.member_id
+GROUP BY m.member_id
+HAVING COUNT(p.payment_id) > 1;
