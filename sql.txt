@@ -429,3 +429,11 @@ FROM members m
 INNER JOIN payments p 
 ON m.member_id = p.member_id 
 GROUP BY m.member_id;
+
+//Task3
+SELECT m.membership, 
+SUM(p.amount) AS total_collected 
+FROM members m 
+INNER JOIN payments p 
+ON m.member_id = p.member_id 
+GROUP BY m.membership;
