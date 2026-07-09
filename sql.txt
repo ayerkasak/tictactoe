@@ -352,3 +352,12 @@ SELECT m.names, p.amount
 FROM members m
 LEFT JOIN payments p
 ON m.member_id = p.member_id;
+
+//LEFT JOIN with GROUP BY
+
+SELECT m.name,
+SUM(p.amount) AS total_payment
+FROM members m
+LEFT JOIN payments p
+ON m.member_id = p.member_id
+GROUP BY m.member_id;
