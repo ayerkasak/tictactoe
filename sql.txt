@@ -378,3 +378,11 @@ FROM members m
 LEFT JOIN payments p
 ON m.member_id = p.member_id
 GROUP BY m.member_id;
+
+Task3: 
+SELECT m.name, 
+AVG(p.amount) as average_payment 
+FROM members m 
+LEFT JOIN payments p 
+ON m.member_id = p.member_id 
+GROUP BY m.member_id;
