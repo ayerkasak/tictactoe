@@ -379,9 +379,17 @@ LEFT JOIN payments p
 ON m.member_id = p.member_id
 GROUP BY m.member_id;
 
-Task3: 
+//Task3: 
 SELECT m.name, 
 AVG(p.amount) as average_payment 
+FROM members m 
+LEFT JOIN payments p 
+ON m.member_id = p.member_id 
+GROUP BY m.member_id;
+
+//Task4: 
+SELECT m.name, 
+MAX(p.amount) as highest_payment 
 FROM members m 
 LEFT JOIN payments p 
 ON m.member_id = p.member_id 
