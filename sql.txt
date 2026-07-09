@@ -394,3 +394,11 @@ FROM members m
 LEFT JOIN payments p 
 ON m.member_id = p.member_id 
 GROUP BY m.member_id;
+
+//Task5: 
+SELECT m.name, 
+MIN(p.amount) as lowest_payment 
+FROM members m 
+LEFT JOIN payments p 
+ON m.member_id = p.member_id 
+GROUP BY m.member_id;
