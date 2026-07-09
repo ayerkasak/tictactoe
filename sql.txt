@@ -437,3 +437,11 @@ FROM members m
 INNER JOIN payments p 
 ON m.member_id = p.member_id 
 GROUP BY m.membership;
+
+//Task4
+SELECT m.membership, 
+AVG(p.amount) as average_amount 
+FROM members m 
+INNER JOIN payments p 
+ON m.member_id = p.member_id 
+GROUP BY m.membership;
