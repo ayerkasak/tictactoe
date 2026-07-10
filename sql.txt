@@ -473,3 +473,10 @@ INNER JOIN payments p
 ON m.member_id = p.member_id
 GROUP BY m.member_id
 HAVING SUM(p.amount) > 5000;
+
+//task8
+SELECT membership,
+COUNT(*) AS member_count
+FROM members
+GROUP BY membership
+HAVING COUNT(*) > 1;
