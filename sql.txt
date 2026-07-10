@@ -445,3 +445,22 @@ FROM members m
 INNER JOIN payments p 
 ON m.member_id = p.member_id 
 GROUP BY m.membership;
+
+//Level 2 of JOINs, GROUP BY and HAVING
+//task5
+SELECT m.name,
+COUNT(p.payment_id) AS total_payments
+FROM members m
+INNER JOIN payments p
+ON m.member_id = p.member_id
+GROUP BY m.member_id
+HAVING COUNT(p.payment_id) > 1;
+
+//Task6
+SELECT m.membership,
+SUM(p.amount) AS total_collection
+FROM members m
+INNER JOIN payments p
+ON m.member_id = p.member_id
+GROUP BY m.membership
+HAVING SUM(p.amount) > 5000;
