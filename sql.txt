@@ -472,7 +472,7 @@ FROM members m
 INNER JOIN payments p
 ON m.member_id = p.member_id
 GROUP BY m.member_id
-HAVING SUM(p.amount) > 5000;
+HAVING SUM(p.amount) > 5000; 
 
 //task8
 SELECT membership,
