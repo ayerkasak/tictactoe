@@ -12,46 +12,24 @@
     </style>
 </head>
 <body style="background-color: #212121; color: #fff;">
-    <!-- <div>
-        <h1 id="title" class="heading">DOM Learning on chai aur code</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error placeat perspiciatis, repudiandae, laboriosam sit fugiat incidunt exercitationem commodi nesciunt voluptates ab voluptatum doloribus maiores possimus sint excepturi non est atque.</p>
-
-        <ul>
-            <li class="list-item">one</li>
-            <li class="list-item">two</li>
-            <li class="list-item">three</li>
-            <li class="list-item">four</li>
-        </ul>
-
-    </div> -->
-
-    <div class="parent">
-        <div class="day">Monday</div>
-        <div class="day">Tuesday</div>
-        <div class="day">Wednesday</div>
-        <div class="day">Thursday</div>
-    </div>
-
-    <script>
-        const parent = document.querySelector('.parent');
-        // console.log(parent)
-        // console.log(parent.children)
-
-        // for(let i = 0; i < parent.children.length; i++){
-        //     console.log(parent.children[i].innerHTML)
-        // }
-
-        parent.children[1].style.color = "orange";
-
-
-        const dayOne = document.querySelector('.day');
-        // console.log(dayOne)
-        // console.log(dayOne.parentElement)
-        // console.log(dayOne.nextElementSibling)
-
-        console.log("Nodes: ", parent.childNodes)
-    </script>
+    
 
     
 </body>
+
+<script>
+    const div = document.createElement('div');
+    // console.log(div)
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute("title", "generated title")
+    div.style.backgroundColor = "green"
+    div.style.padding = "10px"
+    // div.innerText = "Mein aur Code"
+    const addText = document.createTextNode("Mein aur Code")
+    div.appendChild(addText)
+    document.body.appendChild(div)
+
+</script>
+
 </html>
