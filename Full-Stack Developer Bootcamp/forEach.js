@@ -19,9 +19,17 @@
 // }
 // citiesToVisit(["Kathmandu", "Pokhara", "Bhaktapur"])
 
+// function expenses(arr){
+//     arr.forEach(expense => {
+//         console.log(`Expense: ${expense}`)
+ 
+//     });
+// }
+// expenses([1200, 450, 800, 2500, 300])
+
 function expenses(arr){
-    arr.forEach(expense => {
-        console.log(`Expense: ${expense}`)
+    arr.forEach((expense, index) => {
+        console.log(`Expense[${index + 1}]: ${expense}`)
  
     });
 }
