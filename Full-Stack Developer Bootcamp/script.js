@@ -3,6 +3,13 @@
 // console.log(`My name is ${name} and I am ${age} years old.`);
 
 // foreach
-const prices = [100, 250, 500];
+// const prices = [100, 250, 500];
 
-prices.forEach((price) => console.log(price));
+// prices.forEach((price) => console.log(price));
+
+
+const fruits = ["Apple", "Banana", "Orange"];
+fruits.forEach((fruit) => {
+    console.log(fruit)
+})
+
