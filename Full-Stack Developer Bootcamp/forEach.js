@@ -11,3 +11,10 @@ function friends(names){
     })
 }
 friends(["Ram", "Hari", "Sita"]);
+
+function citiesToVisit(cities){
+     cities.forEach((city) => {
+        console.log(`I want to visit ${city}.`)
+     })
+}
+citiesToVisit(["Kathmandu", "Pokhara", "Bhaktapur"])
