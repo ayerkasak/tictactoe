@@ -19,13 +19,13 @@
 // }
 // citiesToVisit(["Kathmandu", "Pokhara", "Bhaktapur"])
 
-// function expenses(arr){
-//     arr.forEach(expense => {
-//         console.log(`Expense: ${expense}`)
+function expenses(arr){
+    arr.forEach(expense => {
+        console.log(`Expense: ${expense}`)
  
-//     });
-// }
-// expenses([1200, 450, 800, 2500, 300])
+    });
+}
+expenses([1200, 450, 800, 2500, 300])
 
 function expenses(arr){
     arr.forEach((expense, index) => {
