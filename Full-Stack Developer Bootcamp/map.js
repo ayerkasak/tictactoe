@@ -13,3 +13,11 @@ function uppercase(arr){
 }
 console.log(uppercase(["ram", "hari", "sita"]))
 
+function addingBonusMarks(marks){
+    const marksWithBonus = marks.map((item) => {
+        return item + 5;
+    })
+    return marksWithBonus;
+}
+
+console.log(addingBonusMarks([45, 60, 80, 95]))
