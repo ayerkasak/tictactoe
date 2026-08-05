@@ -13,15 +13,28 @@
 //     "Sita",
 //     "Gita"]))
 
-const students = [
-    { name: "Ram", marks: 45 },
-    { name: "Hari", marks: 78 },
-    { name: "Sita", marks: 90 },
-    { name: "Gita", marks: 40 }
+// const students = [
+//     { name: "Ram", marks: 45 },
+//     { name: "Hari", marks: 78 },
+//     { name: "Sita", marks: 90 },
+//     { name: "Gita", marks: 40 }
+// ];
+
+// function findPassedStudents(arr){
+//     const passedStudents = arr.filter((item) => item.marks >= 50)
+//     return passedStudents;
+// }
+// console.log(findPassedStudents(students))
+
+const users = [
+    { id: 1, name: "Ram" },
+    { id: 2, name: "Hari" },
+    { id: 3, name: "Sita" }
 ];
 
-function findPassedStudents(arr){
-    const passedStudents = arr.filter((item) => item.marks >= 50)
-    return passedStudents;
+function findUser2(arr){
+    const user = arr.find((item) => item.id === 2);
+    return user;
 }
-console.log(findPassedStudents(students))
+
+console.log(findUser2(users))
