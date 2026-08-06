@@ -17,8 +17,20 @@
 // }
 // console.log(olderPerson([15, 18, 22, 30, 16]))
 
-function checkingResult(arr){
-    const allStudnetsPassed = arr.every((mark) => mark >= 50)
-    return allStudnetsPassed
+// function checkingResult(arr){
+//     const allStudnetsPassed = arr.every((mark) => mark >= 50)
+//     return allStudnetsPassed
+// }
+// console.log(checkingResult([75, 80, 92, 68]))
+
+const cart = [
+    { name: "Laptop", quantity: 1 },
+    { name: "Mouse", quantity: 2 },
+    { name: "Keyboard", quantity: 0 }
+];
+
+function checkProductQuantityMoreThanZero(arr){
+    const productQuantity = arr.every((item) => item.productQuantity > 0)
+    return productQuantity
 }
-console.log(checkingResult([75, 80, 92, 68]))
+console.log(checkProductQuantityMoreThanZero(cart));
