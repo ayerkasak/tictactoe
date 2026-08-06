@@ -36,14 +36,33 @@
 // console.log(checkProductQuantityMoreThanZero(cart));
 
 
-const users = [
-    { name: "Ram", isAdmin: false },
-    { name: "Hari", isAdmin: false },
-    { name: "Sita", isAdmin: true }
+// const users = [
+//     { name: "Ram", isAdmin: false },
+//     { name: "Hari", isAdmin: false },
+//     { name: "Sita", isAdmin: true }
+// ];
+
+// function checkAdmin(arr){
+//     const availableAdmin = arr.some((item) => item.isAdmin === true)
+//     return availableAdmin
+// }
+// console.log(checkAdmin(users));
+
+const emails = [
+    "ram@gmail.com",
+    "",
+    "hari@gmail.com",
+    "sita@gmail.com"
 ];
 
-function checkAdmin(arr){
-    const availableAdmin = arr.some((item) => item.isAdmin === true)
-    return availableAdmin
+function checkFilledEmails(arr){
+    const emailsAvailable = arr.every((item) => item !== "")
+    return emailsAvailable
 }
-console.log(checkAdmin(users));
+console.log(checkFilledEmails(emails));
+
+function checkEmptyEmail(arr){
+    const emptyEmail = arr.some((item) => item === "")
+    return emptyEmail
+}
+console.log(checkEmptyEmail(emails));
