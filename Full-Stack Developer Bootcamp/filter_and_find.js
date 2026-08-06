@@ -1,8 +1,8 @@
-// function greaterThan20(arr){
-//     const greaterNumbers = arr.filter((num) => num > 20);
-//     return greaterNumbers
-// }
-// console.log(greaterThan20([10, 25, 30, 15, 50]))
+function greaterThan20(arr){
+    const greaterNumbers = arr.filter((num) => num > 20);
+    return greaterNumbers
+}
+console.log(greaterThan20([10, 25, 30, 15, 50]))
 
 // function findHari(arr){
 //     const name = arr.find((name) => name === "Hari")
@@ -26,15 +26,15 @@
 // }
 // console.log(findPassedStudents(students))
 
-const users = [
-    { id: 1, name: "Ram" },
-    { id: 2, name: "Hari" },
-    { id: 3, name: "Sita" }
-];
+// const users = [
+//     { id: 1, name: "Ram" },
+//     { id: 2, name: "Hari" },
+//     { id: 3, name: "Sita" }
+// ];
 
-function findUser2(arr){
-    const user = arr.find((item) => item.id === 2);
-    return user;
-}
+// function findUser2(arr){
+//     const user = arr.find((item) => item.id === 2);
+//     return user;
+// }
 
-console.log(findUser2(users))
+// console.log(findUser2(users))
