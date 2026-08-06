@@ -11,8 +11,14 @@
 // console.log(checkPasswordLength(["asdghcvs", "agjhasiuhga", "asgkajsgilag"]))
 
 
-function olderPerson(arr){
-    const personOlderOrEighteen = arr.some((age) => age >= 18);
-    return personOlderOrEighteen
+// function olderPerson(arr){
+//     const personOlderOrEighteen = arr.some((age) => age >= 18);
+//     return personOlderOrEighteen
+// }
+// console.log(olderPerson([15, 18, 22, 30, 16]))
+
+function checkingResult(arr){
+    const allStudnetsPassed = arr.every((mark) => mark >= 50)
+    return allStudnetsPassed
 }
-console.log(olderPerson([15, 18, 22, 30, 16]))
+console.log(checkingResult([75, 80, 92, 68]))
