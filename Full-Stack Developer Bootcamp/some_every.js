@@ -23,14 +23,27 @@
 // }
 // console.log(checkingResult([75, 80, 92, 68]))
 
-const cart = [
-    { name: "Laptop", quantity: 1 },
-    { name: "Mouse", quantity: 2 },
-    { name: "Keyboard", quantity: 0 }
+// const cart = [
+//     { name: "Laptop", quantity: 1 },
+//     { name: "Mouse", quantity: 2 },
+//     { name: "Keyboard", quantity: 0 }
+// ];
+
+// function checkProductQuantityMoreThanZero(arr){
+//     const productQuantity = arr.every((item) => item.productQuantity > 0)
+//     return productQuantity
+// }
+// console.log(checkProductQuantityMoreThanZero(cart));
+
+
+const users = [
+    { name: "Ram", isAdmin: false },
+    { name: "Hari", isAdmin: false },
+    { name: "Sita", isAdmin: true }
 ];
 
-function checkProductQuantityMoreThanZero(arr){
-    const productQuantity = arr.every((item) => item.productQuantity > 0)
-    return productQuantity
+function checkAdmin(arr){
+    const availableAdmin = arr.some((item) => item.isAdmin === true)
+    return availableAdmin
 }
-console.log(checkProductQuantityMoreThanZero(cart));
+console.log(checkAdmin(users));
