@@ -8,12 +8,22 @@
 
 // console.log(keys);
 
+// const student = {
+//     name: "Ram",
+//     age: 20,
+//     faculty: "BCA"
+// };
+
+// const values = Object.values(student);
+
+// console.log(values);
+
 const student = {
     name: "Ram",
     age: 20,
     faculty: "BCA"
 };
 
-const values = Object.values(student);
+const entries = Object.entries(student);
 
-console.log(values);
+console.log(entries);
