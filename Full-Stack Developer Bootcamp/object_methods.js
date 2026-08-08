@@ -29,12 +29,20 @@
 // console.log(entries);
 
 
-const laptop = {
-    brand: "Dell",
-    model: "Inspiron",
-    price: 75000
-};
+// const laptop = {
+//     brand: "Dell",
+//     model: "Inspiron",
+//     price: 75000
+// };
 
 // console.log(Object.keys(laptop))
 // console.log(Object.values(laptop))
-console.log(Object.entries(laptop))
+// console.log(Object.entries(laptop))
+
+const user = {
+    name: "Kalpana",
+    age: 22,
+    country: "Nepal"
+};
+
+console.log(Object.keys(user).length)
