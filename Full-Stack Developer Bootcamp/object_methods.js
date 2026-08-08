@@ -18,12 +18,22 @@
 
 // console.log(values);
 
-const student = {
-    name: "Ram",
-    age: 20,
-    faculty: "BCA"
+// const student = {
+//     name: "Ram",
+//     age: 20,
+//     faculty: "BCA"
+// };
+
+// const entries = Object.entries(student);
+
+// console.log(entries);
+
+
+const laptop = {
+    brand: "Dell",
+    model: "Inspiron",
+    price: 75000
 };
 
-const entries = Object.entries(student);
-
-console.log(entries);
+console.log(Object.keys(laptop))
+// console.log(Object.values(laptop))
