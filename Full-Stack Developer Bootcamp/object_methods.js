@@ -36,4 +36,5 @@ const laptop = {
 };
 
 // console.log(Object.keys(laptop))
-console.log(Object.values(laptop))
+// console.log(Object.values(laptop))
+console.log(Object.entries(laptop))
