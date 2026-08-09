@@ -68,3 +68,6 @@ Object.entries(product).forEach(([key, value]) => {
     console.log(`${key} -> ${value}`)
 })
 
+Object.entries(product).forEach(([key]) => {
+    console.log(`Product property: ${key}`)
+})
