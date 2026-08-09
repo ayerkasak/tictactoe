@@ -39,10 +39,32 @@
 // console.log(Object.values(laptop))
 // console.log(Object.entries(laptop))
 
-const user = {
-    name: "Kalpana",
-    age: 22,
-    country: "Nepal"
+// const user = {
+//     name: "Kalpana",
+//     age: 22,
+//     country: "Nepal"
+// };
+
+// console.log(Object.keys(user).length)
+
+// const student = {
+//     name: "Ram",
+//     age: 20,
+//     faculty: "BCA"
+// };
+
+// Object.entries(student).forEach(([key, value]) => {
+//     console.log(`${key}: ${value}`);
+// });
+
+const product = {
+    name: "Laptop",
+    price: 75000,
+    brand: "Dell",
+    inStock: true
 };
 
-console.log(Object.keys(user).length)
+Object.entries(product).forEach(([key, value]) => {
+    console.log(`${key} -> ${value}`)
+})
+
