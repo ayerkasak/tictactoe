@@ -100,15 +100,28 @@
 // console.log(result);
 
 
-const person = {
-    name: "Ram",
-    age: 20
+// const person = {
+//     name: "Ram",
+//     age: 20
+// };
+
+// const contact = {
+//     email: "ram@gmail.com",
+//     phone: "9800000000"
+// };
+
+// const newObj = Object.assign({}, person, contact);
+// console.log(newObj)
+
+const defaultSettings = {
+    theme: "light",
+    language: "English",
+    notifications: true
 };
 
-const contact = {
-    email: "ram@gmail.com",
-    phone: "9800000000"
+const userSettings = {
+    theme: "dark"
 };
 
-const newObj = Object.assign({}, person, contact);
-console.log(newObj)
+const newObj = Object.assign({}, defaultSettings, userSettings)
+console.log(newObj);
