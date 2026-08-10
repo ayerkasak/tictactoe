@@ -72,16 +72,29 @@
 //     console.log(`Product property: ${key}`)
 // })
 
+// const user = {
+//     name: "Ram",
+//     age: 20
+// };
+
+// const details = {
+//     country: "Nepal", 
+//     faculty: "BCA"
+// };
+
+// Object.assign(user, details);
+
+// console.log(user);         
+
 const user = {
     name: "Ram",
     age: 20
 };
 
-const details = {
-    country: "Nepal",
-    faculty: "BCA"
+const updatedUser = {
+    age: 25
 };
 
-Object.assign(user, details);
+const result = Object.assign({}, user, updatedUser);
 
-console.log(user);
+console.log(result);
