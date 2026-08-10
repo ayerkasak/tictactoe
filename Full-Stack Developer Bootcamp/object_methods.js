@@ -57,17 +57,31 @@
 //     console.log(`${key}: ${value}`);
 // });
 
-const product = {
-    name: "Laptop",
-    price: 75000,
-    brand: "Dell",
-    inStock: true
+// const product = {
+//     name: "Laptop",
+//     price: 75000,
+//     brand: "Dell",
+//     inStock: true
+// };
+
+// Object.entries(product).forEach(([key, value]) => {
+//     console.log(`${key} -> ${value}`)
+// })
+
+// Object.entries(product).forEach(([key]) => {
+//     console.log(`Product property: ${key}`)
+// })
+
+const user = {
+    name: "Ram",
+    age: 20
 };
 
-Object.entries(product).forEach(([key, value]) => {
-    console.log(`${key} -> ${value}`)
-})
+const details = {
+    country: "Nepal",
+    faculty: "BCA"
+};
 
-Object.entries(product).forEach(([key]) => {
-    console.log(`Product property: ${key}`)
-})
+Object.assign(user, details);
+
+console.log(user);
