@@ -86,15 +86,29 @@
 
 // console.log(user);         
 
-const user = {
+// const user = {
+//     name: "Ram",
+//     age: 20
+// };
+
+// const updatedUser = {
+//     age: 25
+// };
+
+// const result = Object.assign({}, user, updatedUser);
+
+// console.log(result);
+
+
+const person = {
     name: "Ram",
     age: 20
 };
 
-const updatedUser = {
-    age: 25
+const contact = {
+    email: "ram@gmail.com",
+    phone: "9800000000"
 };
 
-const result = Object.assign({}, user, updatedUser);
-
-console.log(result);
+const newObj = Object.assign({}, person, contact);
+console.log(newObj)
