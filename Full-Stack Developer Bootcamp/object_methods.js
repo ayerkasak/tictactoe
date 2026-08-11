@@ -113,15 +113,23 @@
 // const newObj = Object.assign({}, person, contact);
 // console.log(newObj)
 
-const defaultSettings = {
-    theme: "light",
-    language: "English",
-    notifications: true
+// const defaultSettings = {
+//     theme: "light",
+//     language: "English",
+//     notifications: true
+// };
+
+// const userSettings = {
+//     theme: "dark"
+// };
+
+// const newObj = Object.assign({}, defaultSettings, userSettings)
+// console.log(newObj);
+
+
+const user = {
+    name: "Ram",
+    age: 20
 };
 
-const userSettings = {
-    theme: "dark"
-};
-
-const newObj = Object.assign({}, defaultSettings, userSettings)
-console.log(newObj);
+console.log(user.hasOwnProperty("name"));
