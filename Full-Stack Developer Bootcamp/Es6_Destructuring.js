@@ -13,9 +13,14 @@
 // console.log(secondColor)
 // console.log(thirdColor)
 
-const numbers = [10, 20, 30];
+// const numbers = [10, 20, 30];
 
-const [first, , third] = numbers;
+// const [first, , third] = numbers;
 
-console.log(first);
-console.log(third);
+// console.log(first);
+// console.log(third);
+
+const student = ["Kalpana", 22, "BCA"];
+const [name, , faculty] = student;
+console.log(name)
+console.log(faculty)
