@@ -127,9 +127,10 @@
 // console.log(newObj);
 
 
-const user = {
-    name: "Ram",
-    age: 20
-};
+// const user = {
+//     name: "Ram",
+//     age: 20
+// };
 
-console.log(user.hasOwnProperty("name"));
+// console.log(user.hasOwnProperty("name"));
+
