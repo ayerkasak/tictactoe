@@ -25,17 +25,29 @@
 // console.log(name)
 // console.log(faculty)
 
-const user = {
-    name: "Kalpana",
-    age: 22,
-    country: "Nepal"
-};
+// const user = {
+//     name: "Kalpana",
+//     age: 22,
+//     country: "Nepal"
+// };
 
 // const name = user.name;
 // const country = user.country
 
 // console.log(`name = ${name} & country = ${country}`)
 
-const {name, country} = user
-console.log(name);     // Kalpana
-console.log(country);  // Nepal
+// const {name, country} = user
+// console.log(name);     // Kalpana
+// console.log(country);  // Nepal
+
+const product = {
+    name: "Laptop",
+    price: 75000,
+    brand: "Dell"
+};
+
+const {name, price, brand} = product
+
+console.log(name)
+console.log(price)
+console.log(brand)
