@@ -20,7 +20,18 @@
 // console.log(first);
 // console.log(third);
 
-const student = ["Kalpana", 22, "BCA"];
-const [name, , faculty] = student;
-console.log(name)
-console.log(faculty)
+// const student = ["Kalpana", 22, "BCA"];
+// const [name, , faculty] = student;
+// console.log(name)
+// console.log(faculty)
+
+const user = {
+    name: "Kalpana",
+    age: 22,
+    country: "Nepal"
+};
+
+const name = user.name;
+const country = user.country
+
+console.log(`name = ${name} & country = ${country}`)
