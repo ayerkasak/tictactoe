@@ -31,7 +31,11 @@ const user = {
     country: "Nepal"
 };
 
-const name = user.name;
-const country = user.country
+// const name = user.name;
+// const country = user.country
 
-console.log(`name = ${name} & country = ${country}`)
+// console.log(`name = ${name} & country = ${country}`)
+
+const {name, country} = user
+console.log(name);     // Kalpana
+console.log(country);  // Nepal
