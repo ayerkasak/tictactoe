@@ -40,14 +40,23 @@
 // console.log(name);     // Kalpana
 // console.log(country);  // Nepal
 
-const product = {
-    name: "Laptop",
-    price: 75000,
-    brand: "Dell"
+// const product = {
+//     name: "Laptop",
+//     price: 75000,
+//     brand: "Dell"
+// };
+
+// const {name, price, brand} = product
+
+// console.log(name)
+// console.log(price)
+// console.log(brand)
+
+// Object Destructuring
+const student = {
+    name: "Kalpana",
+    age: 22
 };
 
-const {name, price, brand} = product
-
-console.log(name)
-console.log(price)
-console.log(brand)
+const {name: studentName} = student
+console.log(studentName);
