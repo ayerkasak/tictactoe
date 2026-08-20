@@ -53,10 +53,21 @@
 // console.log(brand)
 
 // Object Destructuring
-const student = {
-    name: "Kalpana",
-    age: 22
+// const student = {
+//     name: "Kalpana",
+//     age: 22
+// };
+
+// const {name: studentName} = student
+// console.log(studentName);
+
+const product = {
+    name: "Laptop",
+    price: 75000,
+    brand: "Dell"
 };
 
-const {name: studentName} = student
-console.log(studentName);
+const {name:productName, price:productPrice} = product;
+
+console.log(productName)
+console.log(productPrice)
