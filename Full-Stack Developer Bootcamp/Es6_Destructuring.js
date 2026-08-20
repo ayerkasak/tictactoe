@@ -61,13 +61,23 @@
 // const {name: studentName} = student
 // console.log(studentName);
 
-const product = {
-    name: "Laptop",
-    price: 75000,
-    brand: "Dell"
+// const product = {
+//     name: "Laptop",
+//     price: 75000,
+//     brand: "Dell"
+// };
+
+// const {name:productName, price:productPrice} = product;
+
+// console.log(productName)
+// console.log(productPrice)
+
+const user = {
+    name: "Ram",
+    age: 25
 };
 
-const {name:productName, price:productPrice} = product;
+const { name, email = "Not Provided"} = user;
 
-console.log(productName)
-console.log(productPrice)
+console.log(email); // undefined
+
