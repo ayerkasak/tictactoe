@@ -72,12 +72,19 @@
 // console.log(productName)
 // console.log(productPrice)
 
+// const user = {
+//     name: "Ram",
+//     age: 25
+// };
+
+// const { name, email = "Not Provided"} = user;
+
+// console.log(email); // undefined
+
 const user = {
-    name: "Ram",
-    age: 25
+    name: "Kalpana",
+    age: 22
 };
 
-const { name, email = "Not Provided"} = user;
-
-console.log(email); // undefined
-
+const {name: userName, age, email = "No email"} = user;
+console.log({userName, email})
