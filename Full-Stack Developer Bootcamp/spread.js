@@ -15,13 +15,13 @@
 // const combined = [...first, ...second];
 
 // console.log(combined);
-const user = {
-    name: "Kalpana",
-    age: 22
-};
+// const user = {
+//     name: "Kalpana",
+//     age: 22
+// };
 
-const updatedUser = {
-    ...user,
-    country: "Nepal"
-};
-console.log(updatedUser)
+// const updatedUser = {
+//     ...user,
+//     country: "Nepal"
+// };
+// console.log(updatedUser)
