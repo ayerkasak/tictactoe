@@ -20,16 +20,19 @@
     // clearInterval(intervalId)
 
     const displayMessage = function(){
-        console.log("Kasak")
+        console.log("Kasak", Date.now() )
     }
-    const startInterval = setInterval(displayMessage, 2000)
+    let startInterval;
     document.querySelector('#start').addEventListener('click', function(){
-       
-    })
+        startInterval = setInterval(displayMessage, 2000);
 
+        
+    }) 
+    
     document.querySelector('#stop').addEventListener('click', function(){
         clearInterval(startInterval)
+        console.log("STOPPED");
     })
-
+    
 </script>
 </html>
