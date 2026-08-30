@@ -11,9 +11,13 @@
 </body>
 
 <script>
-    setTimeout(function() {
+    const sayKask = function() {
         console.log("Kasak");
         
-    }, 2000)
+    }
+    const chnageText = function(){
+        document.querySelector('h1').innerHTML = "Best JS series"
+    }
+    setTimeout(chnageText, 2000)
 </script>
 </html>
