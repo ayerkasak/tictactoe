@@ -3,4 +3,4 @@ function show(first, ...others) {
     console.log(others);
 }
 
-show("A", "B", "C", "D");``
+show("A", "B", "C", "D");
