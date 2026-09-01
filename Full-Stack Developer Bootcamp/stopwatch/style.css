@@ -12,6 +12,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    flex-direction: column;
 }
 
 .stopwatch{
@@ -23,4 +24,17 @@ body{
 .timerDisplay{
     font-size: 50px;
     font-weight: 600;
+}
+
+.buttons{
+    margin-top: 20px;
+}
+
+.btn{
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    background-color: aqua;
+    padding: 12px 24px;
 }
